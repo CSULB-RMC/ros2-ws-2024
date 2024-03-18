@@ -1,0 +1,28 @@
+[0.459s] Invoking command in '/home/leopan42/ros2_ws/src/camera_test': PYTHONPATH=/home/leopan42/ros2_ws/build/camera_test/prefix_override:/home/leopan42/ros2_ws/install/camera_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/camera_test build --build-base /home/leopan42/ros2_ws/build/camera_test/build install --record /home/leopan42/ros2_ws/build/camera_test/install.log --single-version-externally-managed
+[0.570s] running egg_info
+[0.570s] writing ../../build/camera_test/camera_test.egg-info/PKG-INFO
+[0.570s] writing dependency_links to ../../build/camera_test/camera_test.egg-info/dependency_links.txt
+[0.571s] writing entry points to ../../build/camera_test/camera_test.egg-info/entry_points.txt
+[0.571s] writing requirements to ../../build/camera_test/camera_test.egg-info/requires.txt
+[0.571s] writing top-level names to ../../build/camera_test/camera_test.egg-info/top_level.txt
+[0.572s] reading manifest file '../../build/camera_test/camera_test.egg-info/SOURCES.txt'
+[0.572s] adding license file 'LICENSE'
+[0.572s] writing manifest file '../../build/camera_test/camera_test.egg-info/SOURCES.txt'
+[0.572s] running build
+[0.572s] running build_py
+[0.572s] copying camera_test/cam_sub.py -> /home/leopan42/ros2_ws/build/camera_test/build/lib/camera_test
+[0.572s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.572s]   warnings.warn(
+[0.572s] running install
+[0.572s] running install_lib
+[0.573s] copying /home/leopan42/ros2_ws/build/camera_test/build/lib/camera_test/cam_sub.py -> /home/leopan42/ros2_ws/install/camera_test/lib/python3.10/site-packages/camera_test
+[0.573s] byte-compiling /home/leopan42/ros2_ws/install/camera_test/lib/python3.10/site-packages/camera_test/cam_sub.py to cam_sub.cpython-310.pyc
+[0.573s] running install_data
+[0.574s] copying package.xml -> /home/leopan42/ros2_ws/install/camera_test/share/camera_test
+[0.575s] running install_egg_info
+[0.576s] removing '/home/leopan42/ros2_ws/install/camera_test/lib/python3.10/site-packages/camera_test-0.0.0-py3.10.egg-info' (and everything under it)
+[0.577s] Copying ../../build/camera_test/camera_test.egg-info to /home/leopan42/ros2_ws/install/camera_test/lib/python3.10/site-packages/camera_test-0.0.0-py3.10.egg-info
+[0.577s] running install_scripts
+[0.588s] Installing listener script to /home/leopan42/ros2_ws/install/camera_test/lib/camera_test
+[0.588s] writing list of installed files to '/home/leopan42/ros2_ws/build/camera_test/install.log'
+[0.600s] Invoked command in '/home/leopan42/ros2_ws/src/camera_test' returned '0': PYTHONPATH=/home/leopan42/ros2_ws/build/camera_test/prefix_override:/home/leopan42/ros2_ws/install/camera_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/camera_test build --build-base /home/leopan42/ros2_ws/build/camera_test/build install --record /home/leopan42/ros2_ws/build/camera_test/install.log --single-version-externally-managed
