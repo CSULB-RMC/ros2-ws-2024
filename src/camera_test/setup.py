@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             'listener = camera_test.cam_sub:main',
+            'talker = camera_test.cam_pub:main',
         ],
     },
 )
