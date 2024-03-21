@@ -1,0 +1,130 @@
+[0.000000] (-) TimerEvent: {}
+[0.001449] (camera_test) JobQueued: {'identifier': 'camera_test', 'dependencies': OrderedDict()}
+[0.001575] (py_pubsub) JobQueued: {'identifier': 'py_pubsub', 'dependencies': OrderedDict()}
+[0.002149] (camera_test) JobStarted: {'identifier': 'camera_test'}
+[0.098983] (-) TimerEvent: {}
+[0.199648] (-) TimerEvent: {}
+[0.301825] (-) TimerEvent: {}
+[0.303209] (py_pubsub) JobStarted: {'identifier': 'py_pubsub'}
+[0.402022] (-) TimerEvent: {}
+[0.503594] (-) TimerEvent: {}
+[0.604656] (-) TimerEvent: {}
+[0.705611] (-) TimerEvent: {}
+[0.806299] (-) TimerEvent: {}
+[0.906954] (-) TimerEvent: {}
+[1.007655] (-) TimerEvent: {}
+[1.108322] (-) TimerEvent: {}
+[1.209001] (-) TimerEvent: {}
+[1.309668] (-) TimerEvent: {}
+[1.410409] (-) TimerEvent: {}
+[1.511090] (-) TimerEvent: {}
+[1.611782] (-) TimerEvent: {}
+[1.712565] (-) TimerEvent: {}
+[1.813872] (-) TimerEvent: {}
+[1.914818] (-) TimerEvent: {}
+[2.015587] (-) TimerEvent: {}
+[2.116347] (-) TimerEvent: {}
+[2.217036] (-) TimerEvent: {}
+[2.317732] (-) TimerEvent: {}
+[2.418393] (-) TimerEvent: {}
+[2.519055] (-) TimerEvent: {}
+[2.619759] (-) TimerEvent: {}
+[2.720387] (-) TimerEvent: {}
+[2.821060] (-) TimerEvent: {}
+[2.921788] (-) TimerEvent: {}
+[3.022430] (-) TimerEvent: {}
+[3.123141] (-) TimerEvent: {}
+[3.223967] (-) TimerEvent: {}
+[3.325015] (-) TimerEvent: {}
+[3.426332] (-) TimerEvent: {}
+[3.527245] (-) TimerEvent: {}
+[3.627977] (-) TimerEvent: {}
+[3.728746] (-) TimerEvent: {}
+[3.829468] (-) TimerEvent: {}
+[3.930166] (-) TimerEvent: {}
+[4.030880] (-) TimerEvent: {}
+[4.131676] (-) TimerEvent: {}
+[4.232436] (-) TimerEvent: {}
+[4.333163] (-) TimerEvent: {}
+[4.433857] (-) TimerEvent: {}
+[4.534583] (-) TimerEvent: {}
+[4.635294] (-) TimerEvent: {}
+[4.736017] (-) TimerEvent: {}
+[4.836797] (-) TimerEvent: {}
+[4.937601] (-) TimerEvent: {}
+[5.038339] (-) TimerEvent: {}
+[5.139446] (-) TimerEvent: {}
+[5.241155] (-) TimerEvent: {}
+[5.296620] (camera_test) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/camera_test', 'build', '--build-base', '/home/beachlbl/ros2-ws-2024/build/camera_test/build', 'install', '--record', '/home/beachlbl/ros2-ws-2024/build/camera_test/install.log', '--single-version-externally-managed'], 'cwd': '/home/beachlbl/ros2-ws-2024/src/camera_test', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'MAIL': '/var/mail/beachlbl', 'USER': 'beachlbl', 'XDG_SEAT': 'seat0', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/aarch64-linux-gnu:/opt/ros/iron/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/beachlbl', 'OLDPWD': '/home/beachlbl', 'HUSHLOGIN': 'FALSE', 'ROS_PYTHON_VERSION': '3', 'SYSTEMD_EXEC_PID': '2829', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_DISTRO': 'iron', 'LOGNAME': 'beachlbl', 'JOURNAL_STREAM': '8:32985', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'linux', 'XDG_SESSION_ID': '6', 'PATH': '/home/beachlbl/.local/bin:/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'INVOCATION_ID': 'a2419e96866449e7882a82150282f782', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/iron', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'XDG_VTNR': '3', 'PWD': '/home/beachlbl/ros2-ws-2024/build/camera_test', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/beachlbl/ros2-ws-2024/build/camera_test/prefix_override:/home/beachlbl/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages:/opt/ros/iron/lib/python3.10/site-packages', 'COLCON': '1'}, 'shell': False}
+[5.317271] (py_pubsub) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/py_pubsub', 'build', '--build-base', '/home/beachlbl/ros2-ws-2024/build/py_pubsub/build', 'install', '--record', '/home/beachlbl/ros2-ws-2024/build/py_pubsub/install.log', '--single-version-externally-managed'], 'cwd': '/home/beachlbl/ros2-ws-2024/src/py_pubsub', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'MAIL': '/var/mail/beachlbl', 'USER': 'beachlbl', 'XDG_SEAT': 'seat0', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/aarch64-linux-gnu:/opt/ros/iron/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/beachlbl', 'OLDPWD': '/home/beachlbl', 'HUSHLOGIN': 'FALSE', 'ROS_PYTHON_VERSION': '3', 'SYSTEMD_EXEC_PID': '2829', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_DISTRO': 'iron', 'LOGNAME': 'beachlbl', 'JOURNAL_STREAM': '8:32985', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'linux', 'XDG_SESSION_ID': '6', 'PATH': '/home/beachlbl/.local/bin:/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'INVOCATION_ID': 'a2419e96866449e7882a82150282f782', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/iron', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'XDG_VTNR': '3', 'PWD': '/home/beachlbl/ros2-ws-2024/build/py_pubsub', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/beachlbl/ros2-ws-2024/build/py_pubsub/prefix_override:/home/beachlbl/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages:/opt/ros/iron/lib/python3.10/site-packages', 'COLCON': '1'}, 'shell': False}
+[5.341219] (-) TimerEvent: {}
+[5.441941] (-) TimerEvent: {}
+[5.542711] (-) TimerEvent: {}
+[5.643500] (-) TimerEvent: {}
+[5.744230] (-) TimerEvent: {}
+[5.845054] (-) TimerEvent: {}
+[5.945793] (-) TimerEvent: {}
+[6.047346] (-) TimerEvent: {}
+[6.148071] (-) TimerEvent: {}
+[6.248766] (-) TimerEvent: {}
+[6.349385] (-) TimerEvent: {}
+[6.450056] (-) TimerEvent: {}
+[6.550736] (-) TimerEvent: {}
+[6.590481] (py_pubsub) StdoutLine: {'line': b'running egg_info\n'}
+[6.593848] (py_pubsub) StdoutLine: {'line': b'writing ../../build/py_pubsub/py_pubsub.egg-info/PKG-INFO\n'}
+[6.595294] (py_pubsub) StdoutLine: {'line': b'writing dependency_links to ../../build/py_pubsub/py_pubsub.egg-info/dependency_links.txt\n'}
+[6.596246] (py_pubsub) StdoutLine: {'line': b'writing entry points to ../../build/py_pubsub/py_pubsub.egg-info/entry_points.txt\n'}
+[6.597397] (py_pubsub) StdoutLine: {'line': b'writing requirements to ../../build/py_pubsub/py_pubsub.egg-info/requires.txt\n'}
+[6.598205] (camera_test) StdoutLine: {'line': b'running egg_info\n'}
+[6.599010] (py_pubsub) StdoutLine: {'line': b'writing top-level names to ../../build/py_pubsub/py_pubsub.egg-info/top_level.txt\n'}
+[6.601183] (camera_test) StdoutLine: {'line': b'writing ../../build/camera_test/camera_test.egg-info/PKG-INFO\n'}
+[6.602539] (camera_test) StdoutLine: {'line': b'writing dependency_links to ../../build/camera_test/camera_test.egg-info/dependency_links.txt\n'}
+[6.603701] (camera_test) StdoutLine: {'line': b'writing entry points to ../../build/camera_test/camera_test.egg-info/entry_points.txt\n'}
+[6.604568] (camera_test) StdoutLine: {'line': b'writing requirements to ../../build/camera_test/camera_test.egg-info/requires.txt\n'}
+[6.605415] (camera_test) StdoutLine: {'line': b'writing top-level names to ../../build/camera_test/camera_test.egg-info/top_level.txt\n'}
+[6.607553] (py_pubsub) StdoutLine: {'line': b"reading manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'\n"}
+[6.608906] (py_pubsub) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[6.611689] (py_pubsub) StdoutLine: {'line': b"writing manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'\n"}
+[6.612430] (py_pubsub) StdoutLine: {'line': b'running build\n'}
+[6.612995] (py_pubsub) StdoutLine: {'line': b'running build_py\n'}
+[6.614278] (py_pubsub) StdoutLine: {'line': b'running install\n'}
+[6.614987] (camera_test) StdoutLine: {'line': b"reading manifest file '../../build/camera_test/camera_test.egg-info/SOURCES.txt'\n"}
+[6.615505] (py_pubsub) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[6.616202] (py_pubsub) StderrLine: {'line': b'  warnings.warn(\n'}
+[6.616641] (camera_test) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[6.617078] (py_pubsub) StdoutLine: {'line': b'running install_lib\n'}
+[6.619112] (camera_test) StdoutLine: {'line': b"writing manifest file '../../build/camera_test/camera_test.egg-info/SOURCES.txt'\n"}
+[6.619891] (camera_test) StdoutLine: {'line': b'running build\n'}
+[6.620371] (camera_test) StdoutLine: {'line': b'running build_py\n'}
+[6.621838] (camera_test) StdoutLine: {'line': b'running install\n'}
+[6.622693] (camera_test) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[6.623324] (camera_test) StderrLine: {'line': b'  warnings.warn(\n'}
+[6.623838] (py_pubsub) StdoutLine: {'line': b'running install_data\n'}
+[6.624494] (camera_test) StdoutLine: {'line': b'running install_lib\n'}
+[6.625378] (py_pubsub) StdoutLine: {'line': b'running install_egg_info\n'}
+[6.630516] (camera_test) StdoutLine: {'line': b'running install_data\n'}
+[6.632211] (py_pubsub) StdoutLine: {'line': b"removing '/home/beachlbl/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages/py_pubsub-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[6.633200] (camera_test) StdoutLine: {'line': b'running install_egg_info\n'}
+[6.634129] (py_pubsub) StdoutLine: {'line': b'Copying ../../build/py_pubsub/py_pubsub.egg-info to /home/beachlbl/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages/py_pubsub-0.0.0-py3.10.egg-info\n'}
+[6.639945] (camera_test) StdoutLine: {'line': b"removing '/home/beachlbl/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages/camera_test-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[6.640652] (py_pubsub) StdoutLine: {'line': b'running install_scripts\n'}
+[6.641765] (camera_test) StdoutLine: {'line': b'Copying ../../build/camera_test/camera_test.egg-info to /home/beachlbl/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages/camera_test-0.0.0-py3.10.egg-info\n'}
+[6.650752] (camera_test) StdoutLine: {'line': b'running install_scripts\n'}
+[6.651367] (-) TimerEvent: {}
+[6.732040] (py_pubsub) StdoutLine: {'line': b"writing list of installed files to '/home/beachlbl/ros2-ws-2024/build/py_pubsub/install.log'\n"}
+[6.746903] (camera_test) StdoutLine: {'line': b'Installing listener script to /home/beachlbl/ros2-ws-2024/install/camera_test/lib/camera_test\n'}
+[6.748839] (camera_test) StdoutLine: {'line': b'Installing talker script to /home/beachlbl/ros2-ws-2024/install/camera_test/lib/camera_test\n'}
+[6.751888] (camera_test) StdoutLine: {'line': b"writing list of installed files to '/home/beachlbl/ros2-ws-2024/build/camera_test/install.log'\n"}
+[6.753085] (-) TimerEvent: {}
+[6.855506] (-) TimerEvent: {}
+[6.912249] (py_pubsub) CommandEnded: {'returncode': 0}
+[6.955591] (-) TimerEvent: {}
+[7.056603] (-) TimerEvent: {}
+[7.159369] (-) TimerEvent: {}
+[7.167901] (py_pubsub) JobEnded: {'identifier': 'py_pubsub', 'rc': 0}
+[7.171681] (camera_test) CommandEnded: {'returncode': 0}
+[7.259501] (-) TimerEvent: {}
+[7.360665] (-) TimerEvent: {}
+[7.461762] (-) TimerEvent: {}
+[7.482678] (camera_test) JobEnded: {'identifier': 'camera_test', 'rc': 0}
+[7.485607] (-) EventReactorShutdown: {}

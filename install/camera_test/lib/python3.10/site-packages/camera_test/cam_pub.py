@@ -16,10 +16,12 @@ class ImagePublisher(Node):
 			self.listener_callback,
 			10)
         self.cap = cv2.VideoCapture(0)
+        self.cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
         self.cv_bridge = CvBridge()
         self.i = 0
     
     def timer_callback(self):
+        self.cap.read()
         ret, frame = self.cap.read()
 
         if ret == True:

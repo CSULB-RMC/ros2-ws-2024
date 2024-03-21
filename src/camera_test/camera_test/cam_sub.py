@@ -40,7 +40,7 @@ class ImageSubscriber(Node):
         image = self.cv_bridge.imgmsg_to_cv2(data, 'bgr8')     
         # self.object_detect(image)    
         cv2.imshow("object", image)                          
-        cv2.waitKey(10)                         
+        cv2.waitKey(1)                         
 
 
 def main(args=None):                                         
