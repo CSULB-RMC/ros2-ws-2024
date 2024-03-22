@@ -1,0 +1,36 @@
+running egg_info
+creating ../../build/canbus_interface/canbus_interface.egg-info
+writing ../../build/canbus_interface/canbus_interface.egg-info/PKG-INFO
+writing dependency_links to ../../build/canbus_interface/canbus_interface.egg-info/dependency_links.txt
+writing entry points to ../../build/canbus_interface/canbus_interface.egg-info/entry_points.txt
+writing requirements to ../../build/canbus_interface/canbus_interface.egg-info/requires.txt
+writing top-level names to ../../build/canbus_interface/canbus_interface.egg-info/top_level.txt
+writing manifest file '../../build/canbus_interface/canbus_interface.egg-info/SOURCES.txt'
+reading manifest file '../../build/canbus_interface/canbus_interface.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/canbus_interface/canbus_interface.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /root/ros2-ws-2024/build/canbus_interface/build
+creating /root/ros2-ws-2024/build/canbus_interface/build/lib
+creating /root/ros2-ws-2024/build/canbus_interface/build/lib/canbus_interface
+copying canbus_interface/can_pub.py -> /root/ros2-ws-2024/build/canbus_interface/build/lib/canbus_interface
+copying canbus_interface/__init__.py -> /root/ros2-ws-2024/build/canbus_interface/build/lib/canbus_interface
+running install
+running install_lib
+creating /root/ros2-ws-2024/install/canbus_interface/lib/python3.10/site-packages/canbus_interface
+copying /root/ros2-ws-2024/build/canbus_interface/build/lib/canbus_interface/can_pub.py -> /root/ros2-ws-2024/install/canbus_interface/lib/python3.10/site-packages/canbus_interface
+copying /root/ros2-ws-2024/build/canbus_interface/build/lib/canbus_interface/__init__.py -> /root/ros2-ws-2024/install/canbus_interface/lib/python3.10/site-packages/canbus_interface
+byte-compiling /root/ros2-ws-2024/install/canbus_interface/lib/python3.10/site-packages/canbus_interface/can_pub.py to can_pub.cpython-310.pyc
+byte-compiling /root/ros2-ws-2024/install/canbus_interface/lib/python3.10/site-packages/canbus_interface/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /root/ros2-ws-2024/install/canbus_interface/share/ament_index
+creating /root/ros2-ws-2024/install/canbus_interface/share/ament_index/resource_index
+creating /root/ros2-ws-2024/install/canbus_interface/share/ament_index/resource_index/packages
+copying resource/canbus_interface -> /root/ros2-ws-2024/install/canbus_interface/share/ament_index/resource_index/packages
+copying package.xml -> /root/ros2-ws-2024/install/canbus_interface/share/canbus_interface
+running install_egg_info
+Copying ../../build/canbus_interface/canbus_interface.egg-info to /root/ros2-ws-2024/install/canbus_interface/lib/python3.10/site-packages/canbus_interface-0.0.0-py3.10.egg-info
+running install_scripts
+Installing can_pub script to /root/ros2-ws-2024/install/canbus_interface/lib/canbus_interface
+writing list of installed files to '/root/ros2-ws-2024/build/canbus_interface/install.log'

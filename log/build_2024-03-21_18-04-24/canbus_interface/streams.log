@@ -1,0 +1,43 @@
+[1.154s] Invoking command in '/root/ros2-ws-2024/src/canbus_interface': PYTHONPATH=/root/ros2-ws-2024/build/canbus_interface/prefix_override:/root/ros2-ws-2024/install/canbus_interface/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/canbus_interface build --build-base /root/ros2-ws-2024/build/canbus_interface/build install --record /root/ros2-ws-2024/build/canbus_interface/install.log --single-version-externally-managed install_data
+[1.441s] running egg_info
+[1.441s] creating ../../build/canbus_interface/canbus_interface.egg-info
+[1.442s] writing ../../build/canbus_interface/canbus_interface.egg-info/PKG-INFO
+[1.442s] writing dependency_links to ../../build/canbus_interface/canbus_interface.egg-info/dependency_links.txt
+[1.442s] writing entry points to ../../build/canbus_interface/canbus_interface.egg-info/entry_points.txt
+[1.442s] writing requirements to ../../build/canbus_interface/canbus_interface.egg-info/requires.txt
+[1.443s] writing top-level names to ../../build/canbus_interface/canbus_interface.egg-info/top_level.txt
+[1.443s] writing manifest file '../../build/canbus_interface/canbus_interface.egg-info/SOURCES.txt'
+[1.444s] reading manifest file '../../build/canbus_interface/canbus_interface.egg-info/SOURCES.txt'
+[1.445s] adding license file 'LICENSE'
+[1.446s] writing manifest file '../../build/canbus_interface/canbus_interface.egg-info/SOURCES.txt'
+[1.446s] running build
+[1.446s] running build_py
+[1.446s] creating /root/ros2-ws-2024/build/canbus_interface/build
+[1.447s] creating /root/ros2-ws-2024/build/canbus_interface/build/lib
+[1.447s] creating /root/ros2-ws-2024/build/canbus_interface/build/lib/canbus_interface
+[1.447s] copying canbus_interface/can_pub.py -> /root/ros2-ws-2024/build/canbus_interface/build/lib/canbus_interface
+[1.447s] copying canbus_interface/__init__.py -> /root/ros2-ws-2024/build/canbus_interface/build/lib/canbus_interface
+[1.447s] running install
+[1.448s] running install_lib
+[1.448s] creating /root/ros2-ws-2024/install/canbus_interface/lib/python3.10/site-packages/canbus_interface
+[1.448s] copying /root/ros2-ws-2024/build/canbus_interface/build/lib/canbus_interface/can_pub.py -> /root/ros2-ws-2024/install/canbus_interface/lib/python3.10/site-packages/canbus_interface
+[1.448s] copying /root/ros2-ws-2024/build/canbus_interface/build/lib/canbus_interface/__init__.py -> /root/ros2-ws-2024/install/canbus_interface/lib/python3.10/site-packages/canbus_interface
+[1.450s]   File "/root/ros2-ws-2024/install/canbus_interface/lib/python3.10/site-packages/canbus_interface/can_pub.py", line 26
+[1.450s]     main()  if __name__=='__main__':
+[1.450s]                                    ^
+[1.450s] SyntaxError: invalid syntax
+[1.450s] 
+[1.451s] byte-compiling /root/ros2-ws-2024/install/canbus_interface/lib/python3.10/site-packages/canbus_interface/can_pub.py to can_pub.cpython-310.pyc
+[1.451s] byte-compiling /root/ros2-ws-2024/install/canbus_interface/lib/python3.10/site-packages/canbus_interface/__init__.py to __init__.cpython-310.pyc
+[1.451s] running install_data
+[1.452s] creating /root/ros2-ws-2024/install/canbus_interface/share/ament_index
+[1.452s] creating /root/ros2-ws-2024/install/canbus_interface/share/ament_index/resource_index
+[1.452s] creating /root/ros2-ws-2024/install/canbus_interface/share/ament_index/resource_index/packages
+[1.452s] copying resource/canbus_interface -> /root/ros2-ws-2024/install/canbus_interface/share/ament_index/resource_index/packages
+[1.452s] copying package.xml -> /root/ros2-ws-2024/install/canbus_interface/share/canbus_interface
+[1.452s] running install_egg_info
+[1.452s] Copying ../../build/canbus_interface/canbus_interface.egg-info to /root/ros2-ws-2024/install/canbus_interface/lib/python3.10/site-packages/canbus_interface-0.0.0-py3.10.egg-info
+[1.453s] running install_scripts
+[1.473s] Installing can_pub script to /root/ros2-ws-2024/install/canbus_interface/lib/canbus_interface
+[1.473s] writing list of installed files to '/root/ros2-ws-2024/build/canbus_interface/install.log'
+[1.500s] Invoked command in '/root/ros2-ws-2024/src/canbus_interface' returned '0': PYTHONPATH=/root/ros2-ws-2024/build/canbus_interface/prefix_override:/root/ros2-ws-2024/install/canbus_interface/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/canbus_interface build --build-base /root/ros2-ws-2024/build/canbus_interface/build install --record /root/ros2-ws-2024/build/canbus_interface/install.log --single-version-externally-managed install_data

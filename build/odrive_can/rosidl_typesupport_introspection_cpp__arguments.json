@@ -1,0 +1,33 @@
+{
+  "package_name": "odrive_can",
+  "output_dir": "/root/ros2-ws-2024/build/odrive_can/rosidl_typesupport_introspection_cpp/odrive_can",
+  "template_dir": "/opt/ros/iron/share/rosidl_typesupport_introspection_cpp/resource",
+  "idl_tuples": [
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can:msg/ControlMessage.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can:msg/ControllerStatus.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can:msg/ODriveStatus.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can:srv/AxisState.idl"
+  ],
+  "ros_interface_dependencies": [
+    "service_msgs:/opt/ros/iron/share/service_msgs/msg/ServiceEventInfo.idl",
+    "builtin_interfaces:/opt/ros/iron/share/builtin_interfaces/msg/Duration.idl",
+    "builtin_interfaces:/opt/ros/iron/share/builtin_interfaces/msg/Time.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/iron/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp",
+    "/opt/ros/iron/lib/python3.10/site-packages/rosidl_typesupport_introspection_cpp/__init__.py",
+    "/opt/ros/iron/share/rosidl_typesupport_introspection_cpp/resource/idl__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/ros/iron/share/rosidl_typesupport_introspection_cpp/resource/idl__type_support.cpp.em",
+    "/opt/ros/iron/share/rosidl_typesupport_introspection_cpp/resource/msg__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/ros/iron/share/rosidl_typesupport_introspection_cpp/resource/msg__type_support.cpp.em",
+    "/opt/ros/iron/share/rosidl_typesupport_introspection_cpp/resource/srv__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/ros/iron/share/rosidl_typesupport_introspection_cpp/resource/srv__type_support.cpp.em",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can/msg/ControlMessage.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can/msg/ControllerStatus.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can/msg/ODriveStatus.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can/srv/AxisState.idl",
+    "/opt/ros/iron/share/service_msgs/msg/ServiceEventInfo.idl",
+    "/opt/ros/iron/share/builtin_interfaces/msg/Duration.idl",
+    "/opt/ros/iron/share/builtin_interfaces/msg/Time.idl"
+  ]
+}

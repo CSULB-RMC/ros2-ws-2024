@@ -1,0 +1,58 @@
+{
+  "package_name": "odrive_can",
+  "output_dir": "/root/ros2-ws-2024/build/odrive_can/rosidl_generator_c/odrive_can",
+  "template_dir": "/opt/ros/iron/share/rosidl_generator_c/cmake/../resource",
+  "idl_tuples": [
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can:msg/ControlMessage.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can:msg/ControllerStatus.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can:msg/ODriveStatus.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can:srv/AxisState.idl"
+  ],
+  "ros_interface_files": [
+    "/root/ros2-ws-2024/src/ros_odrive/msg/ControlMessage.msg",
+    "/root/ros2-ws-2024/src/ros_odrive/msg/ControllerStatus.msg",
+    "/root/ros2-ws-2024/src/ros_odrive/msg/ODriveStatus.msg",
+    "/root/ros2-ws-2024/src/ros_odrive/srv/AxisState.srv",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_cmake/srv/AxisState_Request.msg",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_cmake/srv/AxisState_Response.msg"
+  ],
+  "ros_interface_dependencies": [
+    "service_msgs:/opt/ros/iron/share/service_msgs/msg/ServiceEventInfo.idl",
+    "builtin_interfaces:/opt/ros/iron/share/builtin_interfaces/msg/Duration.idl",
+    "builtin_interfaces:/opt/ros/iron/share/builtin_interfaces/msg/Time.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/iron/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c",
+    "/opt/ros/iron/share/rosidl_generator_c/cmake/../../../lib/python3.10/site-packages/rosidl_generator_c/__init__.py",
+    "/opt/ros/iron/share/rosidl_generator_c/cmake/../resource/action__type_support.h.em",
+    "/opt/ros/iron/share/rosidl_generator_c/cmake/../resource/action__type_support.c.em",
+    "/opt/ros/iron/share/rosidl_generator_c/cmake/../resource/empty__description.c.em",
+    "/opt/ros/iron/share/rosidl_generator_c/cmake/../resource/full__description.c.em",
+    "/opt/ros/iron/share/rosidl_generator_c/cmake/../resource/idl.h.em",
+    "/opt/ros/iron/share/rosidl_generator_c/cmake/../resource/idl__description.c.em",
+    "/opt/ros/iron/share/rosidl_generator_c/cmake/../resource/idl__functions.c.em",
+    "/opt/ros/iron/share/rosidl_generator_c/cmake/../resource/idl__functions.h.em",
+    "/opt/ros/iron/share/rosidl_generator_c/cmake/../resource/idl__struct.h.em",
+    "/opt/ros/iron/share/rosidl_generator_c/cmake/../resource/idl__type_support.c.em",
+    "/opt/ros/iron/share/rosidl_generator_c/cmake/../resource/idl__type_support.h.em",
+    "/opt/ros/iron/share/rosidl_generator_c/cmake/../resource/msg__functions.c.em",
+    "/opt/ros/iron/share/rosidl_generator_c/cmake/../resource/msg__functions.h.em",
+    "/opt/ros/iron/share/rosidl_generator_c/cmake/../resource/msg__struct.h.em",
+    "/opt/ros/iron/share/rosidl_generator_c/cmake/../resource/msg__type_support.h.em",
+    "/opt/ros/iron/share/rosidl_generator_c/cmake/../resource/srv__type_support.c.em",
+    "/opt/ros/iron/share/rosidl_generator_c/cmake/../resource/srv__type_support.h.em",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can/msg/ControlMessage.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can/msg/ControllerStatus.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can/msg/ODriveStatus.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can/srv/AxisState.idl",
+    "/opt/ros/iron/share/service_msgs/msg/ServiceEventInfo.idl",
+    "/opt/ros/iron/share/builtin_interfaces/msg/Duration.idl",
+    "/opt/ros/iron/share/builtin_interfaces/msg/Time.idl"
+  ],
+  "type_description_tuples": [
+    "msg/ControlMessage.idl:/root/ros2-ws-2024/build/odrive_can/rosidl_generator_type_description/odrive_can/msg/ControlMessage.json",
+    "msg/ControllerStatus.idl:/root/ros2-ws-2024/build/odrive_can/rosidl_generator_type_description/odrive_can/msg/ControllerStatus.json",
+    "msg/ODriveStatus.idl:/root/ros2-ws-2024/build/odrive_can/rosidl_generator_type_description/odrive_can/msg/ODriveStatus.json",
+    "srv/AxisState.idl:/root/ros2-ws-2024/build/odrive_can/rosidl_generator_type_description/odrive_can/srv/AxisState.json"
+  ]
+}

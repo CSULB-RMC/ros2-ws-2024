@@ -1,0 +1,14 @@
+{
+  "package_name": "odrive_can",
+  "output_dir": "/root/ros2-ws-2024/build/odrive_can/rosidl_generator_type_description/odrive_can",
+  "idl_tuples": [
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can:msg/ControlMessage.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can:msg/ControllerStatus.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can:msg/ODriveStatus.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can:srv/AxisState.idl"
+  ],
+  "include_paths": [
+    "service_msgs:/opt/ros/iron/share/service_msgs",
+    "builtin_interfaces:/opt/ros/iron/share/builtin_interfaces"
+  ]
+}

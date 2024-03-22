@@ -1,0 +1,650 @@
+[0.000000] (-) TimerEvent: {}
+[0.000154] (camera_test) JobQueued: {'identifier': 'camera_test', 'dependencies': OrderedDict()}
+[0.000190] (canbus_interface) JobQueued: {'identifier': 'canbus_interface', 'dependencies': OrderedDict()}
+[0.000226] (odrive_can) JobQueued: {'identifier': 'odrive_can', 'dependencies': OrderedDict()}
+[0.000244] (py_pubsub) JobQueued: {'identifier': 'py_pubsub', 'dependencies': OrderedDict()}
+[0.000261] (camera_test) JobStarted: {'identifier': 'camera_test'}
+[0.018584] (canbus_interface) JobStarted: {'identifier': 'canbus_interface'}
+[0.023584] (odrive_can) JobStarted: {'identifier': 'odrive_can'}
+[0.028189] (py_pubsub) JobStarted: {'identifier': 'py_pubsub'}
+[0.098984] (-) TimerEvent: {}
+[0.199449] (-) TimerEvent: {}
+[0.299824] (-) TimerEvent: {}
+[0.341588] (canbus_interface) JobProgress: {'identifier': 'canbus_interface', 'progress': 'cmake'}
+[0.342284] (canbus_interface) Command: {'cmd': ['/usr/bin/cmake', '/root/ros2-ws-2024/src/canbus_interface', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/root/ros2-ws-2024/install/canbus_interface'], 'cwd': '/root/ros2-ws-2024/build/canbus_interface', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'root'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/root'), ('OLDPWD', '/root/ros2-ws-2024/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/root/ros2-ws-2024/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'root'), ('NAME', 'Snooze'), ('WSL_INTEROP', '/run/WSL/9_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('PATH', '/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_2.1.5.0_x64__8wekyb3d8bbwe:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/AdoptOpenJDK/jdk-16.0.1.9-hotspot/bin:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/mnt/c/Program Files/Razer Chroma SDK/bin:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NGX:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Intel/WiFi/bin/:/mnt/c/Program Files/Common Files/Intel/WirelessCommon/:/mnt/c/Users/Administrator/AppData/Local/Microsoft/WindowsApps:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/WINDOWS/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/MATLAB/R2023b/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Users/test/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/test/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/test/AppData/Roaming/npm:/mnt/c/texlive/2022/bin/win32:/mnt/c/Users/test/AppData/Local/Programs/Python/Python311/python:/mnt/c/MinGW/bin:/mnt/c/ghcup/bin:/mnt/c/Users/test/AppData/Local/Programs/Python/Python311/Scripts:/mnt/c/mongosh/bin:/mnt/c/Program Files/swipl/bin:/mnt/c/Users/test/anaconda3/Scripts:/mnt/c/Users/test/anaconda3/Library/bin:/mnt/c/Program Files/Neovim/bin:/snap/bin:/opt/nvim/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/ros2-ws-2024/install/py_pubsub:/root/ros2-ws-2024/install/camera_test:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('PWD', '/root/ros2-ws-2024/build/canbus_interface'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/root/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages:/root/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages:/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/root/ros2-ws-2024/install/camera_test'), ('WSLENV', '')]), 'shell': False}
+[0.347148] (odrive_can) JobProgress: {'identifier': 'odrive_can', 'progress': 'cmake'}
+[0.349135] (odrive_can) Command: {'cmd': ['/usr/bin/cmake', '/root/ros2-ws-2024/src/ros_odrive', '-DCMAKE_INSTALL_PREFIX=/root/ros2-ws-2024/install/odrive_can'], 'cwd': '/root/ros2-ws-2024/build/odrive_can', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'root'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/root'), ('OLDPWD', '/root/ros2-ws-2024/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/root/ros2-ws-2024/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'root'), ('NAME', 'Snooze'), ('WSL_INTEROP', '/run/WSL/9_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('PATH', '/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_2.1.5.0_x64__8wekyb3d8bbwe:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/AdoptOpenJDK/jdk-16.0.1.9-hotspot/bin:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/mnt/c/Program Files/Razer Chroma SDK/bin:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NGX:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Intel/WiFi/bin/:/mnt/c/Program Files/Common Files/Intel/WirelessCommon/:/mnt/c/Users/Administrator/AppData/Local/Microsoft/WindowsApps:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/WINDOWS/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/MATLAB/R2023b/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Users/test/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/test/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/test/AppData/Roaming/npm:/mnt/c/texlive/2022/bin/win32:/mnt/c/Users/test/AppData/Local/Programs/Python/Python311/python:/mnt/c/MinGW/bin:/mnt/c/ghcup/bin:/mnt/c/Users/test/AppData/Local/Programs/Python/Python311/Scripts:/mnt/c/mongosh/bin:/mnt/c/Program Files/swipl/bin:/mnt/c/Users/test/anaconda3/Scripts:/mnt/c/Users/test/anaconda3/Library/bin:/mnt/c/Program Files/Neovim/bin:/snap/bin:/opt/nvim/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/ros2-ws-2024/install/py_pubsub:/root/ros2-ws-2024/install/camera_test:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('PWD', '/root/ros2-ws-2024/build/odrive_can'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/root/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages:/root/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages:/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/root/ros2-ws-2024/install/camera_test:/root/ros2-ws-2024/install/py_pubsub:/opt/ros/iron'), ('WSLENV', '')]), 'shell': False}
+[0.399977] (-) TimerEvent: {}
+[0.500314] (-) TimerEvent: {}
+[0.600904] (-) TimerEvent: {}
+[0.624446] (canbus_interface) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.625089] (canbus_interface) StderrLine: {'line': b'  Compatibility with CMake < 2.8.12 will be removed from a future version of\n'}
+[0.625628] (canbus_interface) StderrLine: {'line': b'  CMake.\n'}
+[0.627379] (canbus_interface) StderrLine: {'line': b'\n'}
+[0.627757] (canbus_interface) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[0.629292] (canbus_interface) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[0.630311] (canbus_interface) StderrLine: {'line': b'\n'}
+[0.630871] (canbus_interface) StderrLine: {'line': b'\x1b[0m\n'}
+[0.701062] (-) TimerEvent: {}
+[0.734280] (odrive_can) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.735526] (canbus_interface) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.801175] (-) TimerEvent: {}
+[0.901505] (-) TimerEvent: {}
+[1.001910] (-) TimerEvent: {}
+[1.096208] (camera_test) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/camera_test', 'build', '--build-base', '/root/ros2-ws-2024/build/camera_test/build', 'install', '--record', '/root/ros2-ws-2024/build/camera_test/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/root/ros2-ws-2024/src/camera_test', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'root', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib', 'MOTD_SHOWN': 'update-motd', 'HOME': '/root', 'OLDPWD': '/root/ros2-ws-2024/src', 'ROS_PYTHON_VERSION': '3', 'WSL_DISTRO_NAME': 'Ubuntu', 'DEBUGINFOD_URLS': '', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/root/ros2-ws-2024/install', 'ROS_DISTRO': 'iron', 'LOGNAME': 'root', 'NAME': 'Snooze', 'WSL_INTEROP': '/run/WSL/9_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_2.1.5.0_x64__8wekyb3d8bbwe:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/AdoptOpenJDK/jdk-16.0.1.9-hotspot/bin:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/mnt/c/Program Files/Razer Chroma SDK/bin:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NGX:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Intel/WiFi/bin/:/mnt/c/Program Files/Common Files/Intel/WirelessCommon/:/mnt/c/Users/Administrator/AppData/Local/Microsoft/WindowsApps:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/WINDOWS/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/MATLAB/R2023b/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Users/test/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/test/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/test/AppData/Roaming/npm:/mnt/c/texlive/2022/bin/win32:/mnt/c/Users/test/AppData/Local/Programs/Python/Python311/python:/mnt/c/MinGW/bin:/mnt/c/ghcup/bin:/mnt/c/Users/test/AppData/Local/Programs/Python/Python311/Scripts:/mnt/c/mongosh/bin:/mnt/c/Program Files/swipl/bin:/mnt/c/Users/test/anaconda3/Scripts:/mnt/c/Users/test/anaconda3/Library/bin:/mnt/c/Program Files/Neovim/bin:/snap/bin:/opt/nvim/bin', 'XDG_RUNTIME_DIR': '/mnt/wslg/runtime-dir', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/root/ros2-ws-2024/install/py_pubsub:/root/ros2-ws-2024/install/camera_test:/opt/ros/iron', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/ros2-ws-2024/build/camera_test', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/root/ros2-ws-2024/build/camera_test/prefix_override:/root/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages:/root/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages:/root/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages:/opt/ros/iron/lib/python3.10/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/root/ros2-ws-2024/install/camera_test', 'WSLENV': ''}, 'shell': False}
+[1.101210] (py_pubsub) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/py_pubsub', 'build', '--build-base', '/root/ros2-ws-2024/build/py_pubsub/build', 'install', '--record', '/root/ros2-ws-2024/build/py_pubsub/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/root/ros2-ws-2024/src/py_pubsub', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'root', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib', 'MOTD_SHOWN': 'update-motd', 'HOME': '/root', 'OLDPWD': '/root/ros2-ws-2024/src', 'ROS_PYTHON_VERSION': '3', 'WSL_DISTRO_NAME': 'Ubuntu', 'DEBUGINFOD_URLS': '', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/root/ros2-ws-2024/install', 'ROS_DISTRO': 'iron', 'LOGNAME': 'root', 'NAME': 'Snooze', 'WSL_INTEROP': '/run/WSL/9_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_2.1.5.0_x64__8wekyb3d8bbwe:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/AdoptOpenJDK/jdk-16.0.1.9-hotspot/bin:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/mnt/c/Program Files/Razer Chroma SDK/bin:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NGX:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Intel/WiFi/bin/:/mnt/c/Program Files/Common Files/Intel/WirelessCommon/:/mnt/c/Users/Administrator/AppData/Local/Microsoft/WindowsApps:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/WINDOWS/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/MATLAB/R2023b/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Users/test/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/test/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/test/AppData/Roaming/npm:/mnt/c/texlive/2022/bin/win32:/mnt/c/Users/test/AppData/Local/Programs/Python/Python311/python:/mnt/c/MinGW/bin:/mnt/c/ghcup/bin:/mnt/c/Users/test/AppData/Local/Programs/Python/Python311/Scripts:/mnt/c/mongosh/bin:/mnt/c/Program Files/swipl/bin:/mnt/c/Users/test/anaconda3/Scripts:/mnt/c/Users/test/anaconda3/Library/bin:/mnt/c/Program Files/Neovim/bin:/snap/bin:/opt/nvim/bin', 'XDG_RUNTIME_DIR': '/mnt/wslg/runtime-dir', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/root/ros2-ws-2024/install/py_pubsub:/root/ros2-ws-2024/install/camera_test:/opt/ros/iron', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/ros2-ws-2024/build/py_pubsub', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/root/ros2-ws-2024/build/py_pubsub/prefix_override:/root/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages:/root/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages:/root/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages:/opt/ros/iron/lib/python3.10/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/root/ros2-ws-2024/install/camera_test', 'WSLENV': ''}, 'shell': False}
+[1.103478] (-) TimerEvent: {}
+[1.203775] (-) TimerEvent: {}
+[1.304126] (-) TimerEvent: {}
+[1.360146] (camera_test) StdoutLine: {'line': b'running egg_info\n'}
+[1.360994] (camera_test) StdoutLine: {'line': b'writing ../../build/camera_test/camera_test.egg-info/PKG-INFO\n'}
+[1.361251] (camera_test) StdoutLine: {'line': b'writing dependency_links to ../../build/camera_test/camera_test.egg-info/dependency_links.txt\n'}
+[1.361785] (camera_test) StdoutLine: {'line': b'writing entry points to ../../build/camera_test/camera_test.egg-info/entry_points.txt\n'}
+[1.362144] (camera_test) StdoutLine: {'line': b'writing requirements to ../../build/camera_test/camera_test.egg-info/requires.txt\n'}
+[1.362353] (camera_test) StdoutLine: {'line': b'writing top-level names to ../../build/camera_test/camera_test.egg-info/top_level.txt\n'}
+[1.364704] (camera_test) StdoutLine: {'line': b"reading manifest file '../../build/camera_test/camera_test.egg-info/SOURCES.txt'\n"}
+[1.365233] (camera_test) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[1.366030] (camera_test) StdoutLine: {'line': b"writing manifest file '../../build/camera_test/camera_test.egg-info/SOURCES.txt'\n"}
+[1.366450] (camera_test) StdoutLine: {'line': b'running build\n'}
+[1.366556] (camera_test) StdoutLine: {'line': b'running build_py\n'}
+[1.366857] (camera_test) StdoutLine: {'line': b'running install\n'}
+[1.367093] (camera_test) StdoutLine: {'line': b'running install_lib\n'}
+[1.368484] (camera_test) StdoutLine: {'line': b'running install_data\n'}
+[1.368732] (camera_test) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.370518] (camera_test) StdoutLine: {'line': b"removing '/root/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages/camera_test-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[1.370931] (camera_test) StdoutLine: {'line': b'Copying ../../build/camera_test/camera_test.egg-info to /root/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages/camera_test-0.0.0-py3.10.egg-info\n'}
+[1.372429] (camera_test) StdoutLine: {'line': b'running install_scripts\n'}
+[1.395376] (camera_test) StdoutLine: {'line': b'Installing listener script to /root/ros2-ws-2024/install/camera_test/lib/camera_test\n'}
+[1.395734] (camera_test) StdoutLine: {'line': b'Installing talker script to /root/ros2-ws-2024/install/camera_test/lib/camera_test\n'}
+[1.395974] (camera_test) StdoutLine: {'line': b"writing list of installed files to '/root/ros2-ws-2024/build/camera_test/install.log'\n"}
+[1.401021] (py_pubsub) StdoutLine: {'line': b'running egg_info\n'}
+[1.401855] (py_pubsub) StdoutLine: {'line': b'writing ../../build/py_pubsub/py_pubsub.egg-info/PKG-INFO\n'}
+[1.402173] (py_pubsub) StdoutLine: {'line': b'writing dependency_links to ../../build/py_pubsub/py_pubsub.egg-info/dependency_links.txt\n'}
+[1.402381] (py_pubsub) StdoutLine: {'line': b'writing entry points to ../../build/py_pubsub/py_pubsub.egg-info/entry_points.txt\n'}
+[1.402720] (py_pubsub) StdoutLine: {'line': b'writing requirements to ../../build/py_pubsub/py_pubsub.egg-info/requires.txt\n'}
+[1.402878] (py_pubsub) StdoutLine: {'line': b'writing top-level names to ../../build/py_pubsub/py_pubsub.egg-info/top_level.txt\n'}
+[1.404251] (-) TimerEvent: {}
+[1.405160] (py_pubsub) StdoutLine: {'line': b"reading manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'\n"}
+[1.405985] (py_pubsub) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[1.407157] (py_pubsub) StdoutLine: {'line': b"writing manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'\n"}
+[1.407620] (py_pubsub) StdoutLine: {'line': b'running build\n'}
+[1.407770] (py_pubsub) StdoutLine: {'line': b'running build_py\n'}
+[1.408038] (py_pubsub) StdoutLine: {'line': b'running install\n'}
+[1.408465] (py_pubsub) StdoutLine: {'line': b'running install_lib\n'}
+[1.410359] (py_pubsub) StdoutLine: {'line': b'running install_data\n'}
+[1.410704] (py_pubsub) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.412952] (py_pubsub) StdoutLine: {'line': b"removing '/root/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages/py_pubsub-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[1.413473] (py_pubsub) StdoutLine: {'line': b'Copying ../../build/py_pubsub/py_pubsub.egg-info to /root/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages/py_pubsub-0.0.0-py3.10.egg-info\n'}
+[1.415220] (py_pubsub) StdoutLine: {'line': b'running install_scripts\n'}
+[1.423494] (camera_test) CommandEnded: {'returncode': 0}
+[1.438824] (py_pubsub) StdoutLine: {'line': b"writing list of installed files to '/root/ros2-ws-2024/build/py_pubsub/install.log'\n"}
+[1.448214] (camera_test) JobEnded: {'identifier': 'camera_test', 'rc': 0}
+[1.463298] (py_pubsub) CommandEnded: {'returncode': 0}
+[1.469537] (py_pubsub) JobEnded: {'identifier': 'py_pubsub', 'rc': 0}
+[1.504378] (-) TimerEvent: {}
+[1.604747] (-) TimerEvent: {}
+[1.705157] (-) TimerEvent: {}
+[1.805670] (-) TimerEvent: {}
+[1.906397] (-) TimerEvent: {}
+[2.007038] (-) TimerEvent: {}
+[2.107747] (-) TimerEvent: {}
+[2.158479] (odrive_can) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[2.160588] (canbus_interface) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[2.208017] (-) TimerEvent: {}
+[2.308746] (-) TimerEvent: {}
+[2.410079] (-) TimerEvent: {}
+[2.510851] (-) TimerEvent: {}
+[2.611505] (-) TimerEvent: {}
+[2.712118] (-) TimerEvent: {}
+[2.812905] (-) TimerEvent: {}
+[2.913648] (-) TimerEvent: {}
+[3.014445] (-) TimerEvent: {}
+[3.115175] (-) TimerEvent: {}
+[3.216001] (-) TimerEvent: {}
+[3.316664] (-) TimerEvent: {}
+[3.417409] (-) TimerEvent: {}
+[3.518144] (-) TimerEvent: {}
+[3.618794] (-) TimerEvent: {}
+[3.719685] (-) TimerEvent: {}
+[3.820506] (-) TimerEvent: {}
+[3.921331] (-) TimerEvent: {}
+[4.022099] (-) TimerEvent: {}
+[4.122845] (-) TimerEvent: {}
+[4.223557] (-) TimerEvent: {}
+[4.324271] (-) TimerEvent: {}
+[4.425022] (-) TimerEvent: {}
+[4.526067] (-) TimerEvent: {}
+[4.626838] (-) TimerEvent: {}
+[4.727641] (-) TimerEvent: {}
+[4.828399] (-) TimerEvent: {}
+[4.929136] (-) TimerEvent: {}
+[5.008108] (odrive_can) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[5.029419] (-) TimerEvent: {}
+[5.033361] (canbus_interface) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[5.129659] (-) TimerEvent: {}
+[5.230512] (-) TimerEvent: {}
+[5.331241] (-) TimerEvent: {}
+[5.431881] (-) TimerEvent: {}
+[5.532603] (-) TimerEvent: {}
+[5.633327] (-) TimerEvent: {}
+[5.655719] (odrive_can) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[5.656213] (canbus_interface) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[5.669525] (odrive_can) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[5.671464] (canbus_interface) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[5.671912] (odrive_can) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[5.672480] (canbus_interface) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[5.673528] (odrive_can) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[5.673970] (canbus_interface) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[5.681622] (odrive_can) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[5.682097] (canbus_interface) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[5.733605] (-) TimerEvent: {}
+[5.834223] (-) TimerEvent: {}
+[5.934803] (-) TimerEvent: {}
+[6.035556] (-) TimerEvent: {}
+[6.136337] (-) TimerEvent: {}
+[6.236984] (-) TimerEvent: {}
+[6.296413] (canbus_interface) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[6.296851] (odrive_can) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[6.308243] (odrive_can) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[6.308601] (odrive_can) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[6.308863] (canbus_interface) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[6.309267] (odrive_can) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[6.309592] (canbus_interface) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[6.309801] (canbus_interface) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[6.321224] (odrive_can) StdoutLine: {'line': b'-- Found ament_cmake: 2.0.4 (/opt/ros/iron/share/ament_cmake/cmake)\n'}
+[6.337133] (-) TimerEvent: {}
+[6.437469] (-) TimerEvent: {}
+[6.504369] (odrive_can) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[6.537630] (-) TimerEvent: {}
+[6.637280] (odrive_can) StdoutLine: {'line': b'-- Found rclcpp: 21.0.5 (/opt/ros/iron/share/rclcpp/cmake)\n'}
+[6.637779] (-) TimerEvent: {}
+[6.738220] (-) TimerEvent: {}
+[6.838872] (-) TimerEvent: {}
+[6.939773] (-) TimerEvent: {}
+[7.040441] (-) TimerEvent: {}
+[7.141076] (-) TimerEvent: {}
+[7.241875] (-) TimerEvent: {}
+[7.342566] (-) TimerEvent: {}
+[7.443314] (-) TimerEvent: {}
+[7.544026] (-) TimerEvent: {}
+[7.644846] (-) TimerEvent: {}
+[7.745648] (-) TimerEvent: {}
+[7.791652] (odrive_can) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.0.1 (/opt/ros/iron/share/rosidl_generator_c/cmake)\n'}
+[7.845458] (odrive_can) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.0.1 (/opt/ros/iron/share/rosidl_generator_cpp/cmake)\n'}
+[7.845803] (-) TimerEvent: {}
+[7.929807] (odrive_can) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[7.946085] (-) TimerEvent: {}
+[8.015690] (odrive_can) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[8.046456] (-) TimerEvent: {}
+[8.147251] (-) TimerEvent: {}
+[8.248379] (-) TimerEvent: {}
+[8.348835] (-) TimerEvent: {}
+[8.440788] (odrive_can) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.1.0 (/opt/ros/iron/share/rmw_implementation_cmake/cmake)\n'}
+[8.449117] (-) TimerEvent: {}
+[8.455167] (odrive_can) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 7.1.3 (/opt/ros/iron/share/rmw_fastrtps_cpp/cmake)\n'}
+[8.549334] (-) TimerEvent: {}
+[8.650033] (-) TimerEvent: {}
+[8.750689] (-) TimerEvent: {}
+[8.851611] (-) TimerEvent: {}
+[8.952371] (-) TimerEvent: {}
+[9.053102] (-) TimerEvent: {}
+[9.153801] (-) TimerEvent: {}
+[9.254519] (-) TimerEvent: {}
+[9.355250] (-) TimerEvent: {}
+[9.455924] (-) TimerEvent: {}
+[9.556573] (-) TimerEvent: {}
+[9.657218] (-) TimerEvent: {}
+[9.757987] (-) TimerEvent: {}
+[9.858707] (-) TimerEvent: {}
+[9.959365] (-) TimerEvent: {}
+[10.060009] (-) TimerEvent: {}
+[10.160700] (-) TimerEvent: {}
+[10.261338] (-) TimerEvent: {}
+[10.362162] (-) TimerEvent: {}
+[10.462870] (-) TimerEvent: {}
+[10.563640] (-) TimerEvent: {}
+[10.664458] (-) TimerEvent: {}
+[10.765319] (-) TimerEvent: {}
+[10.866043] (-) TimerEvent: {}
+[10.966899] (-) TimerEvent: {}
+[11.067658] (-) TimerEvent: {}
+[11.168333] (-) TimerEvent: {}
+[11.269087] (-) TimerEvent: {}
+[11.369813] (-) TimerEvent: {}
+[11.470482] (-) TimerEvent: {}
+[11.571154] (-) TimerEvent: {}
+[11.671827] (-) TimerEvent: {}
+[11.772634] (-) TimerEvent: {}
+[11.873265] (-) TimerEvent: {}
+[11.973986] (-) TimerEvent: {}
+[12.074626] (-) TimerEvent: {}
+[12.175282] (-) TimerEvent: {}
+[12.276140] (-) TimerEvent: {}
+[12.376951] (-) TimerEvent: {}
+[12.477591] (-) TimerEvent: {}
+[12.578169] (-) TimerEvent: {}
+[12.678605] (-) TimerEvent: {}
+[12.779126] (-) TimerEvent: {}
+[12.879625] (-) TimerEvent: {}
+[12.980231] (-) TimerEvent: {}
+[13.080707] (-) TimerEvent: {}
+[13.181149] (-) TimerEvent: {}
+[13.281626] (-) TimerEvent: {}
+[13.382219] (-) TimerEvent: {}
+[13.482757] (-) TimerEvent: {}
+[13.583533] (-) TimerEvent: {}
+[13.684231] (-) TimerEvent: {}
+[13.784964] (-) TimerEvent: {}
+[13.885734] (-) TimerEvent: {}
+[13.986484] (-) TimerEvent: {}
+[14.087263] (-) TimerEvent: {}
+[14.188032] (-) TimerEvent: {}
+[14.288750] (-) TimerEvent: {}
+[14.389568] (-) TimerEvent: {}
+[14.490429] (-) TimerEvent: {}
+[14.591120] (-) TimerEvent: {}
+[14.691826] (-) TimerEvent: {}
+[14.792554] (-) TimerEvent: {}
+[14.893338] (-) TimerEvent: {}
+[14.994126] (-) TimerEvent: {}
+[15.094883] (-) TimerEvent: {}
+[15.195692] (-) TimerEvent: {}
+[15.296408] (-) TimerEvent: {}
+[15.397174] (-) TimerEvent: {}
+[15.498030] (-) TimerEvent: {}
+[15.598735] (-) TimerEvent: {}
+[15.699397] (-) TimerEvent: {}
+[15.800093] (-) TimerEvent: {}
+[15.900867] (-) TimerEvent: {}
+[16.001641] (-) TimerEvent: {}
+[16.102303] (-) TimerEvent: {}
+[16.202970] (-) TimerEvent: {}
+[16.303905] (-) TimerEvent: {}
+[16.404643] (-) TimerEvent: {}
+[16.505310] (-) TimerEvent: {}
+[16.606038] (-) TimerEvent: {}
+[16.706847] (-) TimerEvent: {}
+[16.807589] (-) TimerEvent: {}
+[16.815086] (canbus_interface) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:7 (find_package):\n'}
+[16.815716] (canbus_interface) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[16.816308] (canbus_interface) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[16.817092] (canbus_interface) StderrLine: {'line': b'  CMake did not find one.\n'}
+[16.817333] (canbus_interface) StderrLine: {'line': b'\n'}
+[16.817529] (canbus_interface) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[16.817925] (canbus_interface) StderrLine: {'line': b'  of the following names:\n'}
+[16.818321] (canbus_interface) StderrLine: {'line': b'\n'}
+[16.818524] (canbus_interface) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[16.818709] (canbus_interface) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[16.819218] (canbus_interface) StderrLine: {'line': b'\n'}
+[16.819422] (canbus_interface) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[16.819691] (canbus_interface) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[16.819903] (canbus_interface) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[16.820154] (canbus_interface) StderrLine: {'line': b'  installed.\n'}
+[16.820616] (canbus_interface) StderrLine: {'line': b'\n'}
+[16.820922] (canbus_interface) StderrLine: {'line': b'\x1b[0m\n'}
+[16.821117] (canbus_interface) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[16.821320] (canbus_interface) StdoutLine: {'line': b'See also "/root/ros2-ws-2024/build/canbus_interface/CMakeFiles/CMakeOutput.log".\n'}
+[16.834556] (canbus_interface) CommandEnded: {'returncode': 1}
+[16.873706] (canbus_interface) JobEnded: {'identifier': 'canbus_interface', 'rc': 1}
+[16.907867] (-) TimerEvent: {}
+[17.008618] (-) TimerEvent: {}
+[17.109323] (-) TimerEvent: {}
+[17.210039] (-) TimerEvent: {}
+[17.310751] (-) TimerEvent: {}
+[17.411389] (-) TimerEvent: {}
+[17.511830] (-) TimerEvent: {}
+[17.612225] (-) TimerEvent: {}
+[17.712717] (-) TimerEvent: {}
+[17.813147] (-) TimerEvent: {}
+[17.913617] (-) TimerEvent: {}
+[18.014102] (-) TimerEvent: {}
+[18.114619] (-) TimerEvent: {}
+[18.215201] (-) TimerEvent: {}
+[18.315714] (-) TimerEvent: {}
+[18.416157] (-) TimerEvent: {}
+[18.516653] (-) TimerEvent: {}
+[18.617250] (-) TimerEvent: {}
+[18.717965] (-) TimerEvent: {}
+[18.818675] (-) TimerEvent: {}
+[18.919371] (-) TimerEvent: {}
+[19.019991] (-) TimerEvent: {}
+[19.120869] (-) TimerEvent: {}
+[19.221550] (-) TimerEvent: {}
+[19.322272] (-) TimerEvent: {}
+[19.423081] (-) TimerEvent: {}
+[19.523830] (-) TimerEvent: {}
+[19.624457] (-) TimerEvent: {}
+[19.725155] (-) TimerEvent: {}
+[19.825836] (-) TimerEvent: {}
+[19.926554] (-) TimerEvent: {}
+[20.027231] (-) TimerEvent: {}
+[20.128241] (-) TimerEvent: {}
+[20.229052] (-) TimerEvent: {}
+[20.329727] (-) TimerEvent: {}
+[20.401615] (odrive_can) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[20.429949] (-) TimerEvent: {}
+[20.530676] (-) TimerEvent: {}
+[20.631390] (-) TimerEvent: {}
+[20.732157] (-) TimerEvent: {}
+[20.832875] (-) TimerEvent: {}
+[20.933529] (-) TimerEvent: {}
+[21.034195] (-) TimerEvent: {}
+[21.134879] (-) TimerEvent: {}
+[21.235569] (-) TimerEvent: {}
+[21.336304] (-) TimerEvent: {}
+[21.436996] (-) TimerEvent: {}
+[21.537650] (-) TimerEvent: {}
+[21.638377] (-) TimerEvent: {}
+[21.739361] (-) TimerEvent: {}
+[21.840096] (-) TimerEvent: {}
+[21.940759] (-) TimerEvent: {}
+[22.041372] (-) TimerEvent: {}
+[22.142062] (-) TimerEvent: {}
+[22.242660] (-) TimerEvent: {}
+[22.343245] (-) TimerEvent: {}
+[22.443865] (-) TimerEvent: {}
+[22.544465] (-) TimerEvent: {}
+[22.645116] (-) TimerEvent: {}
+[22.745860] (-) TimerEvent: {}
+[22.846558] (-) TimerEvent: {}
+[22.947210] (-) TimerEvent: {}
+[23.047861] (-) TimerEvent: {}
+[23.148535] (-) TimerEvent: {}
+[23.249401] (-) TimerEvent: {}
+[23.350071] (-) TimerEvent: {}
+[23.450660] (-) TimerEvent: {}
+[23.551293] (-) TimerEvent: {}
+[23.652014] (-) TimerEvent: {}
+[23.752638] (-) TimerEvent: {}
+[23.853219] (-) TimerEvent: {}
+[23.953817] (-) TimerEvent: {}
+[24.054446] (-) TimerEvent: {}
+[24.155118] (-) TimerEvent: {}
+[24.255767] (-) TimerEvent: {}
+[24.356373] (-) TimerEvent: {}
+[24.456986] (-) TimerEvent: {}
+[24.557587] (-) TimerEvent: {}
+[24.658237] (-) TimerEvent: {}
+[24.758777] (-) TimerEvent: {}
+[24.859593] (-) TimerEvent: {}
+[24.960185] (-) TimerEvent: {}
+[25.060857] (-) TimerEvent: {}
+[25.161441] (-) TimerEvent: {}
+[25.262118] (-) TimerEvent: {}
+[25.362830] (-) TimerEvent: {}
+[25.463549] (-) TimerEvent: {}
+[25.564135] (-) TimerEvent: {}
+[25.664826] (-) TimerEvent: {}
+[25.765509] (-) TimerEvent: {}
+[25.866131] (-) TimerEvent: {}
+[25.966824] (-) TimerEvent: {}
+[26.067415] (-) TimerEvent: {}
+[26.168001] (-) TimerEvent: {}
+[26.268744] (-) TimerEvent: {}
+[26.369377] (-) TimerEvent: {}
+[26.470056] (-) TimerEvent: {}
+[26.570624] (-) TimerEvent: {}
+[26.671171] (-) TimerEvent: {}
+[26.771794] (-) TimerEvent: {}
+[26.872421] (-) TimerEvent: {}
+[26.973096] (-) TimerEvent: {}
+[27.073671] (-) TimerEvent: {}
+[27.174157] (-) TimerEvent: {}
+[27.274470] (-) TimerEvent: {}
+[27.374786] (-) TimerEvent: {}
+[27.475187] (-) TimerEvent: {}
+[27.575836] (-) TimerEvent: {}
+[27.676473] (-) TimerEvent: {}
+[27.777035] (-) TimerEvent: {}
+[27.877607] (-) TimerEvent: {}
+[27.978182] (-) TimerEvent: {}
+[28.078998] (-) TimerEvent: {}
+[28.179630] (-) TimerEvent: {}
+[28.280274] (-) TimerEvent: {}
+[28.380862] (-) TimerEvent: {}
+[28.481547] (-) TimerEvent: {}
+[28.582192] (-) TimerEvent: {}
+[28.682943] (-) TimerEvent: {}
+[28.783738] (-) TimerEvent: {}
+[28.884368] (-) TimerEvent: {}
+[28.985040] (-) TimerEvent: {}
+[29.085667] (-) TimerEvent: {}
+[29.186419] (-) TimerEvent: {}
+[29.287111] (-) TimerEvent: {}
+[29.387798] (-) TimerEvent: {}
+[29.488418] (-) TimerEvent: {}
+[29.589070] (-) TimerEvent: {}
+[29.606721] (odrive_can) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/iron/include  \n'}
+[29.689395] (-) TimerEvent: {}
+[29.789963] (-) TimerEvent: {}
+[29.890677] (-) TimerEvent: {}
+[29.991243] (-) TimerEvent: {}
+[30.091845] (-) TimerEvent: {}
+[30.192604] (-) TimerEvent: {}
+[30.293216] (-) TimerEvent: {}
+[30.393891] (-) TimerEvent: {}
+[30.494528] (-) TimerEvent: {}
+[30.595128] (-) TimerEvent: {}
+[30.695742] (-) TimerEvent: {}
+[30.796416] (-) TimerEvent: {}
+[30.897086] (-) TimerEvent: {}
+[30.997677] (-) TimerEvent: {}
+[31.098326] (-) TimerEvent: {}
+[31.198973] (-) TimerEvent: {}
+[31.299592] (-) TimerEvent: {}
+[31.400161] (-) TimerEvent: {}
+[31.500788] (-) TimerEvent: {}
+[31.601448] (-) TimerEvent: {}
+[31.702070] (-) TimerEvent: {}
+[31.802722] (-) TimerEvent: {}
+[31.903359] (-) TimerEvent: {}
+[32.003946] (-) TimerEvent: {}
+[32.104576] (-) TimerEvent: {}
+[32.205266] (-) TimerEvent: {}
+[32.305701] (-) TimerEvent: {}
+[32.406233] (-) TimerEvent: {}
+[32.506844] (-) TimerEvent: {}
+[32.607488] (-) TimerEvent: {}
+[32.708123] (-) TimerEvent: {}
+[32.808822] (-) TimerEvent: {}
+[32.909566] (-) TimerEvent: {}
+[33.010172] (-) TimerEvent: {}
+[33.110877] (-) TimerEvent: {}
+[33.211528] (-) TimerEvent: {}
+[33.312107] (-) TimerEvent: {}
+[33.412696] (-) TimerEvent: {}
+[33.513302] (-) TimerEvent: {}
+[33.613886] (-) TimerEvent: {}
+[33.714564] (-) TimerEvent: {}
+[33.815226] (-) TimerEvent: {}
+[33.915829] (-) TimerEvent: {}
+[34.016461] (-) TimerEvent: {}
+[34.117126] (-) TimerEvent: {}
+[34.217729] (-) TimerEvent: {}
+[34.318405] (-) TimerEvent: {}
+[34.419068] (-) TimerEvent: {}
+[34.519750] (-) TimerEvent: {}
+[34.620362] (-) TimerEvent: {}
+[34.721090] (-) TimerEvent: {}
+[34.821732] (-) TimerEvent: {}
+[34.922620] (-) TimerEvent: {}
+[35.023323] (-) TimerEvent: {}
+[35.124109] (-) TimerEvent: {}
+[35.225120] (-) TimerEvent: {}
+[35.326121] (-) TimerEvent: {}
+[35.426887] (-) TimerEvent: {}
+[35.527634] (-) TimerEvent: {}
+[35.628335] (-) TimerEvent: {}
+[35.729153] (-) TimerEvent: {}
+[35.829956] (-) TimerEvent: {}
+[35.930814] (-) TimerEvent: {}
+[36.031705] (-) TimerEvent: {}
+[36.132566] (-) TimerEvent: {}
+[36.233398] (-) TimerEvent: {}
+[36.334201] (-) TimerEvent: {}
+[36.434909] (-) TimerEvent: {}
+[36.535747] (-) TimerEvent: {}
+[36.636568] (-) TimerEvent: {}
+[36.737333] (-) TimerEvent: {}
+[36.838185] (-) TimerEvent: {}
+[36.939224] (-) TimerEvent: {}
+[37.040003] (-) TimerEvent: {}
+[37.140735] (-) TimerEvent: {}
+[37.241506] (-) TimerEvent: {}
+[37.342339] (-) TimerEvent: {}
+[37.443555] (-) TimerEvent: {}
+[37.543974] (-) TimerEvent: {}
+[37.644406] (-) TimerEvent: {}
+[37.744783] (-) TimerEvent: {}
+[37.845230] (-) TimerEvent: {}
+[37.945582] (-) TimerEvent: {}
+[38.045960] (-) TimerEvent: {}
+[38.146635] (-) TimerEvent: {}
+[38.247246] (-) TimerEvent: {}
+[38.347827] (-) TimerEvent: {}
+[38.448209] (-) TimerEvent: {}
+[38.548643] (-) TimerEvent: {}
+[38.649016] (-) TimerEvent: {}
+[38.749440] (-) TimerEvent: {}
+[38.849950] (-) TimerEvent: {}
+[38.950391] (-) TimerEvent: {}
+[39.050865] (-) TimerEvent: {}
+[39.151352] (-) TimerEvent: {}
+[39.251795] (-) TimerEvent: {}
+[39.352289] (-) TimerEvent: {}
+[39.452767] (-) TimerEvent: {}
+[39.553183] (-) TimerEvent: {}
+[39.653647] (-) TimerEvent: {}
+[39.754088] (-) TimerEvent: {}
+[39.854494] (-) TimerEvent: {}
+[39.954893] (-) TimerEvent: {}
+[40.055387] (-) TimerEvent: {}
+[40.155980] (-) TimerEvent: {}
+[40.256690] (-) TimerEvent: {}
+[40.357128] (-) TimerEvent: {}
+[40.457546] (-) TimerEvent: {}
+[40.557902] (-) TimerEvent: {}
+[40.658354] (-) TimerEvent: {}
+[40.758734] (-) TimerEvent: {}
+[40.859179] (-) TimerEvent: {}
+[40.959590] (-) TimerEvent: {}
+[41.059940] (-) TimerEvent: {}
+[41.160412] (-) TimerEvent: {}
+[41.260941] (-) TimerEvent: {}
+[41.361507] (-) TimerEvent: {}
+[41.461987] (-) TimerEvent: {}
+[41.562390] (-) TimerEvent: {}
+[41.662829] (-) TimerEvent: {}
+[41.763186] (-) TimerEvent: {}
+[41.863637] (-) TimerEvent: {}
+[41.964089] (-) TimerEvent: {}
+[42.064506] (-) TimerEvent: {}
+[42.165067] (-) TimerEvent: {}
+[42.265425] (-) TimerEvent: {}
+[42.365858] (-) TimerEvent: {}
+[42.466399] (-) TimerEvent: {}
+[42.567148] (-) TimerEvent: {}
+[42.667941] (-) TimerEvent: {}
+[42.768703] (-) TimerEvent: {}
+[42.869342] (-) TimerEvent: {}
+[42.970215] (-) TimerEvent: {}
+[43.071018] (-) TimerEvent: {}
+[43.172120] (-) TimerEvent: {}
+[43.273023] (-) TimerEvent: {}
+[43.373814] (-) TimerEvent: {}
+[43.474735] (-) TimerEvent: {}
+[43.575615] (-) TimerEvent: {}
+[43.676403] (-) TimerEvent: {}
+[43.777280] (-) TimerEvent: {}
+[43.878205] (-) TimerEvent: {}
+[43.979107] (-) TimerEvent: {}
+[44.080180] (-) TimerEvent: {}
+[44.145056] (odrive_can) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[44.180450] (-) TimerEvent: {}
+[44.281186] (-) TimerEvent: {}
+[44.381865] (-) TimerEvent: {}
+[44.482591] (-) TimerEvent: {}
+[44.583118] (-) TimerEvent: {}
+[44.653975] (odrive_can) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.5.0 (/opt/ros/iron/share/rosidl_default_generators/cmake)\n'}
+[44.675460] (odrive_can) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.0.1 (/opt/ros/iron/share/rosidl_adapter/cmake)\n'}
+[44.683219] (-) TimerEvent: {}
+[44.783589] (-) TimerEvent: {}
+[44.883975] (-) TimerEvent: {}
+[44.984351] (-) TimerEvent: {}
+[45.084731] (-) TimerEvent: {}
+[45.100263] (odrive_can) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.11.2 (/opt/ros/iron/share/ament_cmake_ros/cmake)\n'}
+[45.185110] (-) TimerEvent: {}
+[45.285753] (-) TimerEvent: {}
+[45.386330] (-) TimerEvent: {}
+[45.487129] (-) TimerEvent: {}
+[45.587608] (-) TimerEvent: {}
+[45.688150] (-) TimerEvent: {}
+[45.788822] (-) TimerEvent: {}
+[45.829196] (odrive_can) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[45.889099] (-) TimerEvent: {}
+[45.989777] (-) TimerEvent: {}
+[46.072081] (odrive_can) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[46.090087] (-) TimerEvent: {}
+[46.190844] (-) TimerEvent: {}
+[46.291463] (-) TimerEvent: {}
+[46.392181] (-) TimerEvent: {}
+[46.492794] (-) TimerEvent: {}
+[46.593600] (-) TimerEvent: {}
+[46.694290] (-) TimerEvent: {}
+[46.794989] (-) TimerEvent: {}
+[46.895697] (-) TimerEvent: {}
+[46.996396] (-) TimerEvent: {}
+[47.097151] (-) TimerEvent: {}
+[47.197876] (-) TimerEvent: {}
+[47.280213] (odrive_can) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[47.286186] (odrive_can) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.2 (/opt/ros/iron/share/python_cmake_module/cmake)\n'}
+[47.298115] (-) TimerEvent: {}
+[47.398693] (-) TimerEvent: {}
+[47.499343] (-) TimerEvent: {}
+[47.600074] (-) TimerEvent: {}
+[47.700742] (-) TimerEvent: {}
+[47.801380] (-) TimerEvent: {}
+[47.901966] (-) TimerEvent: {}
+[48.002423] (-) TimerEvent: {}
+[48.103081] (-) TimerEvent: {}
+[48.203796] (-) TimerEvent: {}
+[48.304495] (-) TimerEvent: {}
+[48.405185] (-) TimerEvent: {}
+[48.505869] (-) TimerEvent: {}
+[48.606769] (-) TimerEvent: {}
+[48.707766] (-) TimerEvent: {}
+[48.808531] (-) TimerEvent: {}
+[48.909397] (-) TimerEvent: {}
+[49.010084] (-) TimerEvent: {}
+[49.110750] (-) TimerEvent: {}
+[49.211577] (-) TimerEvent: {}
+[49.312372] (-) TimerEvent: {}
+[49.413194] (-) TimerEvent: {}
+[49.513928] (-) TimerEvent: {}
+[49.614600] (-) TimerEvent: {}
+[49.715266] (-) TimerEvent: {}
+[49.815971] (-) TimerEvent: {}
+[49.916698] (-) TimerEvent: {}
+[50.017588] (-) TimerEvent: {}
+[50.118539] (-) TimerEvent: {}
+[50.219722] (-) TimerEvent: {}
+[50.320573] (-) TimerEvent: {}
+[50.421310] (-) TimerEvent: {}
+[50.522091] (-) TimerEvent: {}
+[50.622840] (-) TimerEvent: {}
+[50.703823] (odrive_can) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[50.704780] (odrive_can) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[50.705160] (odrive_can) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[50.705384] (odrive_can) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[50.723046] (-) TimerEvent: {}
+[50.752792] (odrive_can) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[50.823185] (-) TimerEvent: {}
+[50.923639] (-) TimerEvent: {}
+[51.024379] (-) TimerEvent: {}
+[51.106959] (odrive_can) StdoutLine: {'line': b'-- Configuring done\n'}
+[51.124632] (-) TimerEvent: {}
+[51.203384] (odrive_can) StdoutLine: {'line': b'-- Generating done\n'}
+[51.212064] (odrive_can) StdoutLine: {'line': b'-- Build files have been written to: /root/ros2-ws-2024/build/odrive_can\n'}
+[51.224840] (-) TimerEvent: {}
+[51.230179] (odrive_can) JobEnded: {'identifier': 'odrive_can', 'rc': 'SIGINT'}
+[51.241961] (-) EventReactorShutdown: {}

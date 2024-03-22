@@ -1,0 +1,38 @@
+{
+  "package_name": "odrive_can",
+  "output_dir": "/root/ros2-ws-2024/build/odrive_can/rosidl_generator_py/odrive_can",
+  "template_dir": "/opt/ros/iron/share/rosidl_generator_py/cmake/../resource",
+  "idl_tuples": [
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can:msg/ControlMessage.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can:msg/ControllerStatus.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can:msg/ODriveStatus.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can:srv/AxisState.idl"
+  ],
+  "ros_interface_dependencies": [
+    "service_msgs:/opt/ros/iron/share/service_msgs/msg/ServiceEventInfo.idl",
+    "builtin_interfaces:/opt/ros/iron/share/builtin_interfaces/msg/Duration.idl",
+    "builtin_interfaces:/opt/ros/iron/share/builtin_interfaces/msg/Time.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/iron/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py",
+    "/opt/ros/iron/lib/python3.10/site-packages/rosidl_generator_py/__init__.py",
+    "/opt/ros/iron/lib/python3.10/site-packages/rosidl_generator_py/generate_py_impl.py",
+    "/opt/ros/iron/share/rosidl_generator_py/cmake/../resource/_action_pkg_typesupport_entry_point.c.em",
+    "/opt/ros/iron/share/rosidl_generator_py/cmake/../resource/_action.py.em",
+    "/opt/ros/iron/share/rosidl_generator_py/cmake/../resource/_idl_pkg_typesupport_entry_point.c.em",
+    "/opt/ros/iron/share/rosidl_generator_py/cmake/../resource/_idl_support.c.em",
+    "/opt/ros/iron/share/rosidl_generator_py/cmake/../resource/_idl.py.em",
+    "/opt/ros/iron/share/rosidl_generator_py/cmake/../resource/_msg_pkg_typesupport_entry_point.c.em",
+    "/opt/ros/iron/share/rosidl_generator_py/cmake/../resource/_msg_support.c.em",
+    "/opt/ros/iron/share/rosidl_generator_py/cmake/../resource/_msg.py.em",
+    "/opt/ros/iron/share/rosidl_generator_py/cmake/../resource/_srv_pkg_typesupport_entry_point.c.em",
+    "/opt/ros/iron/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can/msg/ControlMessage.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can/msg/ControllerStatus.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can/msg/ODriveStatus.idl",
+    "/root/ros2-ws-2024/build/odrive_can/rosidl_adapter/odrive_can/srv/AxisState.idl",
+    "/opt/ros/iron/share/service_msgs/msg/ServiceEventInfo.idl",
+    "/opt/ros/iron/share/builtin_interfaces/msg/Duration.idl",
+    "/opt/ros/iron/share/builtin_interfaces/msg/Time.idl"
+  ]
+}
