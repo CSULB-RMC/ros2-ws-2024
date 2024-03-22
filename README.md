@@ -18,3 +18,9 @@ ros2 run <package> <entrypoint>
 ```
 
 Ex.) `ros2 run py_pubsub listener`
+
+## Can Interface
+Very much not working
+### Resources
+Ros Can Pub - https://github.com/juancamilog/canbus_interface/tree/master <br>
+VESC Communication w/ Can - https://github.com/vedderb/bldc/blob/master/documentation/comm_can.md
