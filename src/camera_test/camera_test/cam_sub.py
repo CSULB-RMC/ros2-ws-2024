@@ -3,7 +3,9 @@ from rclpy.node import Node
 from sensor_msgs.msg import Image       
 from cv_bridge import CvBridge          
 import cv2                             
-import numpy as np                    
+import numpy as np   
+
+cv2.startWindowThread()
 
 lower_red = np.array([0, 90, 128])     
 upper_red = np.array([180, 255, 255])  
@@ -39,8 +41,12 @@ class ImageSubscriber(Node):
         self.get_logger().info(f'Receiving video frame {self.i}')        
         image = self.cv_bridge.imgmsg_to_cv2(data, 'bgr8')     
         # self.object_detect(image)    
-        cv2.imshow("object", image)                          
-        cv2.waitKey(1)                         
+        # cv2.imshow("object", image)                          
+        # cv2.waitKey(1)  
+        cv2.namedWindow("frame")
+        cv2.imshow('frame', image)
+        cv2.waitKey(1)
+                    
 
 
 def main(args=None):                                         
