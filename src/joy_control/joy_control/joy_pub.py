@@ -11,33 +11,52 @@ class JoyPub(Node):
 
     def __init__(self):
         super().__init__('minimal_publisher')
-        self.Lpublisher_ = self.create_publisher(UInt8, 'ex_dt_left', 10)
-        self.Rpublisher_ = self.create_publisher(UInt8, 'ex_dt_right', 10)
+        self.dt_left_publisher_ = self.create_publisher(UInt8, 'ex_dt_left', 10)
+        self.dt_r_publisher_ = self.create_publisher(UInt8, 'ex_dt_right', 10)
+        self.ex_up_publisher_ = self.create_publisher(UInt8, 'ex_up', 10)
+        self.ex_down_publisher_ = self.create_publisher(UInt8, 'ex_down', 10)
 
         self.subscription = self.create_subscription(
 			Joy,
 			'joy',
 			self.listener_callback,
 			10)
+
     def listener_callback(self, msg: Joy):
         uint8 = UInt8()
+        
+        # Left Stick Maps - Left Drive Train
+        if msg.axes[1] > 0: # L Stick Up
+            uint8.data = 150
+            self.dt_left_publisher_.publish(uint8)
+            self.get_logger().info("L-stick: Up")
 
-        if msg.axes[1] > 0: # up
-            uint8.data = 150
-            self.Lpublisher_.publish(uint8)
-            self.get_logger().info("L: Up")
-        elif msg.axes[1] < 0: # down 
+        elif msg.axes[1] < 0: # L Stick Down 
             uint8.data = 50
-            self.Lpublisher_.publish(uint8)
-            self.get_logger().info("L: Down")
-        if msg.axes[3] > 0:
+            self.dt_left_publisher_.publish(uint8)
+            self.get_logger().info("L-stick: Down")
+        
+        # Right Stick Maps - Right Drive Train
+        if msg.axes[3] > 0: # R Stick Up
             uint8.data = 150
-            self.Rpublisher_.publish(uint8)
-            self.get_logger().info("R: Up")
-        elif msg.axes[3] < 0:
+            self.dt_r_publisher_.publish(uint8)
+            self.get_logger().info("R-stick: Up")
+
+        elif msg.axes[3] < 0: # R Stick Down
             uint8.data = 50
-            self.Rpublisher_.publish(uint8)
-            self.get_logger().info("R: Down")
+            self.dt_r_publisher_.publish(uint8)
+            self.get_logger().info("R-stick: Down")
+        
+        # D pad Maps - Excavator
+        if msg.buttons[11] > 0: # D pad Up
+            uint8.data = 150
+            self.ex_up_publisher_.publish(uint8)
+            self.get_logger().info("Dpad: up")
+            
+        elif msg.buttons[12] > 0: # D pad down
+            uint8.data = 50
+            self.ex_down_publisher_.publish(uint8)
+            self.get_logger().info("Dpad: down")
 
     def timer_callback(self):
        pass 
