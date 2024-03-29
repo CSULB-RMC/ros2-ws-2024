@@ -6,7 +6,7 @@ import time
 from threading import Thread
 from std_msgs.msg import String, UInt8
 from can import Message, Bus
-
+# test
 class JoyPub(Node):
 
     def __init__(self):
