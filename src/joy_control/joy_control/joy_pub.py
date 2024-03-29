@@ -13,8 +13,7 @@ class JoyPub(Node):
         super().__init__('minimal_publisher')
         self.dt_left_publisher_ = self.create_publisher(UInt8, 'ex_dt_left', 10)
         self.dt_r_publisher_ = self.create_publisher(UInt8, 'ex_dt_right', 10)
-        self.ex_up_publisher_ = self.create_publisher(UInt8, 'ex_up', 10)
-        self.ex_down_publisher_ = self.create_publisher(UInt8, 'ex_down', 10)
+        self.ex_publisher_ = self.create_publisher(UInt8, 'ex_excavator', 10)
 
         self.subscription = self.create_subscription(
 			Joy,
@@ -50,12 +49,12 @@ class JoyPub(Node):
         # D pad Maps - Excavator
         if msg.buttons[11] > 0: # D pad Up
             uint8.data = 150
-            self.ex_up_publisher_.publish(uint8)
+            self.ex_publisher_.publish(uint8)
             self.get_logger().info("Dpad: up")
             
         elif msg.buttons[12] > 0: # D pad down
             uint8.data = 50
-            self.ex_down_publisher_.publish(uint8)
+            self.ex_publisher_.publish(uint8)
             self.get_logger().info("Dpad: down")
 
     def timer_callback(self):
