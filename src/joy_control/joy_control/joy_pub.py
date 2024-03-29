@@ -47,23 +47,23 @@ class JoyPub(Node):
             self.get_logger().info("R-stick: Down")
         
         # D pad Maps - Excavator
-        if msg.buttons[11] > 0: # D pad Up
+        if msg.axes[7] > 0: # D pad Up
             uint8.data = 150
             self.ex_publisher_.publish(uint8)
             self.get_logger().info("Dpad: up")
             
-        elif msg.buttons[12] > 0: # D pad down
+        elif msg.axes[7] < 0: # D pad down
             uint8.data = 50
             self.ex_publisher_.publish(uint8)
             self.get_logger().info("Dpad: down")
         
         # A button
-        if msg.buttons[0] > 0:
+        if msg.buttons[0] == 1:
             uint8.data = 150
             self.ex_publisher_.publish(uint8)
             self.get_logger().info("A: pressed")
 
-        elif msg.buttons[0] < 0:
+        elif msg.buttons[0] == 1:
             uint8.data = 50
             self.ex_publisher_.publish(uint8)
 
