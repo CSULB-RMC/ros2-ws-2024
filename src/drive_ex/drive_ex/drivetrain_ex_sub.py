@@ -18,11 +18,15 @@ class DrivetrainExcavator(Node):
         #create subscribers to listen for teleop computer commands
         self.ex_dt_left_sub = self.create_subscription(UInt8, 'ex_dt_left', self.ex_dt_left_update, 10)
         self.ex_dt_right_sub = self.create_subscription(UInt8, 'ex_dt_right', self.ex_dt_right_update, 10)
+        self.ex_excavator_sub = self.create_subscription(UInt8, 'ex_excavator', self.ex_excavator_update, 10)
+        self.ex_reg_sub = self.create_subscription(UInt8, 'ex_reg', self.ex_reg_update, 10)
 
         #create state variables, these keep track of what motors
         #should be running and how fast at the current moment
         self.ex_dt_left_speed = 0
         self.ex_dt_right_speed = 0
+        self.ex_excavator_speed = 0
+        self.ex_reg_speed = 0
 
         #create can bus link, right now is linked to virtual vcan 0, most likely
         #will be can0 when on the bot
@@ -44,6 +48,20 @@ class DrivetrainExcavator(Node):
         #TODO
         self.ex_dt_right_speed = 0
         self.get_logger().info('updating right ex dt')
+        pass
+
+    def ex_excavator_update(self, msg):
+        #msg is an UInt8 from 0-200
+        #TODO
+        self.ex_excavator_speed = 0
+        self.get_logger().info('updating excavator')
+        pass
+
+    def ex_reg_update(self, msg):
+        #msg is an UInt8 from 0-200
+        #TODO
+        self.ex_reg_speed = 0
+        self.get_logger().info('updating regolith')
         pass
 
     #periodically pushes out can messages to keep the rover running
