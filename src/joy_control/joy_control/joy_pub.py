@@ -14,7 +14,7 @@ class JoyPub(Node):
         self.dt_left_publisher_ = self.create_publisher(UInt8, 'ex_dt_left', 10)
         self.dt_r_publisher_ = self.create_publisher(UInt8, 'ex_dt_right', 10)
         self.ex_publisher_ = self.create_publisher(UInt8, 'ex_excavator', 10)
-
+        self.reg_publisher_ = self.create_publisher(UInt8, 'ex_reg', 10)
         self.subscription = self.create_subscription(
 			Joy,
 			'joy',
@@ -56,6 +56,16 @@ class JoyPub(Node):
             uint8.data = 50
             self.ex_publisher_.publish(uint8)
             self.get_logger().info("Dpad: down")
+        
+        # A button
+        if msg.buttons[0] > 0:
+            uint8.data = 150
+            self.ex_publisher_.publish(uint8)
+            self.get_logger().info("A: pressed")
+
+        elif msg.buttons[0] < 0:
+            uint8.data = 50
+            self.ex_publisher_.publish(uint8)
 
     def timer_callback(self):
        pass 
