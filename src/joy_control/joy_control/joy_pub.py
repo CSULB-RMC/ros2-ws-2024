@@ -60,12 +60,12 @@ class JoyPub(Node):
         # A button
         if msg.buttons[0] == 1:
             uint8.data = 150
-            self.ex_publisher_.publish(uint8)
+            self.reg_publisher_.publish(uint8)
             self.get_logger().info("A: pressed")
 
         elif msg.buttons[0] == 1:
             uint8.data = 50
-            self.ex_publisher_.publish(uint8)
+            self.reg_publisher_.publish(uint8)
 
     def timer_callback(self):
        pass 
