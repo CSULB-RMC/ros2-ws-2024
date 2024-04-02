@@ -28,42 +28,42 @@ class JoyPub(Node):
         if msg.axes[1] > 0.01: # L Stick Up 
             uint8.data = int((msg.axes[1] * 100) + 100) # add 100 to indicate forward motion and not include 100
             self.dt_l_publisher_.publish(uint8)
-            self.get_logger().info(f'L-stick: Up, {uint8.data}')
+            # self.get_logger().info(f'L-stick: Up, {uint8.data}')
 
         elif msg.axes[1] < 0: # L Stick Down 
-            uint8.data = int((abs(msg.axes[1]) * 100) - 1) # subtract 1 to no include 100 
+            uint8.data = int((abs(msg.axes[1]) * 100)) # subtract 1 to no include 100 
             self.dt_l_publisher_.publish(uint8)
-            self.get_logger().info(f'L-stick: Down, {uint8.data}')
+            # self.get_logger().info(f'L-stick: Down, {uint8.data}')
         
         else: # Left Drive Train Not Moving
             uint8.data = 100 # stop value 
             self.dt_l_publisher_.publish(uint8)
 
         # Right Stick Maps - Right Drive Train
-        if msg.axes[4] > 0.01: # R Stick Up
+        if msg.axes[3] > 0.01: # R Stick Up
             uint8.data = int((msg.axes[4] * 100) + 100) # add 100 to indicate forward motion and not include 100
             self.dt_r_publisher_.publish(uint8)
-            self.get_logger().info(f'R-stick: Up, {uint8.data}')
+           # self.get_logger().info(f'R-stick: Up, {uint8.data}')
 
-        elif msg.axes[4] < 0: # R Stick Down
-            uint8.data = int((abs(msg.axes[4]) * 100) - 1) # subtract 1 to no include 100 
+        elif msg.axes[3] < 0: # R Stick Down
+            uint8.data = int((abs(msg.axes[3]) * 100) - 1) # subtract 1 to no include 100 
             self.dt_r_publisher_.publish(uint8)
-            self.get_logger().info(f'R-stick: Down, {uint8.data}')
+           # self.get_logger().info(f'R-stick: Down, {uint8.data}')
         
         else: # Right Drive Train Not Moving
             uint8.data = 100 # stop value 
             self.dt_r_publisher_.publish(uint8)
 
         # D pad Maps - Excavator
-        if msg.axes[7] > 0.01: # D pad Up
+        if msg.axes[5] > 0.01: # D pad Up
             uint8.data = 150
             self.ex_publisher_.publish(uint8)
-            self.get_logger().info("Dpad: up")
+            # self.get_logger().info("Dpad: up")
             
-        elif msg.axes[7] < 0: # D pad down
+        elif msg.axes[5] < 0: # D pad down
             uint8.data = 50
             self.ex_publisher_.publish(uint8)
-            self.get_logger().info("Dpad: down")
+            # self.get_logger().info("Dpad: down")
         
         else:
             uint8.data = 100
@@ -74,7 +74,7 @@ class JoyPub(Node):
         if msg.buttons[0] == 1:
             uint8.data = 150
             self.reg_publisher_.publish(uint8)
-            self.get_logger().info("A: pressed")
+            # self.get_logger().info("A: pressed")
 
         elif msg.buttons[0] == 0:
             uint8.data = 50

@@ -34,46 +34,62 @@ class DrivetrainExcavator(Node):
 
         self.i = 0
     
+    def signal_conversion(self, msg_data: UInt8, bytes_range: int) -> list[int]:
+        data: int = msg_data 
+        # Forward msg correction
+        if data > 100:
+            data //= 2
+        
+        # covert controller signal to proper range (1000-100000)
+        data *= 1000
+        
+        # convert signal to byte array
+        temp_data: list[int] = []
+        for i in range(bytes_range - 1, -1, -1):
+            temp_data.append((data >> (8*i)) & 0xff)
+        return temp_data 
+
+
     #updates the states of the left drivetrain motors
     def ex_dt_left_update(self, msg):
         #msg is an UInt8 from 0-200
-        #TODO
-        # self.get_logger().info('updating left ex dt')
-        self.ex_dt_left_speed = msg.data
-
+        temp_data = self.signal_conversion(msg.data, 3)  
+        # can message for right and left motor
         can_msg_m1 = can.Message(
-                arbitration_id=0xd0,
-                data = [self.ex_dt_left_speed],
+                arbitration_id=0x15,
+                data = temp_data, # place holder speed: 50%
                 )
         can_msg_m2 = can.Message(
-                arbitration_id=0xd1,
-                data = [self.ex_dt_left_speed],
+                arbitration_id=0x16,
+                data = temp_data, # place holder speed: 50%
                 )
         
 
         # Send to both left motors
+        # self.get_logger().info(f'{self.ex_dt_left_speed}')
+        # self.bus.send_periodic(can_msg_m1, self.ex_dt_left_speed)
         self.bus.send(can_msg_m1)
         self.bus.send(can_msg_m2)
 
         # Log Speed
         self.get_logger().info(f'{can_msg_m1}')
-        # self.get_logger().info(f'{msg.data}, {controller_data}')
+        # self.get_logger().info(f'{can_msg.data}, {controller_data}')
 
     #updates the states of the right drivetrains motors
     def ex_dt_right_update(self, msg):
         #msg is an UInt8 from 0-200
-        #TODO
+        # converts controller signal to bytes array
+        temp_data = self.signal_conversion(msg.data, 3)  
 
-        self.ex_dt_right_speed =  msg.data
         # self.get_logger().info('updating right ex dt')
        
         can_msg_m1 = can.Message(
-                arbitration_id=0xd2,
-                data = [self.ex_dt_right_speed], 
+                arbitration_id=0x17,
+                data = temp_data,  # place holder speed: 50%
                 )
         can_msg_m2 = can.Message(
-                arbitration_id=0xd3,
-                data = [self.ex_dt_right_speed], 
+                arbitration_id=0x18, # place holder speed: 50%
+                data = temp_data, 
                 )
 
         self.bus.send(can_msg_m1)
@@ -82,12 +98,15 @@ class DrivetrainExcavator(Node):
 
     def ex_excavator_update(self, msg):
         #msg is an UInt8 from 0-200
-        #TODO
+        # TODO
+        # needs to start or stop procedure on button press
+        temp_data = self.signal_conversion(msg.data, 3)
+
         self.ex_excavator_speed = msg.data        
         # self.get_logger().info('updating excavator')
         can_msg = can.Message(
                 arbitration_id=0xe0,
-                data = [self.ex_excavator_speed], 
+                data = temp_data, 
                 )
 
         self.bus.send(can_msg)
@@ -96,13 +115,17 @@ class DrivetrainExcavator(Node):
 
     def ex_reg_update(self, msg):
         #msg is an UInt8 from 0-200
-        #TODO
+        # TODO
+        # needs start or stop procedure on button press
         self.ex_reg_speed = msg.data
+        
+        temp_data = self.signal_conversion(msg.data, 3)
+
         # self.get_logger().info('updating regolith')
 
         can_msg = can.Message(
                 arbitration_id=0xb0,
-                data = [self.ex_reg_speed], 
+                data = temp_data, 
                 )
 
 
