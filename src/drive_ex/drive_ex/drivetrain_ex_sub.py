@@ -39,15 +39,15 @@ class DrivetrainExcavator(Node):
         #msg is an UInt8 from 0-200
         #TODO
         # self.get_logger().info('updating left ex dt')
-        self.ex_dt_left_speed = msg.data.to_bytes(8, 'big')
+        self.ex_dt_left_speed = msg.data
 
         can_msg_m1 = can.Message(
                 arbitration_id=0xd0,
-                data = self.ex_dt_left_speed,
+                data = [self.ex_dt_left_speed],
                 )
         can_msg_m2 = can.Message(
                 arbitration_id=0xd1,
-                data = self.ex_dt_left_speed,
+                data = [self.ex_dt_left_speed],
                 )
         
 
@@ -56,7 +56,7 @@ class DrivetrainExcavator(Node):
         self.bus.send(can_msg_m2)
 
         # Log Speed
-        self.get_logger().info(f'Speed: {can_msg_m1}')
+        self.get_logger().info(f'{can_msg_m1}')
         # self.get_logger().info(f'{msg.data}, {controller_data}')
 
     #updates the states of the right drivetrains motors
@@ -64,31 +64,30 @@ class DrivetrainExcavator(Node):
         #msg is an UInt8 from 0-200
         #TODO
 
-        self.ex_dt_right_speed =  msg.data.to_bytes(8, 'big')
+        self.ex_dt_right_speed =  msg.data
         # self.get_logger().info('updating right ex dt')
        
         can_msg_m1 = can.Message(
                 arbitration_id=0xd2,
-                data = self.ex_dt_right_speed 
+                data = [self.ex_dt_right_speed], 
                 )
         can_msg_m2 = can.Message(
                 arbitration_id=0xd3,
-                data = self.ex_dt_right_speed 
+                data = [self.ex_dt_right_speed], 
                 )
 
         self.bus.send(can_msg_m1)
         self.bus.send(can_msg_m2)
-        self.get_logger().info(f'Speed: {can_msg_m1}')
+        self.get_logger().info(f'{can_msg_m1}')
 
     def ex_excavator_update(self, msg):
         #msg is an UInt8 from 0-200
         #TODO
-        self.ex_excavator_speed = msg.data.to_bytes(8, 'big')
+        self.ex_excavator_speed = msg.data        
         # self.get_logger().info('updating excavator')
-        
         can_msg = can.Message(
                 arbitration_id=0xe0,
-                data = self.ex_excavator_speed 
+                data = [self.ex_excavator_speed], 
                 )
 
         self.bus.send(can_msg)
@@ -98,12 +97,12 @@ class DrivetrainExcavator(Node):
     def ex_reg_update(self, msg):
         #msg is an UInt8 from 0-200
         #TODO
-        self.ex_reg_speed = msg.data.to_bytes(8, 'big')
+        self.ex_reg_speed = msg.data
         # self.get_logger().info('updating regolith')
 
         can_msg = can.Message(
                 arbitration_id=0xb0,
-                data = self.ex_reg_speed 
+                data = [self.ex_reg_speed], 
                 )
 
 
