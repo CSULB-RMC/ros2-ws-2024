@@ -120,7 +120,7 @@ class DrivetrainExcavator(Node):
         
         # Send Message to Excavator Motor
         self.bus.send(can_msg)
-        self.get_logger().info(f'{can_msg}')
+        # self.get_logger().info(f'{can_msg}')
 
 
     def ex_reg_update(self, msg):
