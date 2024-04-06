@@ -18,3 +18,10 @@ ros2 run <package> <entrypoint>
 ```
 
 Ex.) `ros2 run py_pubsub listener`
+
+## Scripts
+In root directory run:
+### `bash controller-can-test.sh`
+use to run can messaging with controller input
+### `bash vcan-setup.sh`
+runs virtual can network interface config
