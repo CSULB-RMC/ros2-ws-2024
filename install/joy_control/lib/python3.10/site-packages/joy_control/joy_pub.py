@@ -36,23 +36,23 @@ class JoyPub(Node):
             # self.get_logger().info(f'L-stick: Down, {uint8.data}')
 
         # Right Stick Maps - Right Drive Train
-        if msg.axes[4] > 0.01: # R Stick Up
-            uint8.data = int((msg.axes[4] * 100) + 100) # add 100 to indicate forward motion and not include 100
+        if msg.axes[3] > 0.01: # R Stick Up
+            uint8.data = int((msg.axes[3] * 100) + 100) # add 100 to indicate forward motion and not include 100
             self.dt_r_publisher_.publish(uint8)
            # self.get_logger().info(f'R-stick: Up, {uint8.data}')
 
-        elif msg.axes[4] < 0: # R Stick Down
-            uint8.data = int((abs(msg.axes[4]) * 100) - 1) # subtract 1 to no include 100 
+        elif msg.axes[3] < 0: # R Stick Down
+            uint8.data = int((abs(msg.axes[3]) * 100) - 1) # subtract 1 to no include 100 
             self.dt_r_publisher_.publish(uint8)
            # self.get_logger().info(f'R-stick: Down, {uint8.data}')
         
         # D pad Maps - Excavator
-        if msg.axes[7] > 0.01: # D pad Up
+        if msg.axes[5] > 0.01: # D pad Up
             uint8.data = 150
             self.ex_publisher_.publish(uint8)
             # self.get_logger().info("Dpad: up")
             
-        elif msg.axes[7] < 0: # D pad down
+        elif msg.axes[5] < 0: # D pad down
             uint8.data = 50
             self.ex_publisher_.publish(uint8)
             # self.get_logger().info("Dpad: down")

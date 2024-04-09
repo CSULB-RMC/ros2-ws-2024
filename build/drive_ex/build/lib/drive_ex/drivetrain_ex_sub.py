@@ -57,17 +57,20 @@ class DrivetrainExcavator(Node):
 
     #updates the states of the left drivetrain motors
     def ex_dt_left_update(self, msg):
-        #msg is an UInt8 from 0-200
-        temp_data = self.signal_conversion(msg.data, 3)  
+        if self.ex_dt_left_speed == msg.data:
+            return None
+        self.ex_dt_left_speed = msg.data
+
+        temp_data = self.signal_conversion(self.ex_dt_left_speed, 3)  
         # can message for right and left motor
         can_msg_m1 = can.Message(
                 arbitration_id = 15,
-                data = [32], # place holder 
+                data = temp_data, # place holder 
                 is_extended_id = True
                 )
         can_msg_m2 = can.Message(
                 arbitration_id = 16,
-                data = [32], # place holder
+                data = temp_data, # place holder
                 is_extended_id = True
                 )
         
@@ -82,18 +85,21 @@ class DrivetrainExcavator(Node):
 
     #updates the states of the right drivetrains motors
     def ex_dt_right_update(self, msg):
-        #msg is an UInt8 from 0-200
+        if self.ex_dt_left_speed == msg.data:
+            pass
+        self.ex_dt_left_speed = msg.data
+
         # converts controller signal to bytes array
         temp_data = self.signal_conversion(msg.data, 3)  
 
         can_msg_m1 = can.Message(
                 arbitration_id = 17,
-                data = [32],  # place holder speed: 50%
+                data = temp_data,  # place holder speed: 50%
                 is_extended_id = True,
                 )
         can_msg_m2 = can.Message(
                 arbitration_id =18, 
-                data = [32], # place holder speed: 50%
+                data = temp_data, # place holder speed: 50%
                 is_extended_id = True
                 )
         
