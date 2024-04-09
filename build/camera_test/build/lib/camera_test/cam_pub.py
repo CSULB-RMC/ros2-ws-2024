@@ -50,7 +50,7 @@ class ImagePublisher(Node):
             self.get_logger().info(f'Publishing video frame {self.i}')
 
     def listener_callback(self, msg):
-        if msg.buttons[3]:
+        if msg.buttons[5]:
             self.timer_callback()
 
 def main(args=None):

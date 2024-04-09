@@ -32,7 +32,7 @@ class DrivetrainExcavator(Node):
 
         #create can bus link, right now is linked to virtual vcan 0, most likely
         #will be can0 when on the bot
-        self.bus = can.interface.Bus(interface='socketcan', channel='vcan0', bitrate='250000')
+        self.bus = can.interface.Bus(interface='socketcan', channel='can0', bitrate='50000')
 
         self.i = 0
     
@@ -65,20 +65,21 @@ class DrivetrainExcavator(Node):
         temp_data = self.signal_conversion(self.ex_dt_left_speed, 3)  
         # can message for right and left motor
         can_msg_m1 = can.Message(
-                arbitration_id = 15,
+                arbitration_id = 16,
                 data = temp_data, # place holder 
                 is_extended_id = True
                 )
-        can_msg_m2 = can.Message(
-                arbitration_id = 16,
-                data = temp_data, # place holder
-                is_extended_id = True
-                )
+        # Changed so both motors are active on 16
+        #can_msg_m2 = can.Message(
+        #        arbitration_id = 15,
+        #        data = [32], # place holder
+        #        is_extended_id = True
+        #        )
         
 
         # Send to Both Left Motors
         self.bus.send(can_msg_m1)
-        self.bus.send(can_msg_m2)
+        # self.bus.send(can_msg_m2)
 
         # Log Can Message
         # self.get_logger().info(f'{can_msg_m1}')
@@ -112,18 +113,18 @@ class DrivetrainExcavator(Node):
         # Log Can Message
         # self.get_logger().info(f'{can_msg_m1}')
     
-    # Sample Dpad Control Scheme 
+    # Sample Dpad Control Scheme
     def ex_excavator_update(self, msg):
         #msg is an UInt8 from 0-200
         # TODO
         # needs correct start or stop procedure on button press
         temp_data = self.signal_conversion(msg.data, 3)
 
-        self.ex_excavator_speed = msg.data        
+        self.ex_excavator_speed = msg.data 
         # self.get_logger().info('updating excavator')
         can_msg = can.Message(
-                arbitration_id=0xe0,
-                data = temp_data, 
+                arbitration_id=16,
+                data = [], 
                 )
         
         # Send Message to Excavator Motor
@@ -135,7 +136,8 @@ class DrivetrainExcavator(Node):
         #msg is an UInt8 from 0-200
         # TODO
         # needs corrent start or stop procedure on button press
-        self.ex_reg_speed = msg.data
+
+        self.ex_reg_speed = self.signal_conversion(100, 3)
         
         temp_data = self.signal_conversion(msg.data, 3)
 
@@ -162,7 +164,7 @@ class DrivetrainExcavator(Node):
             is_extended_id=True
             )
         self.bus.send(can_msg_1)
-        self.bus.send(can_msg_2)
+        # self.bus.send(can_msg_2)
         
 
 def main(args=None):

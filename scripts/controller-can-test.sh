@@ -10,4 +10,4 @@ echo "Starting drivetrain_ex"
 colcon build --build-base build --install-base install --packages-select drive_ex && ros2 run drive_ex drivetrain_ex &
 sleep 7
 echo "Starting Can View"
-candump vcan0
+candump can0
