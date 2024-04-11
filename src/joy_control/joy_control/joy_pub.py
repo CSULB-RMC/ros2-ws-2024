@@ -20,31 +20,41 @@ class JoyPub(Node):
 			'joy',
 			self.listener_callback,
 			10)
+        
+        self.DEADBAND = 0.05
 
     def listener_callback(self, msg: Joy):
         uint8 = UInt8()
         
         # Left Stick Maps - Left Drive Train
-        if msg.axes[1] > 0.01: # L Stick Up 
+        if msg.axes[1] > self.DEADBAND: # L Stick Up 
             uint8.data = int((msg.axes[1] * 100) + 100) # add 100 to indicate forward motion and not include 100
             self.dt_l_publisher_.publish(uint8)
             # self.get_logger().info(f'L-stick: Up, {uint8.data}')
 
-        elif msg.axes[1] < 0: # L Stick Down 
-            uint8.data = int((abs(msg.axes[1]) * 100)) # subtract 1 to no include 100 
+        elif msg.axes[1] < -self.DEADBAND: # L Stick Down 
+            uint8.data = int((abs(msg.axes[1]) * 100) - 1) # subtract 1 to no include 100 
             self.dt_l_publisher_.publish(uint8)
             # self.get_logger().info(f'L-stick: Down, {uint8.data}')
 
+        else:
+            uint8.data = 100 # deadband resets it to neutral
+            self.dt_l_publisher_.publish(uint8)
+
         # Right Stick Maps - Right Drive Train
-        if msg.axes[3] > 0.01: # R Stick Up
+        if msg.axes[3] > self.DEADBAND: # R Stick Up
             uint8.data = int((msg.axes[3] * 100) + 100) # add 100 to indicate forward motion and not include 100
             self.dt_r_publisher_.publish(uint8)
            # self.get_logger().info(f'R-stick: Up, {uint8.data}')
 
-        elif msg.axes[3] < 0: # R Stick Down
+        elif msg.axes[3] < -self.DEADBAND: # R Stick Down
             uint8.data = int((abs(msg.axes[3]) * 100) - 1) # subtract 1 to no include 100 
             self.dt_r_publisher_.publish(uint8)
            # self.get_logger().info(f'R-stick: Down, {uint8.data}')
+            
+        else:
+            uint8.data = 100 # deadband resets it to neutral
+            self.dt_r_publisher_.publish(uint8)
         
         # D pad Maps - Excavator
         if msg.axes[5] > 0.01: # D pad Up
