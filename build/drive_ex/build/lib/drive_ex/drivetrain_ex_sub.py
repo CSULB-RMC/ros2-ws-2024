@@ -15,7 +15,7 @@ class DrivetrainExcavator(Node):
         # currently every 0.02 seconds, so 50 times a second
         # ...
         # changing timer doesn't effect duty cycle speed
-        # self.canSend = self.create_timer(1, self.can_callback)
+        self.canSend = self.create_timer(1, self.can_callback)
 
         # create subscribers to listen for teleop computer commands
         self.ex_dt_left_sub = self.create_subscription(UInt8, 'ex_dt_left', self.ex_dt_left_update, 10)
@@ -32,7 +32,7 @@ class DrivetrainExcavator(Node):
 
         #create can bus link, right now is linked to virtual vcan 0, most likely
         #will be can0 when on the bot
-        self.bus = can.interface.Bus(interface='socketcan', channel='can0', bitrate='50000')
+        self.bus = can.interface.Bus(interface='socketcan', channel='vcan0', bitrate='50000')
 
         self.i = 0
     
@@ -155,7 +155,7 @@ class DrivetrainExcavator(Node):
         #TODO
         can_msg_1 = can.Message(
             arbitration_id=16, # motor id
-            data=[32],         # didn't test if this changed motor speed
+            data=[50000],         # didn't test if this changed motor speed
             is_extended_id=True 
             )
         can_msg_2 = can.Message(

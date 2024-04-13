@@ -32,7 +32,7 @@ class DrivetrainExcavator(Node):
 
         #create can bus link, right now is linked to virtual vcan 0, most likely
         #will be can0 when on the bot
-        self.bus = can.interface.Bus(interface='socketcan', channel='can0', bitrate='50000')
+        self.bus = can.interface.Bus(interface='socketcan', channel='vcan0', bitrate='50000')
 
         self.i = 0
     
@@ -41,17 +41,27 @@ class DrivetrainExcavator(Node):
     # Ex. 200 -> 50% -> 50,000 = [80, 200]
     def signal_conversion(self, msg_data: int, bytes_range: int) -> list[int]:
         data: int = msg_data 
-        # Forward msg correction
-        if data > 100:
-            data //= 2
-        
-        # covert controller signal to proper range (1000-100000)
-        data *= 1000
-        
-        # convert signal to byte array
         temp_data: list[int] = []
-        for i in range(bytes_range - 1, -1, -1):
-            temp_data.append((data >> (8*i)) & 0xff)
+
+        #make sure the direction is correct
+        if data > 100:
+            # Forward msg correction:
+            data -= 100
+            # covert controller signal to proper range (1000-100000)
+            data *= 1000
+
+            #convert to byte array but also 2's compliment to reverse motor
+            for i in range(bytes_range - 1, -1, -1):
+                temp_data.append(255 - ((data >> (8*i)) & 0xff))
+            temp_data[len(temp_data) - 1] += 1
+        else:
+            # covert controller signal to proper range (1000-100000)
+            data *= 1000
+    
+            # convert signal to byte array
+            for i in range(bytes_range - 1, -1, -1):
+                temp_data.append((data >> (8*i)) & 0xff)
+        
         return temp_data 
 
 
@@ -155,7 +165,7 @@ class DrivetrainExcavator(Node):
         #TODO
         can_msg_1 = can.Message(
             arbitration_id=16, # motor id
-            data=[32],         # didn't test if this changed motor speed
+            data=[],         # didn't test if this changed motor speed
             is_extended_id=True 
             )
         can_msg_2 = can.Message(
