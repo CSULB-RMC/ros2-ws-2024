@@ -45,6 +45,8 @@ class DrivetrainExcavator(Node):
 
         #make sure the direction is correct
         if data > 100:
+            #increment for 2's comp
+            c = 1
             # Forward msg correction:
             data -= 100
             # covert controller signal to proper range (1000-100000)
