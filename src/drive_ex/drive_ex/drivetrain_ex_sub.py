@@ -53,9 +53,16 @@ class DrivetrainExcavator(Node):
             #convert to byte array but also 2's compliment to reverse motor
             for i in range(bytes_range - 1, -1, -1):
                 temp_data.append(255 - ((data >> (8*i)) & 0xff))
-            temp_data[len(temp_data) - 1] += 1
 
-            
+            for i in range(len(temp_data) - 1, - 1, -1):
+                temp_data[i] += c 
+                if temp_data[i] > 255:
+                    temp_data[i] = 0
+                else:
+                    c = 0
+                    break
+
+
         else:
             # covert controller signal to proper range (1000-100000)
             data *= 1000
