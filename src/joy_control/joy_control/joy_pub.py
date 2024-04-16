@@ -38,7 +38,7 @@ class JoyPub(Node):
             # self.get_logger().info(f'L-stick: Down, {uint8.data}')
 
         else:
-            uint8.data = 100 # deadband resets it to neutral
+            uint8.data = 0 # deadband resets it to neutral
             self.dt_l_publisher_.publish(uint8)
 
         # Right Stick Maps - Right Drive Train
@@ -53,7 +53,7 @@ class JoyPub(Node):
            # self.get_logger().info(f'R-stick: Down, {uint8.data}')
             
         else:
-            uint8.data = 100 # deadband resets it to neutral
+            uint8.data = 0 # deadband resets it to neutral
             self.dt_r_publisher_.publish(uint8)
         
         # D pad Maps - Excavator
