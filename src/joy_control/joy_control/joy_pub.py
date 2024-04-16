@@ -33,7 +33,7 @@ class JoyPub(Node):
             # self.get_logger().info(f'L-stick: Up, {uint8.data}')
 
         elif msg.axes[1] < -self.DEADBAND: # L Stick Down 
-            uint8.data = int((abs(msg.axes[1]) * 100) - 1) # subtract 1 to no include 100 
+            uint8.data = int((abs(msg.axes[1]) * 100)) # subtract 1 to no include 100 
             self.dt_l_publisher_.publish(uint8)
             # self.get_logger().info(f'L-stick: Down, {uint8.data}')
 
@@ -48,7 +48,7 @@ class JoyPub(Node):
            # self.get_logger().info(f'R-stick: Up, {uint8.data}')
 
         elif msg.axes[3] < -self.DEADBAND: # R Stick Down
-            uint8.data = int((abs(msg.axes[3]) * 100) - 1) # subtract 1 to no include 100 
+            uint8.data = int((abs(msg.axes[3]) * 100)) # subtract 1 to no include 100 
             self.dt_r_publisher_.publish(uint8)
            # self.get_logger().info(f'R-stick: Down, {uint8.data}')
             
