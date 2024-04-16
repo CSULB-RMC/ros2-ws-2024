@@ -1,0 +1,25 @@
+[0.581s] Invoking command in '/home/leho42/Desktop/ros2-ws-2024/src/drive_ex': PYTHONPATH=/home/leho42/Desktop/ros2-ws-2024/build/drive_ex/prefix_override:/home/leho42/Desktop/ros2-ws-2024/install/drive_ex/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/drive_ex build --build-base /home/leho42/Desktop/ros2-ws-2024/build/drive_ex/build install --record /home/leho42/Desktop/ros2-ws-2024/build/drive_ex/install.log --single-version-externally-managed install_data
+[0.690s] running egg_info
+[0.691s] writing ../../build/drive_ex/drive_ex.egg-info/PKG-INFO
+[0.691s] writing dependency_links to ../../build/drive_ex/drive_ex.egg-info/dependency_links.txt
+[0.691s] writing entry points to ../../build/drive_ex/drive_ex.egg-info/entry_points.txt
+[0.692s] writing requirements to ../../build/drive_ex/drive_ex.egg-info/requires.txt
+[0.692s] writing top-level names to ../../build/drive_ex/drive_ex.egg-info/top_level.txt
+[0.692s] reading manifest file '../../build/drive_ex/drive_ex.egg-info/SOURCES.txt'
+[0.692s] adding license file 'LICENSE'
+[0.692s] writing manifest file '../../build/drive_ex/drive_ex.egg-info/SOURCES.txt'
+[0.692s] running build
+[0.692s] running build_py
+[0.693s] copying drive_ex/drivetrain_ex_sub.py -> /home/leho42/Desktop/ros2-ws-2024/build/drive_ex/build/lib/drive_ex
+[0.693s] running install
+[0.693s] running install_lib
+[0.693s] copying /home/leho42/Desktop/ros2-ws-2024/build/drive_ex/build/lib/drive_ex/drivetrain_ex_sub.py -> /home/leho42/Desktop/ros2-ws-2024/install/drive_ex/lib/python3.10/site-packages/drive_ex
+[0.694s] byte-compiling /home/leho42/Desktop/ros2-ws-2024/install/drive_ex/lib/python3.10/site-packages/drive_ex/drivetrain_ex_sub.py to drivetrain_ex_sub.cpython-310.pyc
+[0.694s] running install_data
+[0.694s] running install_egg_info
+[0.695s] removing '/home/leho42/Desktop/ros2-ws-2024/install/drive_ex/lib/python3.10/site-packages/drive_ex-0.0.0-py3.10.egg-info' (and everything under it)
+[0.695s] Copying ../../build/drive_ex/drive_ex.egg-info to /home/leho42/Desktop/ros2-ws-2024/install/drive_ex/lib/python3.10/site-packages/drive_ex-0.0.0-py3.10.egg-info
+[0.697s] running install_scripts
+[0.707s] Installing drivetrain_ex script to /home/leho42/Desktop/ros2-ws-2024/install/drive_ex/lib/drive_ex
+[0.707s] writing list of installed files to '/home/leho42/Desktop/ros2-ws-2024/build/drive_ex/install.log'
+[0.725s] Invoked command in '/home/leho42/Desktop/ros2-ws-2024/src/drive_ex' returned '0': PYTHONPATH=/home/leho42/Desktop/ros2-ws-2024/build/drive_ex/prefix_override:/home/leho42/Desktop/ros2-ws-2024/install/drive_ex/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/drive_ex build --build-base /home/leho42/Desktop/ros2-ws-2024/build/drive_ex/build install --record /home/leho42/Desktop/ros2-ws-2024/build/drive_ex/install.log --single-version-externally-managed install_data
