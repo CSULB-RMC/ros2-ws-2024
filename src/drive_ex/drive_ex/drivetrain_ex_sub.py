@@ -32,7 +32,7 @@ class DrivetrainExcavator(Node):
 
         #create can bus link, right now is linked to virtual vcan 0, most likely
         #will be can0 when on the bot
-        self.bus = can.interface.Bus(interface='socketcan', channel='vcan0', bitrate='50000')
+        self.bus = can.interface.Bus(interface='socketcan', channel='can0', bitrate='500000')
 
         self.i = 0
     
