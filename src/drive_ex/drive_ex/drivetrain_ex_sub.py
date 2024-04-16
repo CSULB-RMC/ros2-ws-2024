@@ -54,6 +54,8 @@ class DrivetrainExcavator(Node):
             for i in range(bytes_range - 1, -1, -1):
                 temp_data.append(255 - ((data >> (8*i)) & 0xff))
             temp_data[len(temp_data) - 1] += 1
+
+            
         else:
             # covert controller signal to proper range (1000-100000)
             data *= 1000
@@ -72,7 +74,7 @@ class DrivetrainExcavator(Node):
             return None
         self.ex_dt_left_speed = msg.data
 
-        temp_data = self.signal_conversion(self.ex_dt_left_speed, 3)  
+        temp_data = self.signal_conversion(self.ex_dt_left_speed, 4)  
         # can message for right and left motor
         can_msg_m1 = can.Message(
                 arbitration_id = 16,
@@ -103,7 +105,7 @@ class DrivetrainExcavator(Node):
         self.ex_dt_right_speed = msg.data
 
         # converts controller signal to bytes array
-        temp_data = self.signal_conversion(self.ex_dt_right_speed, 3)  
+        temp_data = self.signal_conversion(self.ex_dt_right_speed, 4)  
 
         can_msg_m1 = can.Message(
                 arbitration_id = 17,
@@ -128,7 +130,7 @@ class DrivetrainExcavator(Node):
         #msg is an UInt8 from 0-200
         # TODO
         # needs correct start or stop procedure on button press
-        temp_data = self.signal_conversion(msg.data, 3)
+        temp_data = self.signal_conversion(msg.data, 4)
 
         self.ex_excavator_speed = msg.data 
         # self.get_logger().info('updating excavator')
@@ -147,9 +149,9 @@ class DrivetrainExcavator(Node):
         # TODO
         # needs corrent start or stop procedure on button press
 
-        self.ex_reg_speed = self.signal_conversion(100, 3)
+        self.ex_reg_speed = self.signal_conversion(100, 4)
         
-        temp_data = self.signal_conversion(msg.data, 3)
+        temp_data = self.signal_conversion(msg.data, 4)
 
         can_msg = can.Message(
                 arbitration_id=0xb0,
