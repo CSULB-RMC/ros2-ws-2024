@@ -11,28 +11,24 @@ class DrivetrainExcavator(Node):
     def __init__(self):
         super().__init__('drivetrain_excavator')
 
-        # publishes can messages of its current state periodically
-        # currently every 0.02 seconds, so 50 times a second
-        # ...
-        # changing timer doesn't effect duty cycle speed
-        # self.canSend = self.create_timer(1, self.can_callback)
-
         # create subscribers to listen for teleop computer commands
         self.ex_dt_left_sub = self.create_subscription(UInt8, 'ex_dt_left', self.ex_dt_left_update, 10)
         self.ex_dt_right_sub = self.create_subscription(UInt8, 'ex_dt_right', self.ex_dt_right_update, 10)
-        self.ex_excavator_sub = self.create_subscription(UInt8, 'ex_excavator', self.ex_excavator_update, 10)
-        self.ex_reg_sub = self.create_subscription(UInt8, 'ex_reg', self.ex_reg_update, 10)
+        self.ex_conveyer_sub = self.create_subscription(UInt8, 'ex_conveyer', self.ex_conveyer_update, 10)
+        self.ex_arm_sub = self.create_subscription(UInt8, 'ex_arm', self.ex_arm_update, 10)
+        self.ex_digger_sub = self.create_subscription(UInt8, 'ex_', self.ex_digger_update, 10)
 
-        #create state variables, these keep track of what motors
-        #should be running and how fast at the current moment
+        # create state variables, these keep track of what motors
+        # should be running and how fast at the current moment
         self.ex_dt_left_speed = 0
         self.ex_dt_right_speed = 0
         self.ex_excavator_speed = 0
         self.ex_reg_speed = 0
+        self.ex_digger_speed = 0
 
-        #create can bus link, right now is linked to virtual vcan 0, most likely
-        #will be can0 when on the bot
-        self.bus = can.interface.Bus(interface='socketcan', channel='can0', bitrate='500000')
+        # create can bus link, right now is linked to virtual vcan 0, most likely
+        # will be can0 when on the bot
+        self.bus = can.interface.Bus(interface='socketcan', channel='vcan0', bitrate='500000')
 
         self.i = 0
     
@@ -63,8 +59,6 @@ class DrivetrainExcavator(Node):
                 else:
                     c = 0
                     break
-
-
         else:
             # covert controller signal to proper range (1000-100000)
             data *= 1000
@@ -75,6 +69,13 @@ class DrivetrainExcavator(Node):
         
         return temp_data 
 
+    def can_publish(self, arbitration_id, data, is_extended_id) -> None:
+        can_msg = can.Message(
+                arbitration_id = arbitration_id,
+                data = data, 
+                is_extended_id = is_extended_id
+                ) 
+        self.bus.send(can_msg)
 
     #updates the states of the left drivetrain motors
     def ex_dt_left_update(self, msg):
@@ -85,26 +86,8 @@ class DrivetrainExcavator(Node):
 
         temp_data = self.signal_conversion(self.ex_dt_left_speed, 4)  
         # can message for right and left motor
-        can_msg_m1 = can.Message(
-                arbitration_id = 16,
-                data = temp_data, # place holder 
-                is_extended_id = True
-                )
-        
-        can_msg_m2 = can.Message(
-               arbitration_id = 15,
-               data = temp_data, # place holder
-               is_extended_id = True
-               )
-        
-
-        # Send to Both Left Motors
-        self.bus.send(can_msg_m1)
-        self.bus.send(can_msg_m2)
-
-        # Log Can Message
-        # self.get_logger().info(f'{can_msg_m1}')
-
+        self.can_publish(15, temp_data, True)
+        self.can_publish(16, temp_data, True) 
 
     #updates the states of the right drivetrains motors
     def ex_dt_right_update(self, msg):
@@ -115,78 +98,35 @@ class DrivetrainExcavator(Node):
 
         # converts controller signal to bytes array
         temp_data = self.signal_conversion(self.ex_dt_right_speed, 4)  
-
-        can_msg_m1 = can.Message(
-                arbitration_id = 17,
-                data = temp_data, 
-                is_extended_id = True,
-                )
-        can_msg_m2 = can.Message(
-                arbitration_id =18, 
-                data = temp_data, 
-                is_extended_id = True
-                )
-        
-        # Send to Both Right Motors
-        self.bus.send(can_msg_m1)
-        self.bus.send(can_msg_m2)
-
-        # Log Can Message
-        # self.get_logger().info(f'{can_msg_m1}')
+        self.can_publish(17, temp_data, True)
+        self.can_publish(18, temp_data, True)
     
     # Sample Dpad Control Scheme
-    def ex_excavator_update(self, msg):
-        #msg is an UInt8 from 0-200
-        # TODO
-        # needs correct start or stop procedure on button press
+    def ex_conveyer_update(self, msg):
+        if self.ex_excavator_speed == msg.data:
+            return None
+        self.ex_excavator_speed = msg.data
+
         temp_data = self.signal_conversion(msg.data, 4)
 
-        self.ex_excavator_speed = msg.data 
-        # self.get_logger().info('updating excavator')
-        can_msg = can.Message(
-                arbitration_id=16,
-                data = [], 
-                )
-        
-        # Send Message to Excavator Motor
-        self.bus.send(can_msg)
-        # self.get_logger().info(f'{can_msg}')
+        self.can_publish(19, temp_data, True) 
 
     # Sample A Button Scheme
-    def ex_reg_update(self, msg):
-        #msg is an UInt8 from 0-200
-        # TODO
-        # needs corrent start or stop procedure on button press
-
-        self.ex_reg_speed = self.signal_conversion(100, 4)
-        
+    def ex_arm_update(self, msg):
+        if self.ex_reg_speed == msg.data:
+            return None
+        self.ex_reg_speed = msg.data 
         temp_data = self.signal_conversion(msg.data, 4)
 
-        can_msg = can.Message(
-                arbitration_id=0xb0,
-                data = temp_data, 
-                )
+        self.can_publish(21, temp_data, True)
+    
+    def ex_digger_update(self, msg):
+        if self.ex_digger_speed == msg.data:
+            return None
+        self.ex_digger_speed = msg.data 
+        temp_data = self.signal_conversion(msg.data, 4)
 
-        # Send Message to Reg Motor
-        self.bus.send(can_msg) 
-        # self.get_logger().info(f'{can_msg}')
-
-    #Demo Function that calls motor 16 and 17, one command turns motor on.
-    def can_callback(self):
-        #TODO
-        can_msg_1 = can.Message(
-            arbitration_id=16, # motor id
-            data=[],         # didn't test if this changed motor speed
-            is_extended_id=True 
-            )
-        can_msg_2 = can.Message(
-            arbitration_id=17,
-            data=[32],
-            is_extended_id=True
-            )
-        self.bus.send(can_msg_1)
-        # self.bus.send(can_msg_2)
-        
+        self.can_publish(23, temp_data, True)
 
 def main(args=None):
     print("Bus Publisher Active")
