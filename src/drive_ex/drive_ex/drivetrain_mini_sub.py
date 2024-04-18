@@ -6,26 +6,20 @@ from std_msgs.msg import UInt8
 import can
 
 
-class DrivetrainExcavator(Node):
+class DrivetrainMini(Node):
     
     def __init__(self):
         super().__init__('drivetrain_excavator')
 
         # create subscribers to listen for teleop computer commands
-        self.ex_dt_left_sub = self.create_subscription(UInt8, 'ex_dt_left', self.ex_dt_left_update, 10)
-        self.ex_dt_right_sub = self.create_subscription(UInt8, 'ex_dt_right', self.ex_dt_right_update, 10)
-        self.ex_conveyer_sub = self.create_subscription(UInt8, 'ex_conveyer', self.ex_conveyer_update, 10)
-        self.ex_arm_sub = self.create_subscription(UInt8, 'ex_arm', self.ex_arm_update, 10)
-        self.ex_digger_sub = self.create_subscription(UInt8, 'ex_', self.ex_digger_update, 10)
+        self.mini_dt_left_sub = self.create_subscription(UInt8, 'mini_dt_left', self.mini_dt_left_update, 10)
+        self.mini_dt_right_sub = self.create_subscription(UInt8, 'mini_dt_right', self.mini_dt_right_update, 10)
 
         # create state variables, these keep track of what motors
         # should be running and how fast at the current moment
-        self.ex_dt_left_speed = 0
-        self.ex_dt_right_speed = 0
-        self.ex_excavator_speed = 0
-        self.ex_reg_speed = 0
-        self.ex_digger_speed = 0
-
+        self.mini_dt_left_speed = 0
+        self.mini_dt_right_speed = 0
+        
         # create can bus link, right now is linked to virtual vcan 0, most likely
         # will be can0 when on the bot
         self.bus = can.interface.Bus(interface='socketcan', channel='vcan0', bitrate='500000')
@@ -35,7 +29,7 @@ class DrivetrainExcavator(Node):
     # Converts Controller Speed to byte array (decimal form)
     # Alg: signal -> percentage * 1000 (UInt16) -> Hexadecimal Byte Form -> Decimal Byte Form 
     # Ex. 200 -> 50% -> 50,000 = [80, 200]
-    def signal_conversion(self, msg_data: int, bytes_range: int, frequency_floor: int) -> list[int]:
+    def signal_conversion(self, msg_data: int, bytes_range: int, frequency_floor) -> list[int]:
         data: int = msg_data 
         temp_data: list[int] = []
 
@@ -78,47 +72,26 @@ class DrivetrainExcavator(Node):
         self.bus.send(can_msg)
 
     #updates the states of the left drivetrain motors
-    def ex_dt_left_update(self, msg):
+    def mini_dt_left_update(self, msg):
         # checks if speed is different then previous message published
-        if self.ex_dt_left_speed == msg.data:
+        if self.mini_dt_left_speed == msg.data:
             return None
-        self.ex_dt_left_speed = msg.data
+        self.mini_dt_left_speed = msg.data
 
-        temp_data = self.signal_conversion(self.ex_dt_left_speed, 4, 1000)  
+        temp_data = self.signal_conversion(self.mini_dt_left_speed, 4, 1000)  
         # can message for right and left motor
-        self.can_publish(15, temp_data, True)
         self.can_publish(16, temp_data, True) 
 
     #updates the states of the right drivetrains motors
-    def ex_dt_right_update(self, msg):
+    def mini_dt_right_update(self, msg):
         # checks if speed is different then previous message published
-        if self.ex_dt_right_speed == msg.data:
+        if self.mini_dt_right_speed == msg.data:
             return None
-        self.ex_dt_right_speed = msg.data
+        self.mini_dt_right_speed = msg.data
 
         # converts controller signal to bytes array
-        temp_data = self.signal_conversion(self.ex_dt_right_speed, 4, 1000)  
+        temp_data = self.signal_conversion(self.mini_dt_right_speed, 4, 1000)  
         self.can_publish(17, temp_data, True)
-        self.can_publish(18, temp_data, True)
-    
-    # Sample Dpad Control Scheme
-    def ex_conveyer_update(self, msg):
-        if self.ex_excavator_speed == msg.data:
-            return None
-        self.ex_excavator_speed = msg.data
-
-        temp_data = self.signal_conversion(msg.data, 4, 1000)
-
-        self.can_publish(19, temp_data, True) 
-
-    # Sample A Button Scheme
-    def ex_arm_update(self, msg):
-        if self.ex_reg_speed == msg.data:
-            return None
-        self.ex_reg_speed = msg.data 
-        temp_data = self.signal_conversion(msg.data, 4, 1000)
-
-        self.can_publish(21, temp_data, True)
     
     def ex_digger_update(self, msg):
         if self.ex_digger_speed == msg.data:
@@ -131,7 +104,7 @@ class DrivetrainExcavator(Node):
 def main(args=None):
     print("Bus Publisher Active")
     rclpy.init(args=args)
-    node = DrivetrainExcavator()
+    node = DrivetrainMini()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
@@ -139,4 +112,3 @@ def main(args=None):
 if __name__ == '__main__':
     main()
 
-        
