@@ -93,7 +93,7 @@ class DrivetrainExcavator(Node):
         
         can_msg_m2 = can.Message(
                arbitration_id = 15,
-               data = [32], # place holder
+               data = temp_data, # place holder
                is_extended_id = True
                )
         
