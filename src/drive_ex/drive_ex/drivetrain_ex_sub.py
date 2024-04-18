@@ -90,17 +90,17 @@ class DrivetrainExcavator(Node):
                 data = temp_data, # place holder 
                 is_extended_id = True
                 )
-        # Changed so both motors are active on 16
-        #can_msg_m2 = can.Message(
-        #        arbitration_id = 15,
-        #        data = [32], # place holder
-        #        is_extended_id = True
-        #        )
+        
+        can_msg_m2 = can.Message(
+               arbitration_id = 15,
+               data = [32], # place holder
+               is_extended_id = True
+               )
         
 
         # Send to Both Left Motors
         self.bus.send(can_msg_m1)
-        # self.bus.send(can_msg_m2)
+        self.bus.send(can_msg_m2)
 
         # Log Can Message
         # self.get_logger().info(f'{can_msg_m1}')
@@ -118,12 +118,12 @@ class DrivetrainExcavator(Node):
 
         can_msg_m1 = can.Message(
                 arbitration_id = 17,
-                data = temp_data,  # place holder speed: 50%
+                data = temp_data, 
                 is_extended_id = True,
                 )
         can_msg_m2 = can.Message(
                 arbitration_id =18, 
-                data = temp_data, # place holder speed: 50%
+                data = temp_data, 
                 is_extended_id = True
                 )
         
