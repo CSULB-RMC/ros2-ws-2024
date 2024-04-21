@@ -2,7 +2,6 @@ import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Joy
 from std_msgs.msg import UInt8
-from paho.mqtt import client as mqtt_client
 #ignore can import error if it's there, it works if you installed python-can
 import can
 
@@ -11,12 +10,6 @@ class DrivetrainMini(Node):
     
     def __init__(self):
         super().__init__('drivetrain_excavator')
-        self.broker = 'ke831b85.ala.us-east-1.emqxsl.com'
-        self.port = 1883
-        self.topic = "python/mqtt"
-        self.client_id = 'python-mqtt-1000'
-        self.username = 'mini'
-        self.password = 'mini'
 
         # create subscribers to listen for teleop computer commands
         self.mini_dt_left_sub = self.create_subscription(UInt8, 'ex_dt_left', self.mini_dt_left_update, 10)
@@ -32,29 +25,6 @@ class DrivetrainMini(Node):
         self.bus = can.interface.Bus(interface='socketcan', channel='can0', bitrate='500000')
 
         self.i = 0
-        
-        self.client = self.connect_mqtt()
-        self.client.publish(self.topic, f'1')
-        self.client.loop_start()
-        self.client.loop_forever()
-    
-    def connect_mqtt(self):
-        def on_connect(client, userdata, flags, rc):
-            # For paho-mqtt 2.0.0, you need to add the properties parameter.
-            # def on_connect(client, userdata, flags, rc, properties):
-            if rc == 0:
-                print("Connected to MQTT Broker!")
-            else:
-                print("Failed to connect, return code %d\n", rc)
-        # Set Connecting Client ID
-        client = mqtt_client.Client(self.client_id)
-
-        # For paho-mqtt 2.0.0, you need to set callback_api_version.
-        # client = mqtt_client.Client(client_id=client_id, callback_api_version=mqtt_client.CallbackAPIVersion.VERSION2)
-        # client.username_pw_set(username, password)
-        client.on_connect = on_connect
-        client.connect(self.broker, self.port)
-        return client
 
     # Converts Controller Speed to byte array (decimal form)
     # Alg: signal -> percentage * 1000 (UInt16) -> Hexadecimal Byte Form -> Decimal Byte Form 
@@ -151,7 +121,7 @@ class DrivetrainMini(Node):
         self.can_publish(23, temp_data, True)
 
 def main(args=None):
-    print("Bus Publisher Active")
+    print("Bus Publisher Active11")
     rclpy.init(args=args)
     node = DrivetrainMini()
     rclpy.spin(node)

@@ -121,7 +121,7 @@ class DrivetrainMini(Node):
         self.can_publish(23, temp_data, True)
 
 def main(args=None):
-    print("Bus Publisher Active")
+    print("Bus Publisher Active11")
     rclpy.init(args=args)
     node = DrivetrainMini()
     rclpy.spin(node)
