@@ -13,8 +13,9 @@ class JoyPub(Node):
         super().__init__('minimal_publisher')
         self.dt_l_publisher_ = self.create_publisher(UInt8, 'ex_dt_left', 10)
         self.dt_r_publisher_ = self.create_publisher(UInt8, 'ex_dt_right', 10)
-        self.ex_publisher_ = self.create_publisher(UInt8, 'ex_excavator', 10)
-        self.reg_publisher_ = self.create_publisher(UInt8, 'ex_reg', 10)
+        self.ex_conveyer_publisher_ = self.create_publisher(UInt8, 'ex_conveyer', 10)
+        self.ex_arm_publisher_ = self.create_publisher(UInt8, 'ex_arm', 10)
+        self.ex_digger_publisher_ = self.create_publisher(UInt8, 'ex_digger', 10)
         self.subscription = self.create_subscription(
 			Joy,
 			'joy',
@@ -30,49 +31,49 @@ class JoyPub(Node):
         if msg.axes[1] > self.DEADBAND: # L Stick Up 
             uint8.data = int((msg.axes[1] * 100) + 100) # add 100 to indicate forward motion and not include 100
             self.dt_l_publisher_.publish(uint8)
-            # self.get_logger().info(f'L-stick: Up, {uint8.data}')
 
         elif msg.axes[1] < -self.DEADBAND: # L Stick Down 
-            uint8.data = int((abs(msg.axes[1]) * 100) - 1) # subtract 1 to no include 100 
+            uint8.data = int((abs(msg.axes[1]) * 100)) # subtract 1 to no include 100 
             self.dt_l_publisher_.publish(uint8)
-            # self.get_logger().info(f'L-stick: Down, {uint8.data}')
 
         else:
-            uint8.data = 100 # deadband resets it to neutral
+            uint8.data = 0 # deadband resets it to neutral
             self.dt_l_publisher_.publish(uint8)
 
         # Right Stick Maps - Right Drive Train
         if msg.axes[3] > self.DEADBAND: # R Stick Up
             uint8.data = int((msg.axes[3] * 100) + 100) # add 100 to indicate forward motion and not include 100
             self.dt_r_publisher_.publish(uint8)
-           # self.get_logger().info(f'R-stick: Up, {uint8.data}')
 
         elif msg.axes[3] < -self.DEADBAND: # R Stick Down
-            uint8.data = int((abs(msg.axes[3]) * 100) - 1) # subtract 1 to no include 100 
+            uint8.data = int((abs(msg.axes[3]) * 100)) # subtract 1 to no include 100 
             self.dt_r_publisher_.publish(uint8)
-           # self.get_logger().info(f'R-stick: Down, {uint8.data}')
             
         else:
-            uint8.data = 100 # deadband resets it to neutral
+            uint8.data = 0 # deadband resets it to neutral
             self.dt_r_publisher_.publish(uint8)
         
         # D pad Maps - Excavator
         if msg.axes[5] > 0.01: # D pad Up
-            uint8.data = 150
-            self.ex_publisher_.publish(uint8)
-            # self.get_logger().info("Dpad: up")
+            uint8.data = 110
+            self.ex_conveyer_publisher_.publish(uint8)
             
         elif msg.axes[5] < 0: # D pad down
-            uint8.data = 50
-            self.ex_publisher_.publish(uint8)
-            # self.get_logger().info("Dpad: down")
+            uint8.data = 10
+            self.ex_conveyer_publisher_.publish(uint8)
+        else:
+            uint8.data = 0
+            self.ex_conveyer_publisher_.publish(uint8)
 
         # A button
-        # TODO place holder 
-        if msg.buttons[0] == 1:
-            uint8.data = 150
-            self.reg_publisher_.publish(uint8)
-            # self.get_logger().info("A: pressed")
+        if msg.buttons[2] == 1:
+            uint8.data = 10
+            self.ex_digger_publisher_.publish(uint8)
+        else:
+            uint8.data = 0
+            self.ex_digger_publisher_.publish(uint8)
+        
+        
 
 def main(args=None):
     print("Controller Active")
