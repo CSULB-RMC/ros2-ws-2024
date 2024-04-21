@@ -9,14 +9,14 @@ import can
 class DrivetrainExcavator(Node):
     
     def __init__(self):
-        super().__init__('drivetrain_excavator')
+        super().__init__('drivetrain_mini')
 
         # create subscribers to listen for teleop computer commands
         self.ex_dt_left_sub = self.create_subscription(UInt8, 'ex_dt_left', self.ex_dt_left_update, 10)
         self.ex_dt_right_sub = self.create_subscription(UInt8, 'ex_dt_right', self.ex_dt_right_update, 10)
         self.ex_conveyer_sub = self.create_subscription(UInt8, 'ex_conveyer', self.ex_conveyer_update, 10)
         self.ex_arm_sub = self.create_subscription(UInt8, 'ex_arm', self.ex_arm_update, 10)
-        self.ex_digger_sub = self.create_subscription(UInt8, 'ex_', self.ex_digger_update, 10)
+        self.ex_digger_sub = self.create_subscription(UInt8, 'ex_digger', self.ex_digger_update, 10)
 
         # create state variables, these keep track of what motors
         # should be running and how fast at the current moment
@@ -28,7 +28,7 @@ class DrivetrainExcavator(Node):
 
         # create can bus link, right now is linked to virtual vcan 0, most likely
         # will be can0 when on the bot
-        self.bus = can.interface.Bus(interface='socketcan', channel='vcan0', bitrate='500000')
+        self.bus = can.interface.Bus(interface='socketcan', channel='can0', bitrate='500000')
 
         self.i = 0
     
@@ -61,7 +61,7 @@ class DrivetrainExcavator(Node):
                     break
         else:
             # covert controller signal to proper range (1000-100000)
-            data *= 1000
+            data *= frequency_floor
     
             # convert signal to byte array
             for i in range(bytes_range - 1, -1, -1):
@@ -80,11 +80,11 @@ class DrivetrainExcavator(Node):
     #updates the states of the left drivetrain motors
     def ex_dt_left_update(self, msg):
         # checks if speed is different then previous message published
-        if self.ex_dt_left_speed == msg.data:
+        if self.ex_dt_left_speed == msg.data:     
             return None
         self.ex_dt_left_speed = msg.data
 
-        temp_data = self.signal_conversion(self.ex_dt_left_speed, 4, 1000)  
+        temp_data = self.signal_conversion(self.ex_dt_left_speed, 4, 1000)  # Has to be 4 to work on vesc
         # can message for right and left motor
         self.can_publish(15, temp_data, True)
         self.can_publish(16, temp_data, True) 
@@ -97,7 +97,7 @@ class DrivetrainExcavator(Node):
         self.ex_dt_right_speed = msg.data
 
         # converts controller signal to bytes array
-        temp_data = self.signal_conversion(self.ex_dt_right_speed, 4, 1000)  
+        temp_data = self.signal_conversion(self.ex_dt_right_speed, 4, 1000)  # Has to be 4 to work on vesc
         self.can_publish(17, temp_data, True)
         self.can_publish(18, temp_data, True)
     
@@ -107,7 +107,7 @@ class DrivetrainExcavator(Node):
             return None
         self.ex_excavator_speed = msg.data
 
-        temp_data = self.signal_conversion(msg.data, 4, 1000)
+        temp_data = self.signal_conversion(msg.data, 8, 10)
 
         self.can_publish(19, temp_data, True) 
 
@@ -116,7 +116,7 @@ class DrivetrainExcavator(Node):
         if self.ex_reg_speed == msg.data:
             return None
         self.ex_reg_speed = msg.data 
-        temp_data = self.signal_conversion(msg.data, 4, 1000)
+        temp_data = self.signal_conversion(msg.data, 8, 1000)
 
         self.can_publish(21, temp_data, True)
     
@@ -124,12 +124,12 @@ class DrivetrainExcavator(Node):
         if self.ex_digger_speed == msg.data:
             return None
         self.ex_digger_speed = msg.data 
-        temp_data = self.signal_conversion(msg.data, 4, 1000)
+        temp_data = self.signal_conversion(msg.data, 4, 10)
 
-        self.can_publish(23, temp_data, True)
+        self.can_publish(17, temp_data, True)
 
 def main(args=None):
-    print("Bus Publisher Active")
+    print("Bus Publisher Active1")
     rclpy.init(args=args)
     node = DrivetrainExcavator()
     rclpy.spin(node)

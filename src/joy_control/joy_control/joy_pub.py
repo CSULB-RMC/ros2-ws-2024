@@ -66,8 +66,8 @@ class JoyPub(Node):
             self.ex_conveyer_publisher_.publish(uint8)
 
         # A button
-        if msg.buttons[0] == 1:
-            uint8.data = 110
+        if msg.buttons[2] == 1:
+            uint8.data = 10
             self.ex_digger_publisher_.publish(uint8)
         else:
             uint8.data = 0
