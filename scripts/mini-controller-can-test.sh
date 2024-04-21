@@ -8,7 +8,7 @@ echo "Starting Controller Interface"
 colcon build --build-base build --install-base install --packages-select joy_control && ros2 run joy_control talker &
 sleep 7
 echo "Starting drivetrain_ex"
-colcon build --build-base build --install-base install --packages-select drive_ex && ros2 run drive_ex drivetrain_ex &
-sleep 7
+colcon build --build-base build --install-base install --packages-select drive_ex && ros2 run drive_ex drivetrain_mini &
+sleep 10
 echo "Starting Can View"
-candump can0
+cansniffer can0
