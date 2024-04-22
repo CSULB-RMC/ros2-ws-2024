@@ -2,6 +2,7 @@ import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Joy
 from std_msgs.msg import UInt8, String
+import os
 #ignore can import error if it's there, it works if you installed python-can
 
 class UI(Node):
@@ -23,7 +24,7 @@ class UI(Node):
         self.ex_health = msg.data
 
     def timer_callback(self):
-        print(chr(27) + "[2J")
+        os.system('cls' if os.name == 'nt' else 'clear')
         print(f'Excavator Bot: {self.ex_health}')
         print(f'Cargo Bot: {self.cb_health}')
     
