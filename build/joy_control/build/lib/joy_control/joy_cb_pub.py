@@ -26,28 +26,24 @@ class JoyPub_Cb(Node):
         
         # Left Stick Maps - Left Drive Train
         if msg.axes[1] > self.DEADBAND: # L Stick Up 
-            uint8.data = int((msg.axes[1] * 100) + 100) # add 100 to indicate forward motion and not include 100
+            uint8.data = 50 - int((msg.axes[1] * 100) // 2) # add 100 to indicate forward motion and not include 100
             self.cb_l_publisher_.publish(uint8)
-
         elif msg.axes[1] < -self.DEADBAND: # L Stick Down 
-            uint8.data = int((abs(msg.axes[1]) * 100)) # subtract 1 to no include 100 
+            uint8.data = 50 + int((abs(msg.axes[1]) * 100) // 2) # subtract 1 to no include 100 
             self.cb_l_publisher_.publish(uint8)
-
         else:
-            uint8.data = 0 # deadband resets it to neutral
+            uint8.data = 1 # deadband resets it to neutral
             self.cb_l_publisher_.publish(uint8)
 
         # Right Stick Maps - Right Drive Train
         if msg.axes[3] > self.DEADBAND: # R Stick Up
-            uint8.data = int((msg.axes[3] * 100) + 100) # add 100 to indicate forward motion and not include 100
+            uint8.data = 50 - int((msg.axes[3] * 100) // 2) # add 100 to indicate forward motion and not include 100
             self.cb_r_publisher_.publish(uint8)
-
         elif msg.axes[3] < -self.DEADBAND: # R Stick Down
-            uint8.data = int((abs(msg.axes[3]) * 100)) # subtract 1 to no include 100 
+            uint8.data = 50 + int((abs(msg.axes[3]) * 100) // 2) # subtract 1 to no include 100 
             self.cb_r_publisher_.publish(uint8)
-            
         else:
-            uint8.data = 0 # deadband resets it to neutral
+            uint8.data = 1 # deadband resets it to neutral
             self.cb_r_publisher_.publish(uint8)    
 
 def main(args=None):

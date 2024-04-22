@@ -75,15 +75,7 @@ class DrivetrainMini(Node):
     def cb_dt_left_update(self, msg):
         # checks if speed is different then previous message published
         if self.cb_dt_left_speed == msg.data:
-            return None
-        if msg.data == 0:
-            msg.data = 1
-        if msg.data > 100 and msg.data != 0:
-            msg.data = 50 - (msg.data - 100) // 2
-        else:
-            if msg.data <= 50 and msg.data != 0:
-                return None
-             
+            return None  
         self.cb_dt_left_speed = msg.data
 
         temp_data = self.signal_conversion(self.cb_dt_left_speed, 8, 10)  
@@ -95,15 +87,7 @@ class DrivetrainMini(Node):
     def cb_dt_right_update(self, msg):
         # checks if speed is different then previous message published
         if self.cb_dt_right_speed == msg.data:
-            return None
-        if msg.data == 0:
-            msg.data = 1
-        if msg.data > 100 and msg.data != 0:
-            msg.data = 50 - (msg.data - 100) // 2
-        else:
-            if msg.data <= 50 and msg.data != 0:
-                return None
-         
+            return None         
         self.cb_dt_right_speed = msg.data
 
         # converts controller signal to bytes array

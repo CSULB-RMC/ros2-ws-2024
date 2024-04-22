@@ -55,7 +55,7 @@ class JoyPub_Ex(Node):
         
         # D pad Maps - Excavator
         if msg.axes[5] > 0.01: # D pad Up
-            uint8.data = 110
+            uint8.data = 60
             self.ex_conveyer_publisher_.publish(uint8)
             
         elif msg.axes[5] < 0: # D pad down
