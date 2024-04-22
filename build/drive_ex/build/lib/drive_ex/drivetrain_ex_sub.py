@@ -116,7 +116,7 @@ class DrivetrainExcavator(Node):
         if self.ex_reg_speed == msg.data:
             return None
         self.ex_reg_speed = msg.data 
-        temp_data = self.signal_conversion(msg.data, 8, 1000)
+        temp_data = self.signal_conversion(msg.data, 8, 10)
 
         self.can_publish(21, temp_data, True)
     
@@ -126,7 +126,7 @@ class DrivetrainExcavator(Node):
         self.ex_digger_speed = msg.data 
         temp_data = self.signal_conversion(msg.data, 4, 10)
 
-        self.can_publish(17, temp_data, True)
+        self.can_publish(23, temp_data, True)
 
 def main(args=None):
     print("Bus Publisher Active1")
