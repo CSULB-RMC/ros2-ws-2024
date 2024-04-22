@@ -15,7 +15,7 @@ class ImageSubscriber(Node):
         super().__init__(name)                                  
         self.i = 0
         self.sub = self.create_subscription(
-            Image, 'image_raw', self.listener_callback, 10)     
+            Image, 'image_raw_2', self.listener_callback, 10)     
         self.cv_bridge = CvBridge()                             
 
     def object_detect(self, image):
@@ -43,8 +43,8 @@ class ImageSubscriber(Node):
         # self.object_detect(image)    
         # cv2.imshow("object", image)                          
         # cv2.waitKey(1)  
-        cv2.namedWindow("frame1")
-        cv2.imshow('frame1', image)
+        cv2.namedWindow("frame2")
+        cv2.imshow('frame2', image)
         cv2.waitKey(1)
                     
 

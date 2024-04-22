@@ -9,15 +9,15 @@ from threading import Thread
 class ImagePublisher(Node):
     
     def __init__(self):
-        super().__init__('topic_webcam_pub')
-        self.publisher_ = self.create_publisher(Image, 'image_raw', 10)
+        super().__init__('topic_webcam_pub_2')
+        self.publisher_ = self.create_publisher(Image, 'image_raw_2', 10)
         # self.timer = self.create_timer(0.1, self.timer_callback)
         self.subscription = self.create_subscription(
 			Joy,
 			'joy',
 			self.listener_callback,
 			10)
-        self.cap = cv2.VideoCapture(2)
+        self.cap = cv2.VideoCapture(0)
         self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
         self.cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
         self.cv_bridge = CvBridge()
@@ -51,7 +51,7 @@ class ImagePublisher(Node):
             self.get_logger().info(f'Publishing video frame {self.i}')
 
     def listener_callback(self, msg):
-        if msg.buttons[3]:
+        if msg.buttons[2]:
             self.timer_callback()
 
 def main(args=None):
