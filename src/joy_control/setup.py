@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'talker = joy_control.joy_pub:main'
+            'control_ex = joy_control.joy_ex_pub:main',
+            'control_cb = joy_control.joy_cb_pub:main'
         ],
     },
 )

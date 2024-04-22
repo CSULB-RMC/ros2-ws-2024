@@ -21,7 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             'drivetrain_ex = drive_ex.drivetrain_ex_sub:main',
-            'drivetrain_mini = drive_ex.drivetrain_mini_sub:main',
+            'drivetrain_cb = drive_ex.drivetrain_mini_sub:main',
         ],
     },
 )

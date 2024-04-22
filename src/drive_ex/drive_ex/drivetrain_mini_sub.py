@@ -6,19 +6,19 @@ from std_msgs.msg import UInt8
 import can
 
 
-class DrivetrainMini(Node):
+class DrivetrainCb(Node):
     
     def __init__(self):
         super().__init__('drivetrain_excavator')
 
         # create subscribers to listen for teleop computer commands
-        self.mini_dt_left_sub = self.create_subscription(UInt8, 'ex_dt_left', self.mini_dt_left_update, 10)
-        self.mini_dt_right_sub = self.create_subscription(UInt8, 'ex_dt_right', self.mini_dt_right_update, 10)
+        self.cb_dt_left_sub = self.create_subscription(UInt8, 'cb_dt_left', self.cb_dt_left_update, 10)
+        self.cb_dt_right_sub = self.create_subscription(UInt8, 'cb_dt_right', self.cb_dt_right_update, 10)
 
         # create state variables, these keep track of what motors
         # should be running and how fast at the current moment
-        self.mini_dt_left_speed = 0
-        self.mini_dt_right_speed = 0
+        self.cb_dt_left_speed = 0
+        self.cb_dt_right_speed = 0
         
         # create can bus link, right now is linked to virtual vcan 0, most likely
         # will be can0 when on the bot
@@ -72,9 +72,9 @@ class DrivetrainMini(Node):
         self.bus.send(can_msg)
 
     #updates the states of the left drivetrain motors
-    def mini_dt_left_update(self, msg):
+    def cb_dt_left_update(self, msg):
         # checks if speed is different then previous message published
-        if self.mini_dt_left_speed == msg.data:
+        if self.cb_dt_left_speed == msg.data:
             return None
         if msg.data == 0:
             msg.data = 1
@@ -84,17 +84,17 @@ class DrivetrainMini(Node):
             if msg.data <= 50 and msg.data != 0:
                 return None
              
-        self.mini_dt_left_speed = msg.data
+        self.cb_dt_left_speed = msg.data
 
-        temp_data = self.signal_conversion(self.mini_dt_left_speed, 8, 10)  
+        temp_data = self.signal_conversion(self.cb_dt_left_speed, 8, 10)  
         # can message for right and left motor
         self.can_publish(115, temp_data, True) 
         self.can_publish(116, temp_data, True) 
 
     #updates the states of the right drivetrains motors
-    def mini_dt_right_update(self, msg):
+    def cb_dt_right_update(self, msg):
         # checks if speed is different then previous message published
-        if self.mini_dt_right_speed == msg.data:
+        if self.cb_dt_right_speed == msg.data:
             return None
         if msg.data == 0:
             msg.data = 1
@@ -104,26 +104,18 @@ class DrivetrainMini(Node):
             if msg.data <= 50 and msg.data != 0:
                 return None
          
-        self.mini_dt_right_speed = msg.data
+        self.cb_dt_right_speed = msg.data
 
         # converts controller signal to bytes array
-        temp_data = self.signal_conversion(self.mini_dt_right_speed, 8, 10)  
+        temp_data = self.signal_conversion(self.cb_dt_right_speed, 8, 10)  
         self.can_publish(117, temp_data, True) 
         self.can_publish(118, temp_data, True)
 
-    
-    def ex_digger_update(self, msg):
-        if self.ex_digger_speed == msg.data:
-            return None
-        self.ex_digger_speed = msg.data 
-        temp_data = self.signal_conversion(msg.data, 4, 1000)
-
-        self.can_publish(23, temp_data, True)
 
 def main(args=None):
     print("Bus Publisher Active11")
     rclpy.init(args=args)
-    node = DrivetrainMini()
+    node = DrivetrainCb()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
