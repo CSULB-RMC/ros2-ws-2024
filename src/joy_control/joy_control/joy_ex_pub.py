@@ -96,7 +96,7 @@ class JoyPub_Ex(Node):
                 uint8.data = 50 + int((abs(msg.axes[1]) * 100) // 2) # subtract 1 to no include 100 
                 self.cb_l_publisher_.publish(uint8)
             else:
-                uint8.data = 1 # deadband resets it to neutral
+                uint8.data = 50 # deadband resets it to neutral
                 self.cb_l_publisher_.publish(uint8)
 
             # Right Stick Maps - Right Drive Train
@@ -107,7 +107,7 @@ class JoyPub_Ex(Node):
                 uint8.data = 50 + int((abs(msg.axes[3]) * 100) // 2) # subtract 1 to no include 100 
                 self.cb_r_publisher_.publish(uint8)
             else:
-                uint8.data = 1 # deadband resets it to neutral
+                uint8.data = 50 # deadband resets it to neutral
                 self.cb_r_publisher_.publish(uint8)    
 
 
