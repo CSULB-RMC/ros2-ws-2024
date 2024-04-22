@@ -8,14 +8,14 @@ def generate_launch_description():
             namespace='joy_cb',
             executable='joy_node',
             name='joy_node_cb',
-            value='/dev/input/js0'
+            value='/dev/input/js1'
         ),
          Node(
             package='joy',
             namespace='joy_ex',
             executable='joy_node',
             name='joy_node_ex',
-            value='/dev/input/js1'
+            value='/dev/input/js2'
             ),
         
     ])
