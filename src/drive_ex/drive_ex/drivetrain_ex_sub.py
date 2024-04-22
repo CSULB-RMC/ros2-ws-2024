@@ -113,7 +113,7 @@ class DrivetrainExcavator(Node):
             return None
         self.ex_excavator_speed = msg.data
 
-        temp_data = self.signal_conversion(msg.data, 8, 10)
+        temp_data = self.signal_conversion(msg.data, 8, 100)
 
         self.can_publish(19, temp_data, True) 
 

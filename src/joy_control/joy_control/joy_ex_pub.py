@@ -19,7 +19,7 @@ class JoyPub_Ex(Node):
         self.ex_digger_publisher_ = self.create_publisher(UInt8, 'ex_digger', 10)
         self.cb_l_publisher_ = self.create_publisher(UInt8, 'cb_dt_left', 10)
         self.cb_r_publisher_ = self.create_publisher(UInt8, 'cb_dt_right', 10)
-
+        self.cb_scoop_publisher_ = self.create_publisher(UInt8, 'cb_scoop', 10)
         self.subscription = self.create_subscription(
 			Joy,
 			'joy',
@@ -69,14 +69,14 @@ class JoyPub_Ex(Node):
             
             # D pad Maps - Excavator
             if msg.axes[5] > 0.01: # D pad Up
-                uint8.data = 60
+                uint8.data = 20
                 self.ex_conveyer_publisher_.publish(uint8)
                 
             elif msg.axes[5] < 0: # D pad down
-                uint8.data = 10
+                uint8.data = 5
                 self.ex_conveyer_publisher_.publish(uint8)
             else:
-                uint8.data = 0
+                uint8.data = 15
                 self.ex_conveyer_publisher_.publish(uint8)
 
             # A button
@@ -109,7 +109,14 @@ class JoyPub_Ex(Node):
             else:
                 uint8.data = 50 # deadband resets it to neutral
                 self.cb_r_publisher_.publish(uint8)    
-
+            
+            # A button
+            if msg.buttons[2] == 1:
+                uint8.data = 16
+                self.cb_scoop_publisher_.publish(uint8)
+            else:
+                uint8.data = 10
+                self.cb_scoop_publisher_.publish(uint8)
 
             
         
