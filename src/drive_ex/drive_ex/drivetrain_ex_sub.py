@@ -9,7 +9,7 @@ import can
 class DrivetrainExcavator(Node):
     
     def __init__(self):
-        super().__init__('drivetrain_mini')
+        super().__init__('drivetrain_ex')
         self.activity_publisher_ = self.create_publisher(String, 'ex_active', 10) 
         self.status_timer = self.create_timer(1, self.timer_callback)
 
@@ -135,7 +135,7 @@ class DrivetrainExcavator(Node):
         self.can_publish(23, temp_data, True)
 
 def main(args=None):
-    print("Bus Publisher Active1")
+    print("Bus Publisher Active New")
     rclpy.init(args=args)
     node = DrivetrainExcavator()
     rclpy.spin(node)

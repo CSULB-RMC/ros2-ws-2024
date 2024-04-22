@@ -19,7 +19,6 @@ class JoyPub_Ex(Node):
         self.ex_digger_publisher_ = self.create_publisher(UInt8, 'ex_digger', 10)
         self.cb_l_publisher_ = self.create_publisher(UInt8, 'cb_dt_left', 10)
         self.cb_r_publisher_ = self.create_publisher(UInt8, 'cb_dt_right', 10)
-        self.activity_publisher_ = self.create_publisher(String, 'cb_active', 10)
 
         self.subscription = self.create_subscription(
 			Joy,
@@ -28,14 +27,16 @@ class JoyPub_Ex(Node):
 			10)
         
         self.DEADBAND = 0.05
-        self.controller = 0;
+        self.controller = 0
         self.prev = 0
+        
     def listener_callback(self, msg: Joy):
         if msg.buttons[8] != self.prev:
             self.prev = msg.buttons[8]
             if self.prev == True:
                 self.controller = (self.controller + 1) % 2
-            self.get_logger().info("switch")
+                time.sleep(1)
+                self.get_logger().info(f'switch, {self.controller}')
 
         uint8 = UInt8()
         # excavator bot

@@ -109,10 +109,10 @@ class DrivetrainMini(Node):
         self.ex_digger_speed = msg.data 
         temp_data = self.signal_conversion(msg.data, 4, 1000)
 
-        self.can_publish(23, temp_data, True)
+        self.can_publish(120, temp_data, True)
 
 def main(args=None):
-    print("Bus Publisher Active")
+    print("Bus Publisher Active New")
     rclpy.init(args=args)
     node = DrivetrainMini()
     rclpy.spin(node)
