@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Joy
-from std_msgs.msg import UInt8
+from std_msgs.msg import UInt8, String
 #ignore can import error if it's there, it works if you installed python-can
 import can
 
@@ -10,6 +10,9 @@ class DrivetrainMini(Node):
     
     def __init__(self):
         super().__init__('drivetrain_cargo')
+
+        self.status_timer = self.create_timer(1, self.timer_callback)
+        self.activity_publisher_ = self.create_publisher(String, 'cb_active', 10)
 
         # create subscribers to listen for teleop computer commands
         self.cb_dt_left_sub = self.create_subscription(UInt8, 'cb_dt_left', self.cb_dt_left_update, 10)
@@ -26,6 +29,10 @@ class DrivetrainMini(Node):
 
         self.i = 0
 
+    def timer_callback(self):
+        msg = String()
+        msg.data = 'Alive'
+        self.activity_publisher_.publish(msg)
     # Converts Controller Speed to byte array (decimal form)
     # Alg: signal -> percentage * 1000 (UInt16) -> Hexadecimal Byte Form -> Decimal Byte Form 
     # Ex. 200 -> 50% -> 50,000 = [80, 200]
