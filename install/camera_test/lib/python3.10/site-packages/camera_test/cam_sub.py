@@ -43,8 +43,8 @@ class ImageSubscriber(Node):
         # self.object_detect(image)    
         # cv2.imshow("object", image)                          
         # cv2.waitKey(1)  
-        cv2.namedWindow("frame")
-        cv2.imshow('frame', image)
+        cv2.namedWindow("frame1")
+        cv2.imshow('frame1', image)
         cv2.waitKey(1)
                     
 

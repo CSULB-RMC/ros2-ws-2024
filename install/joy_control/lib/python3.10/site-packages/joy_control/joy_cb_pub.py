@@ -11,8 +11,10 @@ class JoyPub_Cb(Node):
 
     def __init__(self):
         super().__init__('minimal_publisher')
+        self.status_timer = self.create_timer(1, self.timer_callback)
         self.cb_l_publisher_ = self.create_publisher(UInt8, 'cb_dt_left', 10)
         self.cb_r_publisher_ = self.create_publisher(UInt8, 'cb_dt_right', 10)
+        self.activity_publisher_ = self.create_publisher(String, 'cb_active', 10)
         self.subscription = self.create_subscription(
 			Joy,
 			'joy',
@@ -20,6 +22,10 @@ class JoyPub_Cb(Node):
 			10)
         
         self.DEADBAND = 0.05
+    def timer_callback(self):
+        msg = String()
+        msg.data = 'alive'
+        self.activity_publisher_.publish(msg)
 
     def listener_callback(self, msg: Joy):
         uint8 = UInt8()
@@ -53,7 +59,9 @@ def main(args=None):
     joy_node = JoyPub_Cb()
 
     rclpy.spin(joy_node)
-
+    x = String()
+    x.data = 'Dead'
+    joy_node.activity_publisher_.publish(x)
     # Destroy the node explicitly
     # (optional - otherwise it will be done automatically
     # when the garbage collector destroys the node object)

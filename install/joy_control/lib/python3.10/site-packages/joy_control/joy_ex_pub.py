@@ -11,6 +11,9 @@ class JoyPub_Ex(Node):
 
     def __init__(self):
         super().__init__('minimal_publisher')
+
+        self.status_timer = self.create_timer(1, self.timer_callback)
+        self.activity_publisher_ = self.create_publisher(String, 'ex_active', 10)
         self.dt_l_publisher_ = self.create_publisher(UInt8, 'ex_dt_left', 10)
         self.dt_r_publisher_ = self.create_publisher(UInt8, 'ex_dt_right', 10)
         self.ex_conveyer_publisher_ = self.create_publisher(UInt8, 'ex_conveyer', 10)
@@ -23,6 +26,11 @@ class JoyPub_Ex(Node):
 			10)
         
         self.DEADBAND = 0.05
+
+    def timer_callback(self):
+        s = String()
+        s.data = "Alive"
+        self.activity_publisher_.publish(s)
 
     def listener_callback(self, msg: Joy):
         uint8 = UInt8()
