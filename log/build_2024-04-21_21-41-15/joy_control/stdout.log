@@ -1,0 +1,30 @@
+running develop
+Removing /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages/joy-control.egg-link (link to .)
+running egg_info
+writing ../../build/joy_control/joy_control.egg-info/PKG-INFO
+writing dependency_links to ../../build/joy_control/joy_control.egg-info/dependency_links.txt
+writing entry points to ../../build/joy_control/joy_control.egg-info/entry_points.txt
+writing requirements to ../../build/joy_control/joy_control.egg-info/requires.txt
+writing top-level names to ../../build/joy_control/joy_control.egg-info/top_level.txt
+reading manifest file '../../build/joy_control/joy_control.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/joy_control/joy_control.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+copying /home/beachlbl/porter/ros2-ws-2024/build/joy_control/build/lib/joy_control/__init__.py -> /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages/joy_control
+copying /home/beachlbl/porter/ros2-ws-2024/build/joy_control/build/lib/joy_control/joy_ex_pub.py -> /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages/joy_control
+copying /home/beachlbl/porter/ros2-ws-2024/build/joy_control/build/lib/joy_control/joy_cb_pub.py -> /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages/joy_control
+byte-compiling /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages/joy_control/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages/joy_control/joy_ex_pub.py to joy_ex_pub.cpython-310.pyc
+byte-compiling /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages/joy_control/joy_cb_pub.py to joy_cb_pub.cpython-310.pyc
+running install_data
+copying resource/joy_control -> /home/beachlbl/porter/ros2-ws-2024/install/joy_control/share/ament_index/resource_index/packages
+copying package.xml -> /home/beachlbl/porter/ros2-ws-2024/install/joy_control/share/joy_control
+running install_egg_info
+Copying ../../build/joy_control/joy_control.egg-info to /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages/joy_control-0.0.0-py3.10.egg-info
+running install_scripts
+Installing control_cb script to /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/joy_control
+Installing control_ex script to /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/joy_control
+writing list of installed files to '/home/beachlbl/porter/ros2-ws-2024/build/joy_control/install.log'

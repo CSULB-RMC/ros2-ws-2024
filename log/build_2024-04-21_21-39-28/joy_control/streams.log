@@ -1,0 +1,21 @@
+[4.631s] Invoking command in '/home/beachlbl/porter/ros2-ws-2024/build/joy_control': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/joy_control/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/beachlbl/porter/ros2-ws-2024/build/joy_control/build --no-deps symlink_data --force
+[6.041s] running develop
+[6.043s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[6.044s]   warnings.warn(
+[6.993s] running egg_info
+[6.994s] writing joy_control.egg-info/PKG-INFO
+[6.995s] writing dependency_links to joy_control.egg-info/dependency_links.txt
+[6.996s] writing entry points to joy_control.egg-info/entry_points.txt
+[6.997s] writing requirements to joy_control.egg-info/requires.txt
+[6.998s] writing top-level names to joy_control.egg-info/top_level.txt
+[7.007s] reading manifest file 'joy_control.egg-info/SOURCES.txt'
+[7.011s] writing manifest file 'joy_control.egg-info/SOURCES.txt'
+[7.017s] running build_ext
+[7.018s] Creating /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages/joy-control.egg-link (link to .)
+[7.022s] Installing control_ex = joy_control.joy_ex_pub:maincontrol_cb script to /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/joy_control
+[7.024s] 
+[7.025s] Installed /home/beachlbl/porter/ros2-ws-2024/build/joy_control
+[7.025s] running symlink_data
+[7.026s] symbolically linking /home/beachlbl/porter/ros2-ws-2024/build/joy_control/resource/joy_control -> /home/beachlbl/porter/ros2-ws-2024/install/joy_control/share/ament_index/resource_index/packages
+[7.026s] symbolically linking /home/beachlbl/porter/ros2-ws-2024/build/joy_control/package.xml -> /home/beachlbl/porter/ros2-ws-2024/install/joy_control/share/joy_control
+[7.245s] Invoked command in '/home/beachlbl/porter/ros2-ws-2024/build/joy_control' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/joy_control/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/beachlbl/porter/ros2-ws-2024/build/joy_control/build --no-deps symlink_data --force

@@ -1,0 +1,26 @@
+[8.105s] Invoking command in '/home/beachlbl/porter/ros2-ws-2024/src/drive_ex': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/drive_ex/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/drive_ex build --build-base /home/beachlbl/porter/ros2-ws-2024/build/drive_ex/build install --record /home/beachlbl/porter/ros2-ws-2024/build/drive_ex/install.log --single-version-externally-managed install_data
+[9.775s] running egg_info
+[9.781s] writing ../../build/drive_ex/drive_ex.egg-info/PKG-INFO
+[9.783s] writing dependency_links to ../../build/drive_ex/drive_ex.egg-info/dependency_links.txt
+[9.796s] writing entry points to ../../build/drive_ex/drive_ex.egg-info/entry_points.txt
+[9.798s] writing requirements to ../../build/drive_ex/drive_ex.egg-info/requires.txt
+[9.799s] writing top-level names to ../../build/drive_ex/drive_ex.egg-info/top_level.txt
+[9.803s] reading manifest file '../../build/drive_ex/drive_ex.egg-info/SOURCES.txt'
+[9.805s] adding license file 'LICENSE'
+[9.810s] writing manifest file '../../build/drive_ex/drive_ex.egg-info/SOURCES.txt'
+[9.814s] running build
+[9.814s] running build_py
+[9.824s] copying drive_ex/drivetrain_mini_sub.py -> /home/beachlbl/porter/ros2-ws-2024/build/drive_ex/build/lib/drive_ex
+[9.825s] running install
+[9.826s] running install_lib
+[9.827s] copying /home/beachlbl/porter/ros2-ws-2024/build/drive_ex/build/lib/drive_ex/drivetrain_mini_sub.py -> /home/beachlbl/porter/ros2-ws-2024/install/drive_ex/lib/python3.10/site-packages/drive_ex
+[9.829s] byte-compiling /home/beachlbl/porter/ros2-ws-2024/install/drive_ex/lib/python3.10/site-packages/drive_ex/drivetrain_mini_sub.py to drivetrain_mini_sub.cpython-310.pyc
+[9.830s] running install_data
+[9.830s] running install_egg_info
+[9.834s] removing '/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/lib/python3.10/site-packages/drive_ex-0.0.0-py3.10.egg-info' (and everything under it)
+[9.850s] Copying ../../build/drive_ex/drive_ex.egg-info to /home/beachlbl/porter/ros2-ws-2024/install/drive_ex/lib/python3.10/site-packages/drive_ex-0.0.0-py3.10.egg-info
+[9.851s] running install_scripts
+[9.985s] Installing drivetrain_ex script to /home/beachlbl/porter/ros2-ws-2024/install/drive_ex/lib/drive_ex
+[9.988s] Installing drivetrain_mini script to /home/beachlbl/porter/ros2-ws-2024/install/drive_ex/lib/drive_ex
+[9.993s] writing list of installed files to '/home/beachlbl/porter/ros2-ws-2024/build/drive_ex/install.log'
+[10.452s] Invoked command in '/home/beachlbl/porter/ros2-ws-2024/src/drive_ex' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/drive_ex/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/drive_ex build --build-base /home/beachlbl/porter/ros2-ws-2024/build/drive_ex/build install --record /home/beachlbl/porter/ros2-ws-2024/build/drive_ex/install.log --single-version-externally-managed install_data
