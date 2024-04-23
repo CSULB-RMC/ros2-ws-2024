@@ -1,0 +1,25 @@
+[1.136s] Invoking command in '/home/porterclev/ros2-ws-2024/src/drive_cb': PYTHONPATH=/home/porterclev/ros2-ws-2024/build/drive_cb/prefix_override:/home/porterclev/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/drive_cb build --build-base /home/porterclev/ros2-ws-2024/build/drive_cb/build install --record /home/porterclev/ros2-ws-2024/build/drive_cb/install.log --single-version-externally-managed install_data
+[1.412s] running egg_info
+[1.413s] writing ../../build/drive_cb/drive_cb.egg-info/PKG-INFO
+[1.416s] writing dependency_links to ../../build/drive_cb/drive_cb.egg-info/dependency_links.txt
+[1.416s] writing entry points to ../../build/drive_cb/drive_cb.egg-info/entry_points.txt
+[1.416s] writing requirements to ../../build/drive_cb/drive_cb.egg-info/requires.txt
+[1.416s] writing top-level names to ../../build/drive_cb/drive_cb.egg-info/top_level.txt
+[1.417s] reading manifest file '../../build/drive_cb/drive_cb.egg-info/SOURCES.txt'
+[1.418s] adding license file 'LICENSE'
+[1.418s] writing manifest file '../../build/drive_cb/drive_cb.egg-info/SOURCES.txt'
+[1.419s] running build
+[1.419s] running build_py
+[1.419s] copying drive_cb/drivetrain_cb_sub.py -> /home/porterclev/ros2-ws-2024/build/drive_cb/build/lib/drive_cb
+[1.419s] running install
+[1.419s] running install_lib
+[1.420s] copying /home/porterclev/ros2-ws-2024/build/drive_cb/build/lib/drive_cb/drivetrain_cb_sub.py -> /home/porterclev/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages/drive_cb
+[1.421s] byte-compiling /home/porterclev/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages/drive_cb/drivetrain_cb_sub.py to drivetrain_cb_sub.cpython-310.pyc
+[1.422s] running install_data
+[1.422s] running install_egg_info
+[1.424s] removing '/home/porterclev/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages/drive_cb-0.0.0-py3.10.egg-info' (and everything under it)
+[1.424s] Copying ../../build/drive_cb/drive_cb.egg-info to /home/porterclev/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages/drive_cb-0.0.0-py3.10.egg-info
+[1.426s] running install_scripts
+[1.465s] Installing drivetrain_cb script to /home/porterclev/ros2-ws-2024/install/drive_cb/lib/drive_cb
+[1.466s] writing list of installed files to '/home/porterclev/ros2-ws-2024/build/drive_cb/install.log'
+[1.770s] Invoked command in '/home/porterclev/ros2-ws-2024/src/drive_cb' returned '0': PYTHONPATH=/home/porterclev/ros2-ws-2024/build/drive_cb/prefix_override:/home/porterclev/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/drive_cb build --build-base /home/porterclev/ros2-ws-2024/build/drive_cb/build install --record /home/porterclev/ros2-ws-2024/build/drive_cb/install.log --single-version-externally-managed install_data

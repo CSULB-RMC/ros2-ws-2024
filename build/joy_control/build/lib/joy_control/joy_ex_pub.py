@@ -12,13 +12,14 @@ class JoyPub_Ex(Node):
     def __init__(self):
         super().__init__('minimal_publisher')
 
-        self.status_timer = self.create_timer(1, self.timer_callback)
-        self.activity_publisher_ = self.create_publisher(String, 'ex_active', 10)
         self.dt_l_publisher_ = self.create_publisher(UInt8, 'ex_dt_left', 10)
         self.dt_r_publisher_ = self.create_publisher(UInt8, 'ex_dt_right', 10)
         self.ex_conveyer_publisher_ = self.create_publisher(UInt8, 'ex_conveyer', 10)
         self.ex_arm_publisher_ = self.create_publisher(UInt8, 'ex_arm', 10)
         self.ex_digger_publisher_ = self.create_publisher(UInt8, 'ex_digger', 10)
+        self.cb_l_publisher_ = self.create_publisher(UInt8, 'cb_dt_left', 10)
+        self.cb_r_publisher_ = self.create_publisher(UInt8, 'cb_dt_right', 10)
+        self.cb_scoop_publisher_ = self.create_publisher(UInt8, 'cb_scoop', 10)
         self.subscription = self.create_subscription(
 			Joy,
 			'joy',
@@ -26,61 +27,98 @@ class JoyPub_Ex(Node):
 			10)
         
         self.DEADBAND = 0.05
-
-    def timer_callback(self):
-        s = String()
-        s.data = "Alive"
-        self.activity_publisher_.publish(s)
-
+        self.controller = 0
+        self.prev = 0
+        
     def listener_callback(self, msg: Joy):
+        if msg.buttons[8] != self.prev:
+            self.prev = msg.buttons[8]
+            if self.prev == True:
+                self.controller = (self.controller + 1) % 2
+                time.sleep(1)
+                self.get_logger().info(f'switch, {self.controller}')
+
         uint8 = UInt8()
-        
-        # Left Stick Maps - Left Drive Train
-        if msg.axes[1] > self.DEADBAND: # L Stick Up 
-            uint8.data = int((msg.axes[1] * 100) + 100) # add 100 to indicate forward motion and not include 100
-            self.dt_l_publisher_.publish(uint8)
+        # excavator bot
+        if self.controller == 0: 
+            # Left Stick Maps - Left Drive Train
+            if msg.axes[1] > self.DEADBAND: # L Stick Up 
+                uint8.data = int((msg.axes[1] * 100) + 100) # add 100 to indicate forward motion and not include 100
+                self.dt_l_publisher_.publish(uint8)
 
-        elif msg.axes[1] < -self.DEADBAND: # L Stick Down 
-            uint8.data = int((abs(msg.axes[1]) * 100)) # subtract 1 to no include 100 
-            self.dt_l_publisher_.publish(uint8)
+            elif msg.axes[1] < -self.DEADBAND: # L Stick Down 
+                uint8.data = int((abs(msg.axes[1]) * 100)) # subtract 1 to no include 100 
+                self.dt_l_publisher_.publish(uint8)
 
-        else:
-            uint8.data = 0 # deadband resets it to neutral
-            self.dt_l_publisher_.publish(uint8)
+            else:
+                uint8.data = 0 # deadband resets it to neutral
+                self.dt_l_publisher_.publish(uint8)
 
-        # Right Stick Maps - Right Drive Train
-        if msg.axes[3] > self.DEADBAND: # R Stick Up
-            uint8.data = int((msg.axes[3] * 100) + 100) # add 100 to indicate forward motion and not include 100
-            self.dt_r_publisher_.publish(uint8)
+            # Right Stick Maps - Right Drive Train
+            if msg.axes[3] > self.DEADBAND: # R Stick Up
+                uint8.data = int((msg.axes[3] * 100) + 100) # add 100 to indicate forward motion and not include 100
+                self.dt_r_publisher_.publish(uint8)
 
-        elif msg.axes[3] < -self.DEADBAND: # R Stick Down
-            uint8.data = int((abs(msg.axes[3]) * 100)) # subtract 1 to no include 100 
-            self.dt_r_publisher_.publish(uint8)
+            elif msg.axes[3] < -self.DEADBAND: # R Stick Down
+                uint8.data = int((abs(msg.axes[3]) * 100)) # subtract 1 to no include 100 
+                self.dt_r_publisher_.publish(uint8)
+                
+            else:
+                uint8.data = 0 # deadband resets it to neutral
+                self.dt_r_publisher_.publish(uint8)
             
-        else:
-            uint8.data = 0 # deadband resets it to neutral
-            self.dt_r_publisher_.publish(uint8)
-        
-        # D pad Maps - Excavator
-        if msg.axes[5] > 0.01: # D pad Up
-            uint8.data = 60
-            self.ex_conveyer_publisher_.publish(uint8)
-            
-        elif msg.axes[5] < 0: # D pad down
-            uint8.data = 10
-            self.ex_conveyer_publisher_.publish(uint8)
-        else:
-            uint8.data = 0
-            self.ex_conveyer_publisher_.publish(uint8)
+            # D pad Maps - Excavator
+            if msg.axes[5] > 0.01: # D pad Up
+                uint8.data = 20
+                self.ex_conveyer_publisher_.publish(uint8)
+                
+            elif msg.axes[5] < 0: # D pad down
+                uint8.data = 5
+                self.ex_conveyer_publisher_.publish(uint8)
+            else:
+                uint8.data = 15
+                self.ex_conveyer_publisher_.publish(uint8)
 
-        # A button
-        if msg.buttons[2] == 1:
-            uint8.data = 10
-            self.ex_digger_publisher_.publish(uint8)
-        else:
-            uint8.data = 0
-            self.ex_digger_publisher_.publish(uint8)
+            # A button
+            if msg.buttons[2] == 1:
+                uint8.data = 10
+                self.ex_digger_publisher_.publish(uint8)
+            else:
+                uint8.data = 0
+                self.ex_digger_publisher_.publish(uint8)
         
+        # cargo bot
+        elif self.controller == 1:
+            if msg.axes[1] > self.DEADBAND: # L Stick Up 
+                uint8.data = 50 - int((msg.axes[1] * 100) // 2) # add 100 to indicate forward motion and not include 100
+                self.cb_l_publisher_.publish(uint8)
+            elif msg.axes[1] < -self.DEADBAND: # L Stick Down 
+                uint8.data = 50 + int((abs(msg.axes[1]) * 100) // 2) # subtract 1 to no include 100 
+                self.cb_l_publisher_.publish(uint8)
+            else:
+                uint8.data = 50 # deadband resets it to neutral
+                self.cb_l_publisher_.publish(uint8)
+
+            # Right Stick Maps - Right Drive Train
+            if msg.axes[3] > self.DEADBAND: # R Stick Up
+                uint8.data = 50 - int((msg.axes[3] * 100) // 2) # add 100 to indicate forward motion and not include 100
+                self.cb_r_publisher_.publish(uint8)
+            elif msg.axes[3] < -self.DEADBAND: # R Stick Down
+                uint8.data = 50 + int((abs(msg.axes[3]) * 100) // 2) # subtract 1 to no include 100 
+                self.cb_r_publisher_.publish(uint8)
+            else:
+                uint8.data = 50 # deadband resets it to neutral
+                self.cb_r_publisher_.publish(uint8)    
+            
+            # A button
+            if msg.buttons[2] == 1:
+                uint8.data = 16
+                self.cb_scoop_publisher_.publish(uint8)
+            else:
+                uint8.data = 10
+                self.cb_scoop_publisher_.publish(uint8)
+
+            
         
 
 def main(args=None):

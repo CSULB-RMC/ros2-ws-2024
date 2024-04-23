@@ -10,28 +10,34 @@ class DB_Broker(Node):
     
     def __init__(self):
         super().__init__('db_broker_pub')
-        # python 3.11
+
         self.broker = 'broker.emqx.io'
         self.port = 1883
         self.topic = "python/mqtt"
-        # Generate a Client ID with the subscribe prefix.
-        self.client_id = 'mini_bot_broker'
-        #self.username = 'porter.clevidence01@student.csulb.edu'
-        #self.password = '1115b07a-9f83-4422-918f-f2caaf83'
+        self.client_id = f'python-mqtt-{random.randint(0, 1000)}'
+        # username = 'emqx'
+        # password = 'public'
 
 
-    def connect_mqtt(self) -> mqtt_client:
+    def connect_mqtt(self):
         def on_connect(client, userdata, flags, rc):
+        # For paho-mqtt 2.0.0, you need to add the properties parameter.
+        # def on_connect(client, userdata, flags, rc, properties):
             if rc == 0:
                 print("Connected to MQTT Broker!")
             else:
                 print("Failed to connect, return code %d\n", rc)
-
+        # Set Connecting Client ID
         client = mqtt_client.Client(self.client_id)
-        client.username_pw_set(self.username, self.password)
+
+        # For paho-mqtt 2.0.0, you need to set callback_api_version.
+        # client = mqtt_client.Client(client_id=client_id, callback_api_version=mqtt_client.CallbackAPIVersion.VERSION2)
+
+        # client.username_pw_set(username, password)
         client.on_connect = on_connect
         client.connect(self.broker, self.port)
         return client
+
 
 
     def publish(self, client): 

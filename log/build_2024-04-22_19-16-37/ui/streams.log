@@ -1,0 +1,25 @@
+[0.740s] Invoking command in '/home/porterclev/ros2-ws-2024/src/ui': PYTHONPATH=/home/porterclev/ros2-ws-2024/build/ui/prefix_override:/home/porterclev/ros2-ws-2024/install/ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ui build --build-base /home/porterclev/ros2-ws-2024/build/ui/build install --record /home/porterclev/ros2-ws-2024/build/ui/install.log --single-version-externally-managed install_data
+[1.017s] running egg_info
+[1.017s] writing ../../build/ui/ui.egg-info/PKG-INFO
+[1.018s] writing dependency_links to ../../build/ui/ui.egg-info/dependency_links.txt
+[1.019s] writing entry points to ../../build/ui/ui.egg-info/entry_points.txt
+[1.020s] writing requirements to ../../build/ui/ui.egg-info/requires.txt
+[1.020s] writing top-level names to ../../build/ui/ui.egg-info/top_level.txt
+[1.023s] reading manifest file '../../build/ui/ui.egg-info/SOURCES.txt'
+[1.024s] adding license file 'LICENSE'
+[1.024s] writing manifest file '../../build/ui/ui.egg-info/SOURCES.txt'
+[1.025s] running build
+[1.025s] running build_py
+[1.025s] copying ui/ui_health.py -> /home/porterclev/ros2-ws-2024/build/ui/build/lib/ui
+[1.026s] running install
+[1.026s] running install_lib
+[1.027s] copying /home/porterclev/ros2-ws-2024/build/ui/build/lib/ui/ui_health.py -> /home/porterclev/ros2-ws-2024/install/ui/lib/python3.10/site-packages/ui
+[1.028s] byte-compiling /home/porterclev/ros2-ws-2024/install/ui/lib/python3.10/site-packages/ui/ui_health.py to ui_health.cpython-310.pyc
+[1.029s] running install_data
+[1.030s] running install_egg_info
+[1.032s] removing '/home/porterclev/ros2-ws-2024/install/ui/lib/python3.10/site-packages/ui-0.0.0-py3.10.egg-info' (and everything under it)
+[1.033s] Copying ../../build/ui/ui.egg-info to /home/porterclev/ros2-ws-2024/install/ui/lib/python3.10/site-packages/ui-0.0.0-py3.10.egg-info
+[1.035s] running install_scripts
+[1.057s] Installing ui_health script to /home/porterclev/ros2-ws-2024/install/ui/lib/ui
+[1.058s] writing list of installed files to '/home/porterclev/ros2-ws-2024/build/ui/install.log'
+[1.085s] Invoked command in '/home/porterclev/ros2-ws-2024/src/ui' returned '0': PYTHONPATH=/home/porterclev/ros2-ws-2024/build/ui/prefix_override:/home/porterclev/ros2-ws-2024/install/ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ui build --build-base /home/porterclev/ros2-ws-2024/build/ui/build install --record /home/porterclev/ros2-ws-2024/build/ui/install.log --single-version-externally-managed install_data

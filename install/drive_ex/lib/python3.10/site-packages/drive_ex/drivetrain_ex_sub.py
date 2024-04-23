@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Joy
-from std_msgs.msg import UInt8
+from std_msgs.msg import UInt8, String
 #ignore can import error if it's there, it works if you installed python-can
 import can
 
@@ -9,7 +9,9 @@ import can
 class DrivetrainExcavator(Node):
     
     def __init__(self):
-        super().__init__('drivetrain_mini')
+        super().__init__('drivetrain_ex')
+        self.activity_publisher_ = self.create_publisher(String, 'ex_active', 10) 
+        self.status_timer = self.create_timer(1, self.timer_callback)
 
         # create subscribers to listen for teleop computer commands
         self.ex_dt_left_sub = self.create_subscription(UInt8, 'ex_dt_left', self.ex_dt_left_update, 10)
@@ -32,6 +34,10 @@ class DrivetrainExcavator(Node):
 
         self.i = 0
     
+    def timer_callback(self):
+        s = String()
+        s.data = "Alive"
+        self.activity_publisher_.publish(s)
     # Converts Controller Speed to byte array (decimal form)
     # Alg: signal -> percentage * 1000 (UInt16) -> Hexadecimal Byte Form -> Decimal Byte Form 
     # Ex. 200 -> 50% -> 50,000 = [80, 200]
@@ -107,7 +113,7 @@ class DrivetrainExcavator(Node):
             return None
         self.ex_excavator_speed = msg.data
 
-        temp_data = self.signal_conversion(msg.data, 8, 10)
+        temp_data = self.signal_conversion(msg.data, 8, 100)
 
         self.can_publish(19, temp_data, True) 
 
@@ -129,7 +135,7 @@ class DrivetrainExcavator(Node):
         self.can_publish(23, temp_data, True)
 
 def main(args=None):
-    print("Bus Publisher Active1")
+    print("Bus Publisher Active New")
     rclpy.init(args=args)
     node = DrivetrainExcavator()
     rclpy.spin(node)

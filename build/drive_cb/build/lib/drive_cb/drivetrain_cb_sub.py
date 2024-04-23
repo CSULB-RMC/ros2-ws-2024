@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Joy
-from std_msgs.msg import UInt8
+from std_msgs.msg import UInt8, String
 #ignore can import error if it's there, it works if you installed python-can
 import can
 
@@ -11,21 +11,30 @@ class DrivetrainMini(Node):
     def __init__(self):
         super().__init__('drivetrain_cargo')
 
+        self.status_timer = self.create_timer(1, self.timer_callback)
+        self.activity_publisher_ = self.create_publisher(String, 'cb_active', 10)
+
         # create subscribers to listen for teleop computer commands
         self.cb_dt_left_sub = self.create_subscription(UInt8, 'cb_dt_left', self.cb_dt_left_update, 10)
         self.cb_dt_right_sub = self.create_subscription(UInt8, 'cb_dt_right', self.cb_dt_right_update, 10)
+        self.cb_scoop_sub = self.create_subscription(UInt8, 'cb_scoop', self.cb_scoop_update, 10)
 
         # create state variables, these keep track of what motors
         # should be running and how fast at the current moment
         self.cb_dt_left_speed = 0
         self.cb_dt_right_speed = 0
-        
+        self.cb_scoop_speed = 0
+
         # create can bus link, right now is linked to virtual vcan 0, most likely
         # will be can0 when on the bot
         self.bus = can.interface.Bus(interface='socketcan', channel='can0', bitrate='500000')
 
         self.i = 0
 
+    def timer_callback(self):
+        msg = String()
+        msg.data = 'Alive'
+        self.activity_publisher_.publish(msg)
     # Converts Controller Speed to byte array (decimal form)
     # Alg: signal -> percentage * 1000 (UInt16) -> Hexadecimal Byte Form -> Decimal Byte Form 
     # Ex. 200 -> 50% -> 50,000 = [80, 200]
@@ -78,7 +87,7 @@ class DrivetrainMini(Node):
             return None  
         self.cb_dt_left_speed = msg.data
 
-        temp_data = self.signal_conversion(self.cb_dt_left_speed, 8, 10)  
+        temp_data = self.signal_conversion(self.cb_dt_left_speed, 8, 20)  
         # can message for right and left motor
         self.can_publish(115, temp_data, True) 
         self.can_publish(116, temp_data, True) 
@@ -91,21 +100,21 @@ class DrivetrainMini(Node):
         self.cb_dt_right_speed = msg.data
 
         # converts controller signal to bytes array
-        temp_data = self.signal_conversion(self.cb_dt_right_speed, 8, 10)  
+        temp_data = self.signal_conversion(self.cb_dt_right_speed, 8, 20)  
         self.can_publish(117, temp_data, True) 
         self.can_publish(118, temp_data, True)
 
     
-    def ex_digger_update(self, msg):
-        if self.ex_digger_speed == msg.data:
+    def cb_scoop_update(self, msg):
+        if self.cb_scoop_speed == msg.data:
             return None
-        self.ex_digger_speed = msg.data 
-        temp_data = self.signal_conversion(msg.data, 4, 1000)
+        self.cb_scoop_speed = msg.data 
+        temp_data = self.signal_conversion(msg.data, 8, 100)
 
-        self.can_publish(23, temp_data, True)
+        self.can_publish(120, temp_data, True)
 
 def main(args=None):
-    print("Bus Publisher Active")
+    print("Bus Publisher Active New")
     rclpy.init(args=args)
     node = DrivetrainMini()
     rclpy.spin(node)
