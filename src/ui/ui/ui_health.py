@@ -15,16 +15,23 @@ class UI(Node):
         self.cb_sub = self.create_subscription(String, 'cb_active', self.cb_ui_update, 10)
         self.cb_sub = self.create_subscription(String, 'ex_active', self.ex_ui_update, 10)
         
-        # self.ex_dt_left_sub = self.create_subscription(UInt8, 'ex_dt_left', self.ex_dt_left_update, 10)
-        # self.ex_dt_right_sub = self.create_subscription(UInt8, 'ex_dt_right', self.ex_dt_right_update, 10)
+        self.ex_dt_left_sub = self.create_subscription(UInt8, 'ex_dt_left', self.ex_dt_left_update, 10)
+        self.ex_dt_right_sub = self.create_subscription(UInt8, 'ex_dt_right', self.ex_dt_right_update, 10)
         self.ex_conveyer_sub = self.create_subscription(UInt8, 'ex_conveyer', self.ex_conveyer_update, 10)
         # self.ex_arm_sub = self.create_subscription(UInt8, 'ex_arm', self.ex_arm_update, 10)
         # self.ex_digger_sub = self.create_subscription(UInt8, 'ex_digger', self.ex_digger_update, 10)
+        self.cb_dt_left_sub = self.create_subscription(UInt8, 'cb_dt_left', self.cb_dt_left_update, 10)
+        self.cb_dt_right_sub = self.create_subscription(UInt8, 'cb_dt_right', self.cb_dt_right_update, 10)
+        # self.cb_scoop_sub = self.create_subscription(UInt8, 'cb_scoop', self.cb_scoop_update, 10)
+
 
 
         self.cb_health = "Dead"
         self.ex_health = "Dead"
         self.health_msg = ""
+
+    def ex_dt_left_update(self, msg):
+
 
     def cb_ui_update(self, msg):
         self.cb_health = msg.data
