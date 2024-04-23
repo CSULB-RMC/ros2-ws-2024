@@ -11,14 +11,14 @@ class ImagePublisher(Node):
     def __init__(self):
         super().__init__('topic_webcam_pub')
         self.publisher_ = self.create_publisher(Image, 'image_raw', 10)
-        # self.timer = self.create_timer(0.1, self.timer_callback)
+        # self.timer = self.create_timer(0.1, self.listener_callback)
         self.subscription = self.create_subscription(
 			Joy,
 			'joy',
 			self.listener_callback,
 			10)
         self.cap = cv2.VideoCapture(0)
-        self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
+        # self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
         self.cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
         self.cv_bridge = CvBridge()
         self.i = 0
@@ -43,7 +43,7 @@ class ImagePublisher(Node):
 
     def timer_callback(self):
         # self.cap.read()
-        # ret, frame = self.cap.read()
+        # self.status, self.frame = self.cap.read()
 
         if self.status == True:
             self.publisher_.publish(self.cv_bridge.cv2_to_imgmsg(self.frame, 'bgr8'))
@@ -51,7 +51,7 @@ class ImagePublisher(Node):
             self.get_logger().info(f'Publishing video frame {self.i}')
 
     def listener_callback(self, msg):
-        if msg.buttons[2]:
+        if msg.buttons[0]:
             self.timer_callback()
 
 def main(args=None):

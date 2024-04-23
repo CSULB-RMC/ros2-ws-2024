@@ -18,7 +18,7 @@ class ImagePublisher(Node):
 			self.listener_callback,
 			10)
         self.cap = cv2.VideoCapture(0)
-        self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
+        # self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
         self.cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
         self.cv_bridge = CvBridge()
         self.i = 0
