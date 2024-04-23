@@ -28,9 +28,9 @@ class ImagePublisher(Node):
         self.FPS = 1/30
         self.FPS_MS = int(self.FPS * 1000)
 
-        self.thread = Thread(target = self.update, args = ())
-        self.thread.daemon = True
-        self.thread.start()
+        # self.thread = Thread(target = self.update, args = ())
+        # self.thread.daemon = True
+        # self.thread.start()
 
         self.status = False
         self.frame  = None
@@ -42,8 +42,8 @@ class ImagePublisher(Node):
             time.sleep(self.FPS)
 
     def timer_callback(self):
-        # self.cap.read()
-        # ret, frame = self.cap.read()
+        self.cap.read()
+        self.status, self.frame = self.cap.read()
 
         if self.status == True:
             self.publisher_.publish(self.cv_bridge.cv2_to_imgmsg(self.frame, 'bgr8'))
