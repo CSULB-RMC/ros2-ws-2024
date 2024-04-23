@@ -17,7 +17,7 @@ class ImagePublisher(Node):
 			'joy',
 			self.listener_callback,
 			10)
-        self.cap = cv2.VideoCapture(2)
+        self.cap = cv2.VideoCapture(0)
         self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
         self.cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
         self.cv_bridge = CvBridge()
@@ -51,7 +51,7 @@ class ImagePublisher(Node):
             self.get_logger().info(f'Publishing video frame {self.i}')
 
     def listener_callback(self, msg):
-        if msg.buttons[3]:
+        if msg.buttons[2]:
             self.timer_callback()
 
 def main(args=None):

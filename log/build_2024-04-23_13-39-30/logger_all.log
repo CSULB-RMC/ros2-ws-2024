@@ -1,0 +1,474 @@
+[0.764s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.764s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffb5535360>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffb5662860>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffb5662860>>)
+[2.142s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.142s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.142s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.143s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.143s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[2.143s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.143s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/beachlbl/porter/ros2-ws-2024'
+[2.144s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.144s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[2.144s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[2.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[2.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[2.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[2.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[2.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[2.222s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.222s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[2.223s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[2.223s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.223s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.224s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.224s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['ignore', 'ignore_ament_install']
+[2.224s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'ignore'
+[2.224s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'ignore_ament_install'
+[2.225s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['colcon_pkg']
+[2.225s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'colcon_pkg'
+[2.225s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['colcon_meta']
+[2.225s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'colcon_meta'
+[2.225s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['ros']
+[2.225s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'ros'
+[2.226s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['cmake', 'python']
+[2.226s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'cmake'
+[2.226s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'python'
+[2.226s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['python_setup_py']
+[2.226s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'python_setup_py'
+[2.227s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['ignore', 'ignore_ament_install']
+[2.227s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'ignore'
+[2.227s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'ignore_ament_install'
+[2.227s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['colcon_pkg']
+[2.228s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'colcon_pkg'
+[2.228s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['colcon_meta']
+[2.228s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'colcon_meta'
+[2.228s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['ros']
+[2.228s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'ros'
+[2.228s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['cmake', 'python']
+[2.229s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'cmake'
+[2.229s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'python'
+[2.229s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['python_setup_py']
+[2.229s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'python_setup_py'
+[2.244s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.244s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.245s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.245s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['ignore', 'ignore_ament_install']
+[2.246s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ignore'
+[2.246s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ignore_ament_install'
+[2.246s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['colcon_pkg']
+[2.246s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'colcon_pkg'
+[2.247s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['colcon_meta']
+[2.247s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'colcon_meta'
+[2.247s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['ros']
+[2.247s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ros'
+[2.248s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['cmake', 'python']
+[2.248s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'cmake'
+[2.248s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'python'
+[2.248s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['python_setup_py']
+[2.248s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'python_setup_py'
+[2.249s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[2.249s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[2.249s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[2.250s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[2.250s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[2.250s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[2.250s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[2.250s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[2.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[2.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[2.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[2.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[2.252s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[2.252s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[2.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_test) by extensions ['ignore', 'ignore_ament_install']
+[2.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_test) by extension 'ignore'
+[2.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_test) by extension 'ignore_ament_install'
+[2.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_test) by extensions ['colcon_pkg']
+[2.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_test) by extension 'colcon_pkg'
+[2.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_test) by extensions ['colcon_meta']
+[2.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_test) by extension 'colcon_meta'
+[2.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_test) by extensions ['ros']
+[2.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_test) by extension 'ros'
+[2.269s] DEBUG:colcon.colcon_core.package_identification:Package 'src/camera_test' with type 'ros.ament_python' and name 'camera_test'
+[2.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/db_broker) by extensions ['ignore', 'ignore_ament_install']
+[2.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/db_broker) by extension 'ignore'
+[2.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/db_broker) by extension 'ignore_ament_install'
+[2.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/db_broker) by extensions ['colcon_pkg']
+[2.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/db_broker) by extension 'colcon_pkg'
+[2.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/db_broker) by extensions ['colcon_meta']
+[2.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/db_broker) by extension 'colcon_meta'
+[2.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/db_broker) by extensions ['ros']
+[2.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/db_broker) by extension 'ros'
+[2.280s] DEBUG:colcon.colcon_core.package_identification:Package 'src/db_broker' with type 'ros.ament_python' and name 'db_broker'
+[2.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_cb) by extensions ['ignore', 'ignore_ament_install']
+[2.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_cb) by extension 'ignore'
+[2.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_cb) by extension 'ignore_ament_install'
+[2.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_cb) by extensions ['colcon_pkg']
+[2.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_cb) by extension 'colcon_pkg'
+[2.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_cb) by extensions ['colcon_meta']
+[2.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_cb) by extension 'colcon_meta'
+[2.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_cb) by extensions ['ros']
+[2.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_cb) by extension 'ros'
+[2.287s] DEBUG:colcon.colcon_core.package_identification:Package 'src/drive_cb' with type 'ros.ament_python' and name 'drive_cb'
+[2.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_ex) by extensions ['ignore', 'ignore_ament_install']
+[2.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_ex) by extension 'ignore'
+[2.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_ex) by extension 'ignore_ament_install'
+[2.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_ex) by extensions ['colcon_pkg']
+[2.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_ex) by extension 'colcon_pkg'
+[2.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_ex) by extensions ['colcon_meta']
+[2.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_ex) by extension 'colcon_meta'
+[2.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_ex) by extensions ['ros']
+[2.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_ex) by extension 'ros'
+[2.293s] DEBUG:colcon.colcon_core.package_identification:Package 'src/drive_ex' with type 'ros.ament_python' and name 'drive_ex'
+[2.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/joy_control) by extensions ['ignore', 'ignore_ament_install']
+[2.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/joy_control) by extension 'ignore'
+[2.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/joy_control) by extension 'ignore_ament_install'
+[2.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/joy_control) by extensions ['colcon_pkg']
+[2.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/joy_control) by extension 'colcon_pkg'
+[2.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/joy_control) by extensions ['colcon_meta']
+[2.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/joy_control) by extension 'colcon_meta'
+[2.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/joy_control) by extensions ['ros']
+[2.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/joy_control) by extension 'ros'
+[2.299s] DEBUG:colcon.colcon_core.package_identification:Package 'src/joy_control' with type 'ros.ament_python' and name 'joy_control'
+[2.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_pubsub) by extensions ['ignore', 'ignore_ament_install']
+[2.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_pubsub) by extension 'ignore'
+[2.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_pubsub) by extension 'ignore_ament_install'
+[2.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_pubsub) by extensions ['colcon_pkg']
+[2.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_pubsub) by extension 'colcon_pkg'
+[2.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_pubsub) by extensions ['colcon_meta']
+[2.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_pubsub) by extension 'colcon_meta'
+[2.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_pubsub) by extensions ['ros']
+[2.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_pubsub) by extension 'ros'
+[2.306s] DEBUG:colcon.colcon_core.package_identification:Package 'src/py_pubsub' with type 'ros.ament_python' and name 'py_pubsub'
+[2.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/ui) by extensions ['ignore', 'ignore_ament_install']
+[2.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/ui) by extension 'ignore'
+[2.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/ui) by extension 'ignore_ament_install'
+[2.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/ui) by extensions ['colcon_pkg']
+[2.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/ui) by extension 'colcon_pkg'
+[2.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/ui) by extensions ['colcon_meta']
+[2.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/ui) by extension 'colcon_meta'
+[2.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/ui) by extensions ['ros']
+[2.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/ui) by extension 'ros'
+[2.312s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ui' with type 'ros.ament_python' and name 'ui'
+[2.312s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.312s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.312s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.312s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.313s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.477s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.478s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.497s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/beachlbl/porter/ros2-ws-2024/install
+[2.508s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 281 installed packages in /opt/ros/iron
+[2.514s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.709s] Level 5:colcon.colcon_core.verb:set package 'camera_test' build argument 'cmake_args' from command line to 'None'
+[2.709s] Level 5:colcon.colcon_core.verb:set package 'camera_test' build argument 'cmake_target' from command line to 'None'
+[2.709s] Level 5:colcon.colcon_core.verb:set package 'camera_test' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.709s] Level 5:colcon.colcon_core.verb:set package 'camera_test' build argument 'cmake_clean_cache' from command line to 'False'
+[2.709s] Level 5:colcon.colcon_core.verb:set package 'camera_test' build argument 'cmake_clean_first' from command line to 'False'
+[2.710s] Level 5:colcon.colcon_core.verb:set package 'camera_test' build argument 'cmake_force_configure' from command line to 'False'
+[2.710s] Level 5:colcon.colcon_core.verb:set package 'camera_test' build argument 'ament_cmake_args' from command line to 'None'
+[2.710s] Level 5:colcon.colcon_core.verb:set package 'camera_test' build argument 'catkin_cmake_args' from command line to 'None'
+[2.710s] Level 5:colcon.colcon_core.verb:set package 'camera_test' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.710s] DEBUG:colcon.colcon_core.verb:Building package 'camera_test' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/beachlbl/porter/ros2-ws-2024/build/camera_test', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/beachlbl/porter/ros2-ws-2024/install/camera_test', 'merge_install': False, 'path': '/home/beachlbl/porter/ros2-ws-2024/src/camera_test', 'symlink_install': False, 'test_result_base': None}
+[2.712s] Level 5:colcon.colcon_core.verb:set package 'db_broker' build argument 'cmake_args' from command line to 'None'
+[2.712s] Level 5:colcon.colcon_core.verb:set package 'db_broker' build argument 'cmake_target' from command line to 'None'
+[2.712s] Level 5:colcon.colcon_core.verb:set package 'db_broker' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.712s] Level 5:colcon.colcon_core.verb:set package 'db_broker' build argument 'cmake_clean_cache' from command line to 'False'
+[2.712s] Level 5:colcon.colcon_core.verb:set package 'db_broker' build argument 'cmake_clean_first' from command line to 'False'
+[2.712s] Level 5:colcon.colcon_core.verb:set package 'db_broker' build argument 'cmake_force_configure' from command line to 'False'
+[2.712s] Level 5:colcon.colcon_core.verb:set package 'db_broker' build argument 'ament_cmake_args' from command line to 'None'
+[2.712s] Level 5:colcon.colcon_core.verb:set package 'db_broker' build argument 'catkin_cmake_args' from command line to 'None'
+[2.712s] Level 5:colcon.colcon_core.verb:set package 'db_broker' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.713s] DEBUG:colcon.colcon_core.verb:Building package 'db_broker' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/beachlbl/porter/ros2-ws-2024/build/db_broker', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/beachlbl/porter/ros2-ws-2024/install/db_broker', 'merge_install': False, 'path': '/home/beachlbl/porter/ros2-ws-2024/src/db_broker', 'symlink_install': False, 'test_result_base': None}
+[2.714s] Level 5:colcon.colcon_core.verb:set package 'drive_cb' build argument 'cmake_args' from command line to 'None'
+[2.714s] Level 5:colcon.colcon_core.verb:set package 'drive_cb' build argument 'cmake_target' from command line to 'None'
+[2.714s] Level 5:colcon.colcon_core.verb:set package 'drive_cb' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.714s] Level 5:colcon.colcon_core.verb:set package 'drive_cb' build argument 'cmake_clean_cache' from command line to 'False'
+[2.714s] Level 5:colcon.colcon_core.verb:set package 'drive_cb' build argument 'cmake_clean_first' from command line to 'False'
+[2.715s] Level 5:colcon.colcon_core.verb:set package 'drive_cb' build argument 'cmake_force_configure' from command line to 'False'
+[2.715s] Level 5:colcon.colcon_core.verb:set package 'drive_cb' build argument 'ament_cmake_args' from command line to 'None'
+[2.715s] Level 5:colcon.colcon_core.verb:set package 'drive_cb' build argument 'catkin_cmake_args' from command line to 'None'
+[2.715s] Level 5:colcon.colcon_core.verb:set package 'drive_cb' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.715s] DEBUG:colcon.colcon_core.verb:Building package 'drive_cb' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/beachlbl/porter/ros2-ws-2024/build/drive_cb', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/beachlbl/porter/ros2-ws-2024/install/drive_cb', 'merge_install': False, 'path': '/home/beachlbl/porter/ros2-ws-2024/src/drive_cb', 'symlink_install': False, 'test_result_base': None}
+[2.716s] Level 5:colcon.colcon_core.verb:set package 'drive_ex' build argument 'cmake_args' from command line to 'None'
+[2.717s] Level 5:colcon.colcon_core.verb:set package 'drive_ex' build argument 'cmake_target' from command line to 'None'
+[2.717s] Level 5:colcon.colcon_core.verb:set package 'drive_ex' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.717s] Level 5:colcon.colcon_core.verb:set package 'drive_ex' build argument 'cmake_clean_cache' from command line to 'False'
+[2.717s] Level 5:colcon.colcon_core.verb:set package 'drive_ex' build argument 'cmake_clean_first' from command line to 'False'
+[2.717s] Level 5:colcon.colcon_core.verb:set package 'drive_ex' build argument 'cmake_force_configure' from command line to 'False'
+[2.717s] Level 5:colcon.colcon_core.verb:set package 'drive_ex' build argument 'ament_cmake_args' from command line to 'None'
+[2.717s] Level 5:colcon.colcon_core.verb:set package 'drive_ex' build argument 'catkin_cmake_args' from command line to 'None'
+[2.717s] Level 5:colcon.colcon_core.verb:set package 'drive_ex' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.717s] DEBUG:colcon.colcon_core.verb:Building package 'drive_ex' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/beachlbl/porter/ros2-ws-2024/build/drive_ex', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/beachlbl/porter/ros2-ws-2024/install/drive_ex', 'merge_install': False, 'path': '/home/beachlbl/porter/ros2-ws-2024/src/drive_ex', 'symlink_install': False, 'test_result_base': None}
+[2.719s] Level 5:colcon.colcon_core.verb:set package 'joy_control' build argument 'cmake_args' from command line to 'None'
+[2.719s] Level 5:colcon.colcon_core.verb:set package 'joy_control' build argument 'cmake_target' from command line to 'None'
+[2.719s] Level 5:colcon.colcon_core.verb:set package 'joy_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.719s] Level 5:colcon.colcon_core.verb:set package 'joy_control' build argument 'cmake_clean_cache' from command line to 'False'
+[2.719s] Level 5:colcon.colcon_core.verb:set package 'joy_control' build argument 'cmake_clean_first' from command line to 'False'
+[2.719s] Level 5:colcon.colcon_core.verb:set package 'joy_control' build argument 'cmake_force_configure' from command line to 'False'
+[2.719s] Level 5:colcon.colcon_core.verb:set package 'joy_control' build argument 'ament_cmake_args' from command line to 'None'
+[2.719s] Level 5:colcon.colcon_core.verb:set package 'joy_control' build argument 'catkin_cmake_args' from command line to 'None'
+[2.720s] Level 5:colcon.colcon_core.verb:set package 'joy_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.720s] DEBUG:colcon.colcon_core.verb:Building package 'joy_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/beachlbl/porter/ros2-ws-2024/build/joy_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/beachlbl/porter/ros2-ws-2024/install/joy_control', 'merge_install': False, 'path': '/home/beachlbl/porter/ros2-ws-2024/src/joy_control', 'symlink_install': False, 'test_result_base': None}
+[2.721s] Level 5:colcon.colcon_core.verb:set package 'py_pubsub' build argument 'cmake_args' from command line to 'None'
+[2.721s] Level 5:colcon.colcon_core.verb:set package 'py_pubsub' build argument 'cmake_target' from command line to 'None'
+[2.721s] Level 5:colcon.colcon_core.verb:set package 'py_pubsub' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.721s] Level 5:colcon.colcon_core.verb:set package 'py_pubsub' build argument 'cmake_clean_cache' from command line to 'False'
+[2.721s] Level 5:colcon.colcon_core.verb:set package 'py_pubsub' build argument 'cmake_clean_first' from command line to 'False'
+[2.722s] Level 5:colcon.colcon_core.verb:set package 'py_pubsub' build argument 'cmake_force_configure' from command line to 'False'
+[2.722s] Level 5:colcon.colcon_core.verb:set package 'py_pubsub' build argument 'ament_cmake_args' from command line to 'None'
+[2.722s] Level 5:colcon.colcon_core.verb:set package 'py_pubsub' build argument 'catkin_cmake_args' from command line to 'None'
+[2.722s] Level 5:colcon.colcon_core.verb:set package 'py_pubsub' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.722s] DEBUG:colcon.colcon_core.verb:Building package 'py_pubsub' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/beachlbl/porter/ros2-ws-2024/build/py_pubsub', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub', 'merge_install': False, 'path': '/home/beachlbl/porter/ros2-ws-2024/src/py_pubsub', 'symlink_install': False, 'test_result_base': None}
+[2.723s] Level 5:colcon.colcon_core.verb:set package 'ui' build argument 'cmake_args' from command line to 'None'
+[2.723s] Level 5:colcon.colcon_core.verb:set package 'ui' build argument 'cmake_target' from command line to 'None'
+[2.724s] Level 5:colcon.colcon_core.verb:set package 'ui' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.724s] Level 5:colcon.colcon_core.verb:set package 'ui' build argument 'cmake_clean_cache' from command line to 'False'
+[2.724s] Level 5:colcon.colcon_core.verb:set package 'ui' build argument 'cmake_clean_first' from command line to 'False'
+[2.724s] Level 5:colcon.colcon_core.verb:set package 'ui' build argument 'cmake_force_configure' from command line to 'False'
+[2.724s] Level 5:colcon.colcon_core.verb:set package 'ui' build argument 'ament_cmake_args' from command line to 'None'
+[2.724s] Level 5:colcon.colcon_core.verb:set package 'ui' build argument 'catkin_cmake_args' from command line to 'None'
+[2.724s] Level 5:colcon.colcon_core.verb:set package 'ui' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.724s] DEBUG:colcon.colcon_core.verb:Building package 'ui' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/beachlbl/porter/ros2-ws-2024/build/ui', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/beachlbl/porter/ros2-ws-2024/install/ui', 'merge_install': False, 'path': '/home/beachlbl/porter/ros2-ws-2024/src/ui', 'symlink_install': False, 'test_result_base': None}
+[2.725s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.728s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.729s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/beachlbl/porter/ros2-ws-2024/src/camera_test' with build type 'ament_python'
+[2.730s] Level 1:colcon.colcon_core.shell:create_environment_hook('camera_test', 'ament_prefix_path')
+[2.755s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.757s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/camera_test/share/camera_test/hook/ament_prefix_path.ps1'
+[2.762s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/beachlbl/porter/ros2-ws-2024/install/camera_test/share/camera_test/hook/ament_prefix_path.dsv'
+[2.797s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/camera_test/share/camera_test/hook/ament_prefix_path.sh'
+[2.806s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.806s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.829s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/beachlbl/porter/ros2-ws-2024/src/db_broker' with build type 'ament_python'
+[2.829s] Level 1:colcon.colcon_core.shell:create_environment_hook('db_broker', 'ament_prefix_path')
+[2.831s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/db_broker/share/db_broker/hook/ament_prefix_path.ps1'
+[2.833s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/beachlbl/porter/ros2-ws-2024/install/db_broker/share/db_broker/hook/ament_prefix_path.dsv'
+[2.835s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/db_broker/share/db_broker/hook/ament_prefix_path.sh'
+[2.838s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.838s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.859s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/beachlbl/porter/ros2-ws-2024/src/drive_cb' with build type 'ament_python'
+[2.860s] Level 1:colcon.colcon_core.shell:create_environment_hook('drive_cb', 'ament_prefix_path')
+[2.861s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/share/drive_cb/hook/ament_prefix_path.ps1'
+[2.863s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/share/drive_cb/hook/ament_prefix_path.dsv'
+[2.865s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/share/drive_cb/hook/ament_prefix_path.sh'
+[2.868s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.868s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.889s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/beachlbl/porter/ros2-ws-2024/src/drive_ex' with build type 'ament_python'
+[2.890s] Level 1:colcon.colcon_core.shell:create_environment_hook('drive_ex', 'ament_prefix_path')
+[2.891s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/share/drive_ex/hook/ament_prefix_path.ps1'
+[2.893s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/share/drive_ex/hook/ament_prefix_path.dsv'
+[2.895s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/share/drive_ex/hook/ament_prefix_path.sh'
+[2.898s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.898s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.177s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/beachlbl/porter/ros2-ws-2024/src/camera_test'
+[4.179s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.179s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.428s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/beachlbl/porter/ros2-ws-2024/src/db_broker'
+[5.430s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.430s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.684s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/beachlbl/porter/ros2-ws-2024/src/drive_cb'
+[6.685s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.685s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.931s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/beachlbl/porter/ros2-ws-2024/src/drive_ex'
+[7.932s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.932s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[11.041s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/beachlbl/porter/ros2-ws-2024/src/db_broker': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/db_broker/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/db_broker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/db_broker build --build-base /home/beachlbl/porter/ros2-ws-2024/build/db_broker/build install --record /home/beachlbl/porter/ros2-ws-2024/build/db_broker/install.log --single-version-externally-managed install_data
+[11.064s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/beachlbl/porter/ros2-ws-2024/src/drive_ex': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/drive_ex/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/drive_ex build --build-base /home/beachlbl/porter/ros2-ws-2024/build/drive_ex/build install --record /home/beachlbl/porter/ros2-ws-2024/build/drive_ex/install.log --single-version-externally-managed install_data
+[11.071s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/beachlbl/porter/ros2-ws-2024/src/camera_test': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/camera_test/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/camera_test build --build-base /home/beachlbl/porter/ros2-ws-2024/build/camera_test/build install --record /home/beachlbl/porter/ros2-ws-2024/build/camera_test/install.log --single-version-externally-managed install_data
+[11.083s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/beachlbl/porter/ros2-ws-2024/src/drive_cb': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/drive_cb/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/drive_cb build --build-base /home/beachlbl/porter/ros2-ws-2024/build/drive_cb/build install --record /home/beachlbl/porter/ros2-ws-2024/build/drive_cb/install.log --single-version-externally-managed install_data
+[13.193s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/beachlbl/porter/ros2-ws-2024/src/drive_ex' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/drive_ex/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/drive_ex build --build-base /home/beachlbl/porter/ros2-ws-2024/build/drive_ex/build install --record /home/beachlbl/porter/ros2-ws-2024/build/drive_ex/install.log --single-version-externally-managed install_data
+[13.244s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/drive_ex' for CMake module files
+[13.248s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/drive_ex' for CMake config files
+[13.254s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/lib'
+[13.255s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/bin'
+[13.256s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/lib/pkgconfig/drive_ex.pc'
+[13.257s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/lib/python3.10/site-packages'
+[13.257s] Level 1:colcon.colcon_core.shell:create_environment_hook('drive_ex', 'pythonpath')
+[13.258s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/share/drive_ex/hook/pythonpath.ps1'
+[13.261s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/share/drive_ex/hook/pythonpath.dsv'
+[13.263s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/share/drive_ex/hook/pythonpath.sh'
+[13.265s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/bin'
+[13.265s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drive_ex)
+[13.267s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/share/drive_ex/package.ps1'
+[13.271s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/share/drive_ex/package.dsv'
+[13.275s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/share/drive_ex/package.sh'
+[13.280s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/share/drive_ex/package.bash'
+[13.285s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/share/drive_ex/package.zsh'
+[13.291s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/beachlbl/porter/ros2-ws-2024/install/drive_ex/share/colcon-core/packages/drive_ex)
+[13.293s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/beachlbl/porter/ros2-ws-2024/src/joy_control' with build type 'ament_python'
+[13.294s] Level 1:colcon.colcon_core.shell:create_environment_hook('joy_control', 'ament_prefix_path')
+[13.295s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/joy_control/share/joy_control/hook/ament_prefix_path.ps1'
+[13.298s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/beachlbl/porter/ros2-ws-2024/install/joy_control/share/joy_control/hook/ament_prefix_path.dsv'
+[13.300s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/joy_control/share/joy_control/hook/ament_prefix_path.sh'
+[13.303s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[13.303s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[13.327s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/db_broker' for CMake module files
+[13.329s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/beachlbl/porter/ros2-ws-2024/src/db_broker' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/db_broker/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/db_broker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/db_broker build --build-base /home/beachlbl/porter/ros2-ws-2024/build/db_broker/build install --record /home/beachlbl/porter/ros2-ws-2024/build/db_broker/install.log --single-version-externally-managed install_data
+[13.332s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/db_broker' for CMake config files
+[13.336s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/db_broker/lib'
+[13.337s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/db_broker/bin'
+[13.337s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/db_broker/lib/pkgconfig/db_broker.pc'
+[13.338s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/db_broker/lib/python3.10/site-packages'
+[13.338s] Level 1:colcon.colcon_core.shell:create_environment_hook('db_broker', 'pythonpath')
+[13.339s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/db_broker/share/db_broker/hook/pythonpath.ps1'
+[13.341s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/beachlbl/porter/ros2-ws-2024/install/db_broker/share/db_broker/hook/pythonpath.dsv'
+[13.343s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/db_broker/share/db_broker/hook/pythonpath.sh'
+[13.345s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/db_broker/bin'
+[13.346s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(db_broker)
+[13.347s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/db_broker/share/db_broker/package.ps1'
+[13.350s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/beachlbl/porter/ros2-ws-2024/install/db_broker/share/db_broker/package.dsv'
+[13.352s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/db_broker/share/db_broker/package.sh'
+[13.353s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/db_broker/share/db_broker/package.bash'
+[13.355s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/db_broker/share/db_broker/package.zsh'
+[13.356s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/beachlbl/porter/ros2-ws-2024/install/db_broker/share/colcon-core/packages/db_broker)
+[13.358s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/camera_test' for CMake module files
+[13.362s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/beachlbl/porter/ros2-ws-2024/src/camera_test' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/camera_test/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/camera_test build --build-base /home/beachlbl/porter/ros2-ws-2024/build/camera_test/build install --record /home/beachlbl/porter/ros2-ws-2024/build/camera_test/install.log --single-version-externally-managed install_data
+[13.365s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/camera_test' for CMake config files
+[13.369s] Level 1:colcon.colcon_core.shell:create_environment_hook('camera_test', 'cmake_prefix_path')
+[13.371s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/camera_test/share/camera_test/hook/cmake_prefix_path.ps1'
+[13.373s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/beachlbl/porter/ros2-ws-2024/install/camera_test/share/camera_test/hook/cmake_prefix_path.dsv'
+[13.375s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/camera_test/share/camera_test/hook/cmake_prefix_path.sh'
+[13.378s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/camera_test/lib'
+[13.379s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/camera_test/bin'
+[13.379s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/camera_test/lib/pkgconfig/camera_test.pc'
+[13.380s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages'
+[13.380s] Level 1:colcon.colcon_core.shell:create_environment_hook('camera_test', 'pythonpath')
+[13.381s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/camera_test/share/camera_test/hook/pythonpath.ps1'
+[13.383s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/beachlbl/porter/ros2-ws-2024/install/camera_test/share/camera_test/hook/pythonpath.dsv'
+[13.385s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/camera_test/share/camera_test/hook/pythonpath.sh'
+[13.387s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/camera_test/bin'
+[13.387s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(camera_test)
+[13.389s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/camera_test/share/camera_test/package.ps1'
+[13.391s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/beachlbl/porter/ros2-ws-2024/install/camera_test/share/camera_test/package.dsv'
+[13.394s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/camera_test/share/camera_test/package.sh'
+[13.396s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/camera_test/share/camera_test/package.bash'
+[13.397s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/camera_test/share/camera_test/package.zsh'
+[13.399s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/beachlbl/porter/ros2-ws-2024/install/camera_test/share/colcon-core/packages/camera_test)
+[13.401s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/drive_cb' for CMake module files
+[13.405s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/beachlbl/porter/ros2-ws-2024/src/drive_cb' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/drive_cb/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/drive_cb build --build-base /home/beachlbl/porter/ros2-ws-2024/build/drive_cb/build install --record /home/beachlbl/porter/ros2-ws-2024/build/drive_cb/install.log --single-version-externally-managed install_data
+[13.406s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/drive_cb' for CMake config files
+[13.409s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/lib'
+[13.409s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/bin'
+[13.410s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/lib/pkgconfig/drive_cb.pc'
+[13.410s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages'
+[13.411s] Level 1:colcon.colcon_core.shell:create_environment_hook('drive_cb', 'pythonpath')
+[13.412s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/share/drive_cb/hook/pythonpath.ps1'
+[13.413s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/share/drive_cb/hook/pythonpath.dsv'
+[13.415s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/share/drive_cb/hook/pythonpath.sh'
+[13.417s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/bin'
+[13.418s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drive_cb)
+[13.419s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/share/drive_cb/package.ps1'
+[13.421s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/share/drive_cb/package.dsv'
+[13.423s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/share/drive_cb/package.sh'
+[13.427s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/share/drive_cb/package.bash'
+[13.428s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/share/drive_cb/package.zsh'
+[13.430s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/share/colcon-core/packages/drive_cb)
+[13.432s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/beachlbl/porter/ros2-ws-2024/src/py_pubsub' with build type 'ament_python'
+[13.433s] Level 1:colcon.colcon_core.shell:create_environment_hook('py_pubsub', 'ament_prefix_path')
+[13.434s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/share/py_pubsub/hook/ament_prefix_path.ps1'
+[13.436s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/share/py_pubsub/hook/ament_prefix_path.dsv'
+[13.438s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/share/py_pubsub/hook/ament_prefix_path.sh'
+[13.441s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[13.441s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[13.461s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/beachlbl/porter/ros2-ws-2024/src/ui' with build type 'ament_python'
+[13.462s] Level 1:colcon.colcon_core.shell:create_environment_hook('ui', 'ament_prefix_path')
+[13.463s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/ui/share/ui/hook/ament_prefix_path.ps1'
+[13.465s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/beachlbl/porter/ros2-ws-2024/install/ui/share/ui/hook/ament_prefix_path.dsv'
+[13.467s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/ui/share/ui/hook/ament_prefix_path.sh'
+[13.470s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[13.470s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[14.738s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/beachlbl/porter/ros2-ws-2024/src/joy_control'
+[14.739s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[14.740s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[15.987s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/beachlbl/porter/ros2-ws-2024/src/py_pubsub'
+[15.988s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[15.988s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[17.230s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/beachlbl/porter/ros2-ws-2024/src/ui'
+[17.231s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[17.232s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[19.437s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/beachlbl/porter/ros2-ws-2024/src/joy_control': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/joy_control/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/joy_control build --build-base /home/beachlbl/porter/ros2-ws-2024/build/joy_control/build install --record /home/beachlbl/porter/ros2-ws-2024/build/joy_control/install.log --single-version-externally-managed install_data
+[19.474s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/beachlbl/porter/ros2-ws-2024/src/py_pubsub': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/py_pubsub/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/py_pubsub build --build-base /home/beachlbl/porter/ros2-ws-2024/build/py_pubsub/build install --record /home/beachlbl/porter/ros2-ws-2024/build/py_pubsub/install.log --single-version-externally-managed install_data
+[19.501s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/beachlbl/porter/ros2-ws-2024/src/ui': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/ui/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ui build --build-base /home/beachlbl/porter/ros2-ws-2024/build/ui/build install --record /home/beachlbl/porter/ros2-ws-2024/build/ui/install.log --single-version-externally-managed install_data
+[21.269s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/joy_control' for CMake module files
+[21.273s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/beachlbl/porter/ros2-ws-2024/src/joy_control' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/joy_control/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/joy_control build --build-base /home/beachlbl/porter/ros2-ws-2024/build/joy_control/build install --record /home/beachlbl/porter/ros2-ws-2024/build/joy_control/install.log --single-version-externally-managed install_data
+[21.280s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/joy_control' for CMake config files
+[21.289s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib'
+[21.291s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/joy_control/bin'
+[21.292s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/pkgconfig/joy_control.pc'
+[21.295s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages'
+[21.296s] Level 1:colcon.colcon_core.shell:create_environment_hook('joy_control', 'pythonpath')
+[21.299s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/joy_control/share/joy_control/hook/pythonpath.ps1'
+[21.304s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/beachlbl/porter/ros2-ws-2024/install/joy_control/share/joy_control/hook/pythonpath.dsv'
+[21.308s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/joy_control/share/joy_control/hook/pythonpath.sh'
+[21.315s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/joy_control/bin'
+[21.316s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(joy_control)
+[21.318s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/joy_control/share/joy_control/package.ps1'
+[21.324s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/beachlbl/porter/ros2-ws-2024/install/joy_control/share/joy_control/package.dsv'
+[21.329s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/joy_control/share/joy_control/package.sh'
+[21.335s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/joy_control/share/joy_control/package.bash'
+[21.339s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/joy_control/share/joy_control/package.zsh'
+[21.342s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/beachlbl/porter/ros2-ws-2024/install/joy_control/share/colcon-core/packages/joy_control)
+[21.349s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub' for CMake module files
+[21.351s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub' for CMake config files
+[21.354s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/beachlbl/porter/ros2-ws-2024/src/py_pubsub' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/py_pubsub/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/py_pubsub build --build-base /home/beachlbl/porter/ros2-ws-2024/build/py_pubsub/build install --record /home/beachlbl/porter/ros2-ws-2024/build/py_pubsub/install.log --single-version-externally-managed install_data
+[21.357s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/lib'
+[21.357s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/bin'
+[21.358s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/lib/pkgconfig/py_pubsub.pc'
+[21.358s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages'
+[21.359s] Level 1:colcon.colcon_core.shell:create_environment_hook('py_pubsub', 'pythonpath')
+[21.360s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/share/py_pubsub/hook/pythonpath.ps1'
+[21.361s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/share/py_pubsub/hook/pythonpath.dsv'
+[21.363s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/share/py_pubsub/hook/pythonpath.sh'
+[21.365s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/bin'
+[21.366s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(py_pubsub)
+[21.367s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/share/py_pubsub/package.ps1'
+[21.369s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/share/py_pubsub/package.dsv'
+[21.371s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/share/py_pubsub/package.sh'
+[21.373s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/share/py_pubsub/package.bash'
+[21.375s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/share/py_pubsub/package.zsh'
+[21.376s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/share/colcon-core/packages/py_pubsub)
+[21.380s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/ui' for CMake module files
+[21.383s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/beachlbl/porter/ros2-ws-2024/src/ui' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/ui/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ui build --build-base /home/beachlbl/porter/ros2-ws-2024/build/ui/build install --record /home/beachlbl/porter/ros2-ws-2024/build/ui/install.log --single-version-externally-managed install_data
+[21.384s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/ui' for CMake config files
+[21.387s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/ui/lib'
+[21.388s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/ui/bin'
+[21.388s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/ui/lib/pkgconfig/ui.pc'
+[21.389s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/ui/lib/python3.10/site-packages'
+[21.389s] Level 1:colcon.colcon_core.shell:create_environment_hook('ui', 'pythonpath')
+[21.390s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/ui/share/ui/hook/pythonpath.ps1'
+[21.392s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/beachlbl/porter/ros2-ws-2024/install/ui/share/ui/hook/pythonpath.dsv'
+[21.394s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/beachlbl/porter/ros2-ws-2024/install/ui/share/ui/hook/pythonpath.sh'
+[21.397s] Level 1:colcon.colcon_core.environment:checking '/home/beachlbl/porter/ros2-ws-2024/install/ui/bin'
+[21.397s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ui)
+[21.398s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/ui/share/ui/package.ps1'
+[21.400s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/beachlbl/porter/ros2-ws-2024/install/ui/share/ui/package.dsv'
+[21.402s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/ui/share/ui/package.sh'
+[21.404s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/ui/share/ui/package.bash'
+[21.406s] INFO:colcon.colcon_core.shell:Creating package script '/home/beachlbl/porter/ros2-ws-2024/install/ui/share/ui/package.zsh'
+[21.407s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/beachlbl/porter/ros2-ws-2024/install/ui/share/colcon-core/packages/ui)
+[21.408s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[21.409s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[21.410s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[21.410s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[21.439s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[21.440s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[21.440s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[21.443s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[21.443s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[21.444s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/beachlbl/porter/ros2-ws-2024/install/local_setup.ps1'
+[21.449s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/beachlbl/porter/ros2-ws-2024/install/_local_setup_util_ps1.py'
+[21.458s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/beachlbl/porter/ros2-ws-2024/install/setup.ps1'
+[21.466s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/beachlbl/porter/ros2-ws-2024/install/local_setup.sh'
+[21.469s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/beachlbl/porter/ros2-ws-2024/install/_local_setup_util_sh.py'
+[21.471s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/beachlbl/porter/ros2-ws-2024/install/setup.sh'
+[21.479s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/beachlbl/porter/ros2-ws-2024/install/local_setup.bash'
+[21.482s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/beachlbl/porter/ros2-ws-2024/install/setup.bash'
+[21.488s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/beachlbl/porter/ros2-ws-2024/install/local_setup.zsh'
+[21.492s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/beachlbl/porter/ros2-ws-2024/install/setup.zsh'

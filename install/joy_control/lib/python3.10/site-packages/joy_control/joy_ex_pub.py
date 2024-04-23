@@ -17,6 +17,7 @@ class JoyPub_Ex(Node):
         self.ex_conveyer_publisher_ = self.create_publisher(UInt8, 'ex_conveyer', 10)
         self.ex_arm_publisher_ = self.create_publisher(UInt8, 'ex_arm', 10)
         self.ex_digger_publisher_ = self.create_publisher(UInt8, 'ex_digger', 10)
+        self.ex_servo_publisher_ = self.create_publisher(UInt8, 'ex_servo', 10)
         self.cb_l_publisher_ = self.create_publisher(UInt8, 'cb_dt_left', 10)
         self.cb_r_publisher_ = self.create_publisher(UInt8, 'cb_dt_right', 10)
         self.cb_scoop_publisher_ = self.create_publisher(UInt8, 'cb_scoop', 10)
@@ -68,25 +69,40 @@ class JoyPub_Ex(Node):
                 self.dt_r_publisher_.publish(uint8)
             
             # D pad Maps - Excavator
-            if msg.axes[5] > 0.01: # D pad Up
+            if msg.buttons[3] == 1: # D pad Up
                 uint8.data = 20
-                self.ex_conveyer_publisher_.publish(uint8)
-                
-            elif msg.axes[5] < 0: # D pad down
-                uint8.data = 5
-                self.ex_conveyer_publisher_.publish(uint8)
-            else:
-                uint8.data = 15
-                self.ex_conveyer_publisher_.publish(uint8)
-
-            # A button
-            if msg.buttons[2] == 1:
-                uint8.data = 10
-                self.ex_digger_publisher_.publish(uint8)
+                self.ex_conveyer_publisher_.publish(uint8)                
             else:
                 uint8.data = 0
+                self.ex_conveyer_publisher_.publish(uint8)
+
+            # Right Trigger button
+            if msg.buttons[7] == 1:
+                uint8.data = 24
                 self.ex_digger_publisher_.publish(uint8)
-        
+            else:
+                uint8.data = 5
+                self.ex_digger_publisher_.publish(uint8)
+            
+            # D pad
+            if msg.axes[5] > 0.01:
+                uint8.data = 20
+                self.ex_arm_publisher_.publish(uint8)
+            elif msg.axes[5] < 0:              
+                uint8.data = 5
+                self.ex_arm_publisher_.publish(uint8)
+            else:
+                uint8.data = 15
+                self.ex_arm_publisher_.publish(uint8)
+            
+            # right bumper
+            if msg.buttons[5] == 1: 
+                uint8.data = 10
+                self.ex_servo_publisher_.publish(uint8)
+            else:
+                uint8.data = 0
+                self.ex_servo_publisher_.publish(uint8)
+
         # cargo bot
         elif self.controller == 1:
             if msg.axes[1] > self.DEADBAND: # L Stick Up 

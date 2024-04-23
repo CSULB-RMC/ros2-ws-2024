@@ -19,14 +19,16 @@ class DrivetrainExcavator(Node):
         self.ex_conveyer_sub = self.create_subscription(UInt8, 'ex_conveyer', self.ex_conveyer_update, 10)
         self.ex_arm_sub = self.create_subscription(UInt8, 'ex_arm', self.ex_arm_update, 10)
         self.ex_digger_sub = self.create_subscription(UInt8, 'ex_digger', self.ex_digger_update, 10)
+        self.ex_servo_sub = self.create_subscription(UInt8, 'ex_servo', self.ex_servo_update, 10)
 
         # create state variables, these keep track of what motors
         # should be running and how fast at the current moment
         self.ex_dt_left_speed = 0
         self.ex_dt_right_speed = 0
-        self.ex_excavator_speed = 0
-        self.ex_reg_speed = 0
+        self.ex_conveyer_speed = 0
+        self.ex_arm_speed = 0
         self.ex_digger_speed = 0
+        self.ex_servo_speed = 0
 
         # create can bus link, right now is linked to virtual vcan 0, most likely
         # will be can0 when on the bot
@@ -107,22 +109,22 @@ class DrivetrainExcavator(Node):
         self.can_publish(17, temp_data, True)
         self.can_publish(18, temp_data, True)
     
-    # Sample Dpad Control Scheme
+    # Conveyer Belt
     def ex_conveyer_update(self, msg):
-        if self.ex_excavator_speed == msg.data:
+        if self.ex_conveyer_speed == msg.data:
             return None
-        self.ex_excavator_speed = msg.data
+        self.ex_conveyer_speed = msg.data
 
         temp_data = self.signal_conversion(msg.data, 8, 100)
 
         self.can_publish(19, temp_data, True) 
 
-    # Sample A Button Scheme
+    # Arm
     def ex_arm_update(self, msg):
-        if self.ex_reg_speed == msg.data:
+        if self.ex_arm_speed == msg.data:
             return None
-        self.ex_reg_speed = msg.data 
-        temp_data = self.signal_conversion(msg.data, 8, 10)
+        self.ex_arm_speed = msg.data 
+        temp_data = self.signal_conversion(msg.data, 8, 100)
 
         self.can_publish(21, temp_data, True)
     
@@ -130,9 +132,19 @@ class DrivetrainExcavator(Node):
         if self.ex_digger_speed == msg.data:
             return None
         self.ex_digger_speed = msg.data 
-        temp_data = self.signal_conversion(msg.data, 4, 10)
+        temp_data = self.signal_conversion(msg.data, 8, 100)
 
         self.can_publish(23, temp_data, True)
+
+    # Servo
+    def ex_servo_update(self, msg):
+        if self.ex_servo_speed == msg.data:
+            return None
+        self.ex_servo_speed = msg.data
+
+        temp_data = self.signal_conversion(msg.data, 8, 100)
+
+        self.can_publish(25, temp_data, True) 
 
 def main(args=None):
     print("Bus Publisher Active New")
