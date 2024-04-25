@@ -17,8 +17,8 @@ class ImagePublisher(Node):
 			'joy',
 			self.listener_callback,
 			10)
-        self.cap = cv2.VideoCapture(0)
-        # self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
+        self.cap = cv2.VideoCapture(2)
+        self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('P', 'N', 'G', ' '))
         self.cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
         self.cv_bridge = CvBridge()
         self.i = 0
@@ -42,8 +42,8 @@ class ImagePublisher(Node):
             time.sleep(self.FPS)
 
     def timer_callback(self):
-        # self.cap.read()
-        # ret, frame = self.cap.read()
+        self.cap.read()
+        self.status, self.frame = self.cap.read()
 
         if self.status == True:
             self.publisher_.publish(self.cv_bridge.cv2_to_imgmsg(self.frame, 'bgr8'))

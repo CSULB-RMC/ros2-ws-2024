@@ -75,13 +75,39 @@ class UI(Node):
     def ex_conveyer_update(self, msg):
         self.ex_conveyer_speed = msg.data
 
+    def generate_ascii_art(self, text):
+        # Define ASCII art characters for each letter        
+        ascii_art = {
+            'L': ["#    ", "#    ", "#    ", "#    ", "#####"],
+            'U': ["#   #", "#   #", "#   #", "#   #", "#####"],
+            'N': ["#   #", "##  #", "# # #", "#  ##", "#   #"],
+            'A': ["  #  ", " # # ", "#####", "#   #", "#   #"],
+            'B': ["#### ", "#   #", "#### ", "#   #", "#### "],
+            'O': ["#####", "#   #", "#   #", "#   #", "#####"],
+            'T': ["#####", "  #  ", "  #  ", "  #  ", "  #  "],
+            'I': ["#####", "  #  ", "  #  ", "  #  ", "#####"],
+            'C': ["#####", "#    ", "#    ", "#    ", "#####"],
+            'S': ["#####", "#    ", "#####", "    #", "#####"]
+        }
+
+        # Convert input text to uppercase
+        text = text.upper()
+
+        # Print ASCII art for each letter in the text
+        for row in range(5):
+            for char in text:
+                print(ascii_art.get(char, ["     "])[row], end="  ")
+            print()
+
     def timer_callback(self):
+        # Call the function with the text "LUNABOTICS"
         os.system('cls' if os.name == 'nt' else 'clear')
+        self.generate_ascii_art("LUNABOTICS")
         s = f'Excavator Bot: {self.ex_health}, '
         s += f'right_dt: {self.ex_dt_right_speed} left_dt: {self.ex_dt_left_speed}, '
         s += f'conveyer speed: {self.ex_conveyer_speed}, '
         s += f'arm speed: {self.ex_arm_speed}, '
-        s += f'digger speed: {self.ex_digger_speed}'
+        s += f'digger speed: {self.ex_digger_speed},'
         s += f'servo speed: {self.ex_servo_speed}'
         print(s)
 
@@ -93,7 +119,8 @@ class UI(Node):
     def timer_fail_callback(self):
         self.cb_health = "Dead"
         self.ex_health = "Dead"
-    
+
+
 def main(args=None):
     rclpy.init(args=args)
     node = UI()
