@@ -11,7 +11,7 @@ class DrivetrainExcavator(Node):
     def __init__(self):
         super().__init__('drivetrain_ex')
         self.activity_publisher_ = self.create_publisher(String, 'ex_active', 10) 
-        self.status_timer = self.create_timer(1, self.timer_callback)
+        self.status_timer = self.create_timer(0.1, self.timer_callback)
 
         # create subscribers to listen for teleop computer commands
         self.ex_dt_left_sub = self.create_subscription(UInt8, 'ex_dt_left', self.ex_dt_left_update, 10)
@@ -92,10 +92,6 @@ class DrivetrainExcavator(Node):
             return None
         self.ex_dt_left_speed = msg.data
 
-        temp_data = self.signal_conversion(self.ex_dt_left_speed, 4, 1000)  # Has to be 4 to work on vesc
-        # can message for right and left motor
-        self.can_publish(15, temp_data, True)
-        self.can_publish(16, temp_data, True) 
 
     #updates the states of the right drivetrains motors
     def ex_dt_right_update(self, msg):
@@ -104,10 +100,7 @@ class DrivetrainExcavator(Node):
             return None
         self.ex_dt_right_speed = msg.data
 
-        # converts controller signal to bytes array
-        temp_data = self.signal_conversion(self.ex_dt_right_speed, 4, 1000)  # Has to be 4 to work on vesc
-        self.can_publish(17, temp_data, True)
-        self.can_publish(18, temp_data, True)
+
     
     # Conveyer Belt
     def ex_conveyer_update(self, msg):
@@ -124,7 +117,7 @@ class DrivetrainExcavator(Node):
         if self.ex_arm_speed == msg.data:
             return None
         self.ex_arm_speed = msg.data 
-        temp_data = self.signal_conversion(msg.data, 8, 100)
+        temp_data = self.signal_conversion(msg.data, 8, 10)
 
         self.can_publish(21, temp_data, True)
     
@@ -145,6 +138,17 @@ class DrivetrainExcavator(Node):
         temp_data = self.signal_conversion(msg.data, 8, 100)
 
         self.can_publish(25, temp_data, True) 
+
+    def timer_callback(self):
+        temp_data = self.signal_conversion(self.ex_dt_left_speed, 4, 1000)  # Has to be 4 to work on vesc
+        # can message for right and left motor
+        self.can_publish(15, temp_data, True)
+        self.can_publish(16, temp_data, True) 
+
+        # converts controller signal to bytes array
+        temp_data = self.signal_conversion(self.ex_dt_right_speed, 4, 1000)  # Has to be 4 to work on vesc
+        self.can_publish(17, temp_data, True)
+        self.can_publish(18, temp_data, True)
 
 def main(args=None):
     print("Bus Publisher Active New")

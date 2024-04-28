@@ -1,0 +1,84 @@
+[0.000000] (-) TimerEvent: {}
+[0.001794] (-) JobUnselected: {'identifier': 'camera_test'}
+[0.001965] (-) JobUnselected: {'identifier': 'db_broker'}
+[0.002060] (-) JobUnselected: {'identifier': 'drive_cb'}
+[0.002147] (-) JobUnselected: {'identifier': 'drive_ex'}
+[0.002230] (-) JobUnselected: {'identifier': 'py_pubsub'}
+[0.002313] (-) JobUnselected: {'identifier': 'ui'}
+[0.002437] (joy_control) JobQueued: {'identifier': 'joy_control', 'dependencies': OrderedDict()}
+[0.002546] (joy_control) JobStarted: {'identifier': 'joy_control'}
+[0.098830] (-) TimerEvent: {}
+[0.199597] (-) TimerEvent: {}
+[0.300667] (-) TimerEvent: {}
+[0.401916] (-) TimerEvent: {}
+[0.502709] (-) TimerEvent: {}
+[0.603456] (-) TimerEvent: {}
+[0.704307] (-) TimerEvent: {}
+[0.805303] (-) TimerEvent: {}
+[0.906053] (-) TimerEvent: {}
+[1.006831] (-) TimerEvent: {}
+[1.107513] (-) TimerEvent: {}
+[1.208559] (-) TimerEvent: {}
+[1.309411] (-) TimerEvent: {}
+[1.410465] (-) TimerEvent: {}
+[1.513627] (-) TimerEvent: {}
+[1.614455] (-) TimerEvent: {}
+[1.715770] (-) TimerEvent: {}
+[1.817262] (-) TimerEvent: {}
+[1.929686] (-) TimerEvent: {}
+[2.031582] (-) TimerEvent: {}
+[2.133341] (-) TimerEvent: {}
+[2.235023] (-) TimerEvent: {}
+[2.336730] (-) TimerEvent: {}
+[2.438426] (-) TimerEvent: {}
+[2.540340] (-) TimerEvent: {}
+[2.642588] (-) TimerEvent: {}
+[2.744419] (-) TimerEvent: {}
+[2.846308] (-) TimerEvent: {}
+[2.948432] (-) TimerEvent: {}
+[3.050136] (-) TimerEvent: {}
+[3.151849] (-) TimerEvent: {}
+[3.254735] (-) TimerEvent: {}
+[3.360369] (-) TimerEvent: {}
+[3.465037] (-) TimerEvent: {}
+[3.476048] (joy_control) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/joy_control', 'build', '--build-base', '/home/beachlbl/ros2-ws-2024/build/joy_control/build', 'install', '--record', '/home/beachlbl/ros2-ws-2024/build/joy_control/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/beachlbl/ros2-ws-2024/src/joy_control', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'beachlbl', 'SSH_CLIENT': '192.168.0.104 51439 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/aarch64-linux-gnu:/opt/ros/iron/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/beachlbl', 'OLDPWD': '/home/beachlbl', 'NVM_BIN': '/home/beachlbl/.nvm/versions/node/v19.4.0/bin', 'SSH_TTY': '/dev/pts/0', 'NVM_INC': '/home/beachlbl/.nvm/versions/node/v19.4.0/include/node', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'NVM_DIR': '/home/beachlbl/.nvm', 'COLCON_PREFIX_PATH': '/home/beachlbl/ros2-ws-2024/install', 'ROS_DISTRO': 'iron', 'LOGNAME': 'beachlbl', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '3', 'PATH': '/home/beachlbl/.local/bin:/home/beachlbl/.nvm/versions/node/v19.4.0/bin:/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/beachlbl/ros2-ws-2024/install/ui:/home/beachlbl/ros2-ws-2024/install/py_pubsub:/home/beachlbl/ros2-ws-2024/install/joy_control:/home/beachlbl/ros2-ws-2024/install/drive_ex:/home/beachlbl/ros2-ws-2024/install/drive_cb:/home/beachlbl/ros2-ws-2024/install/db_broker:/home/beachlbl/ros2-ws-2024/install/camera_test:/opt/ros/iron', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/beachlbl/ros2-ws-2024/build/joy_control', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.0.104 51439 192.168.0.101 22', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/beachlbl/ros2-ws-2024/build/joy_control/prefix_override:/home/beachlbl/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages:/home/beachlbl/ros2-ws-2024/install/ui/lib/python3.10/site-packages:/home/beachlbl/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages:/home/beachlbl/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages:/home/beachlbl/ros2-ws-2024/install/drive_ex/lib/python3.10/site-packages:/home/beachlbl/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages:/home/beachlbl/ros2-ws-2024/install/db_broker/lib/python3.10/site-packages:/home/beachlbl/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages:/opt/ros/iron/lib/python3.10/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/beachlbl/ros2-ws-2024/install/camera_test'}, 'shell': False}
+[3.565615] (-) TimerEvent: {}
+[3.666385] (-) TimerEvent: {}
+[3.767200] (-) TimerEvent: {}
+[3.868290] (-) TimerEvent: {}
+[3.969400] (-) TimerEvent: {}
+[4.070749] (-) TimerEvent: {}
+[4.171703] (-) TimerEvent: {}
+[4.272676] (-) TimerEvent: {}
+[4.373524] (-) TimerEvent: {}
+[4.474483] (-) TimerEvent: {}
+[4.575371] (-) TimerEvent: {}
+[4.676062] (-) TimerEvent: {}
+[4.776763] (-) TimerEvent: {}
+[4.796606] (joy_control) StdoutLine: {'line': b'running egg_info\n'}
+[4.799866] (joy_control) StdoutLine: {'line': b'writing ../../build/joy_control/joy_control.egg-info/PKG-INFO\n'}
+[4.801066] (joy_control) StdoutLine: {'line': b'writing dependency_links to ../../build/joy_control/joy_control.egg-info/dependency_links.txt\n'}
+[4.802107] (joy_control) StdoutLine: {'line': b'writing entry points to ../../build/joy_control/joy_control.egg-info/entry_points.txt\n'}
+[4.802893] (joy_control) StdoutLine: {'line': b'writing requirements to ../../build/joy_control/joy_control.egg-info/requires.txt\n'}
+[4.803808] (joy_control) StdoutLine: {'line': b'writing top-level names to ../../build/joy_control/joy_control.egg-info/top_level.txt\n'}
+[4.812059] (joy_control) StdoutLine: {'line': b"reading manifest file '../../build/joy_control/joy_control.egg-info/SOURCES.txt'\n"}
+[4.813568] (joy_control) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[4.816378] (joy_control) StdoutLine: {'line': b"writing manifest file '../../build/joy_control/joy_control.egg-info/SOURCES.txt'\n"}
+[4.817551] (joy_control) StdoutLine: {'line': b'running build\n'}
+[4.817971] (joy_control) StdoutLine: {'line': b'running build_py\n'}
+[4.819394] (joy_control) StdoutLine: {'line': b'running install\n'}
+[4.820910] (joy_control) StdoutLine: {'line': b'running install_lib\n'}
+[4.828014] (joy_control) StdoutLine: {'line': b'running install_data\n'}
+[4.828823] (joy_control) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.835914] (joy_control) StdoutLine: {'line': b"removing '/home/beachlbl/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages/joy_control-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[4.837696] (joy_control) StdoutLine: {'line': b'Copying ../../build/joy_control/joy_control.egg-info to /home/beachlbl/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages/joy_control-0.0.0-py3.10.egg-info\n'}
+[4.843261] (joy_control) StdoutLine: {'line': b'running install_scripts\n'}
+[4.876966] (-) TimerEvent: {}
+[4.937200] (joy_control) StdoutLine: {'line': b'Installing control_cb script to /home/beachlbl/ros2-ws-2024/install/joy_control/lib/joy_control\n'}
+[4.938240] (joy_control) StdoutLine: {'line': b'Installing control_ex script to /home/beachlbl/ros2-ws-2024/install/joy_control/lib/joy_control\n'}
+[4.940175] (joy_control) StdoutLine: {'line': b"writing list of installed files to '/home/beachlbl/ros2-ws-2024/build/joy_control/install.log'\n"}
+[4.977251] (-) TimerEvent: {}
+[5.078940] (-) TimerEvent: {}
+[5.120443] (joy_control) CommandEnded: {'returncode': 0}
+[5.168058] (joy_control) JobEnded: {'identifier': 'joy_control', 'rc': 0}
+[5.171109] (-) EventReactorShutdown: {}
