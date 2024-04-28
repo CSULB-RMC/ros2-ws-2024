@@ -31,8 +31,8 @@ class JoyPub_Ex(Node):
         self.controller = 0
         self.prev = 0
 
-        self.ex_speed_limit = 50
-        self.cb_speed_limit = 50
+        self.ex_speed_limit = 10
+        self.cb_speed_limit = 10
         
     def listener_callback(self, msg: Joy):
         if msg.buttons[8] != self.prev:
@@ -47,11 +47,11 @@ class JoyPub_Ex(Node):
         if self.controller == 0: 
             # Left Stick Maps - Left Drive Train
             if msg.axes[1] > self.DEADBAND: # L Stick Up 
-                uint8.data = int((msg.axes[1] * self.ex_speed_limit) + 100) # add 100 to indicate forward motion and not include 100
+                uint8.data = int((msg.axes[1] * self.ex_speed_limit)) # add 100 to indicate forward motion and not include 100
                 self.dt_l_publisher_.publish(uint8)
 
             elif msg.axes[1] < -self.DEADBAND: # L Stick Down 
-                uint8.data = int((abs(msg.axes[1]) * self.ex_speed_limit)) # subtract 1 to no include 100 
+                uint8.data = int((abs(msg.axes[1]) * self.ex_speed_limit) + 100) # subtract 1 to no include 100 
                 self.dt_l_publisher_.publish(uint8)
 
             else:
@@ -60,11 +60,11 @@ class JoyPub_Ex(Node):
 
             # Right Stick Maps - Right Drive Train
             if msg.axes[3] > self.DEADBAND: # R Stick Up
-                uint8.data = int((msg.axes[3] * self.ex_speed_limit) + 100) # add 100 to indicate forward motion and not include 100
+                uint8.data = int((msg.axes[3] * self.ex_speed_limit)) # add 100 to indicate forward motion and not include 100
                 self.dt_r_publisher_.publish(uint8)
 
             elif msg.axes[3] < -self.DEADBAND: # R Stick Down
-                uint8.data = int((abs(msg.axes[3]) * self.ex_speed_limit)) # subtract 1 to no include 100 
+                uint8.data = int((abs(msg.axes[3]) * self.ex_speed_limit) + 100) # subtract 1 to no include 100 
                 self.dt_r_publisher_.publish(uint8)
                 
             else:
@@ -81,21 +81,21 @@ class JoyPub_Ex(Node):
 
             # Right Trigger button
             if msg.buttons[7] == 1:
-                uint8.data = 24
+                uint8.data = 20
                 self.ex_digger_publisher_.publish(uint8)
             else:
-                uint8.data = 5
+                uint8.data = 15
                 self.ex_digger_publisher_.publish(uint8)
             
             # D pad
             if msg.axes[5] > 0.01:
-                uint8.data = 20
+                uint8.data = 15
                 self.ex_arm_publisher_.publish(uint8)
             elif msg.axes[5] < 0:              
                 uint8.data = 5
                 self.ex_arm_publisher_.publish(uint8)
             else:
-                uint8.data = 15
+                uint8.data = 0
                 self.ex_arm_publisher_.publish(uint8)
             
             # right bumper
