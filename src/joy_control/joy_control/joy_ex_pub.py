@@ -71,28 +71,28 @@ class JoyPub_Ex(Node):
                 uint8.data = 0 # deadband resets it to neutral
                 self.dt_r_publisher_.publish(uint8)
             
-            # D pad Maps - Excavator
+            # X Button - Digger
             if msg.buttons[3] == 1: # D pad Up
-                uint8.data = 20
+                uint8.data = 60  # 600 
                 self.ex_conveyer_publisher_.publish(uint8)                
             else:
-                uint8.data = 0
+                uint8.data = 50 # 500
                 self.ex_conveyer_publisher_.publish(uint8)
 
-            # Right Trigger button
+            # Right Trigger button - conveyer
             if msg.buttons[7] == 1:
-                uint8.data = 20
+                uint8.data = 60
                 self.ex_digger_publisher_.publish(uint8)
             else:
-                uint8.data = 15
+                uint8.data = 50
                 self.ex_digger_publisher_.publish(uint8)
             
             # D pad
             if msg.axes[5] > 0.01:
-                uint8.data = 15
+                uint8.data = 15  # 150
                 self.ex_arm_publisher_.publish(uint8)
             elif msg.axes[5] < 0:              
-                uint8.data = 5
+                uint8.data = 5   # 50
                 self.ex_arm_publisher_.publish(uint8)
             else:
                 uint8.data = 0
@@ -100,7 +100,7 @@ class JoyPub_Ex(Node):
             
             # right bumper
             if msg.buttons[5] == 1: 
-                uint8.data = 10
+                uint8.data = 25
                 self.ex_servo_publisher_.publish(uint8)
             else:
                 uint8.data = 0
