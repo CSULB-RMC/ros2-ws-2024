@@ -1,0 +1,28 @@
+[0.813s] Invoking command in '/home/leho42/Desktop/ros2-ws-2024/src/camera_test': PYTHONPATH=/home/leho42/Desktop/ros2-ws-2024/build/camera_test/prefix_override:/home/leho42/Desktop/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/camera_test build --build-base /home/leho42/Desktop/ros2-ws-2024/build/camera_test/build install --record /home/leho42/Desktop/ros2-ws-2024/build/camera_test/install.log --single-version-externally-managed install_data
+[0.935s] running egg_info
+[0.935s] writing ../../build/camera_test/camera_test.egg-info/PKG-INFO
+[0.935s] writing dependency_links to ../../build/camera_test/camera_test.egg-info/dependency_links.txt
+[0.936s] writing entry points to ../../build/camera_test/camera_test.egg-info/entry_points.txt
+[0.936s] writing requirements to ../../build/camera_test/camera_test.egg-info/requires.txt
+[0.936s] writing top-level names to ../../build/camera_test/camera_test.egg-info/top_level.txt
+[0.937s] reading manifest file '../../build/camera_test/camera_test.egg-info/SOURCES.txt'
+[0.937s] adding license file 'LICENSE'
+[0.937s] writing manifest file '../../build/camera_test/camera_test.egg-info/SOURCES.txt'
+[0.937s] running build
+[0.937s] running build_py
+[0.937s] copying camera_test/cam_pub.py -> /home/leho42/Desktop/ros2-ws-2024/build/camera_test/build/lib/camera_test
+[0.938s] running install
+[0.938s] running install_lib
+[0.939s] copying /home/leho42/Desktop/ros2-ws-2024/build/camera_test/build/lib/camera_test/cam_pub.py -> /home/leho42/Desktop/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages/camera_test
+[0.939s] byte-compiling /home/leho42/Desktop/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages/camera_test/cam_pub.py to cam_pub.cpython-310.pyc
+[0.939s] running install_data
+[0.940s] running install_egg_info
+[0.940s] removing '/home/leho42/Desktop/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages/camera_test-0.0.0-py3.10.egg-info' (and everything under it)
+[0.941s] Copying ../../build/camera_test/camera_test.egg-info to /home/leho42/Desktop/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages/camera_test-0.0.0-py3.10.egg-info
+[0.966s] running install_scripts
+[0.999s] Installing listener script to /home/leho42/Desktop/ros2-ws-2024/install/camera_test/lib/camera_test
+[0.999s] Installing listener2 script to /home/leho42/Desktop/ros2-ws-2024/install/camera_test/lib/camera_test
+[0.999s] Installing talker script to /home/leho42/Desktop/ros2-ws-2024/install/camera_test/lib/camera_test
+[0.999s] Installing talker2 script to /home/leho42/Desktop/ros2-ws-2024/install/camera_test/lib/camera_test
+[0.999s] writing list of installed files to '/home/leho42/Desktop/ros2-ws-2024/build/camera_test/install.log'
+[1.141s] Invoked command in '/home/leho42/Desktop/ros2-ws-2024/src/camera_test' returned '0': PYTHONPATH=/home/leho42/Desktop/ros2-ws-2024/build/camera_test/prefix_override:/home/leho42/Desktop/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/camera_test build --build-base /home/leho42/Desktop/ros2-ws-2024/build/camera_test/build install --record /home/leho42/Desktop/ros2-ws-2024/build/camera_test/install.log --single-version-externally-managed install_data
