@@ -11,12 +11,12 @@ class DB_Broker(Node):
     def __init__(self):
         super().__init__('db_broker_pub')
 
-        self.broker = 'broker.emqx.io'
-        self.port = 1883
+        self.broker = 'ws://54.151.96.241:8083/mqtt'
+        self.port = 8083
         self.topic = "python/mqtt"
         self.client_id = f'python-mqtt-{random.randint(0, 1000)}'
-        # username = 'emqx'
-        # password = 'public'
+        self.username = 'porter.clevidence01@student.csulb.edu'
+        self.password = '66b9ed8a-f2bc-4292-924c-466a06d9'
 
 
     def connect_mqtt(self):
@@ -33,7 +33,7 @@ class DB_Broker(Node):
         # For paho-mqtt 2.0.0, you need to set callback_api_version.
         # client = mqtt_client.Client(client_id=client_id, callback_api_version=mqtt_client.CallbackAPIVersion.VERSION2)
 
-        # client.username_pw_set(username, password)
+        client.username_pw_set(self.username, self.password)
         client.on_connect = on_connect
         client.connect(self.broker, self.port)
         return client

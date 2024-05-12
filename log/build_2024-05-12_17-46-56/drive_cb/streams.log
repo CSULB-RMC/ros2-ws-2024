@@ -1,0 +1,30 @@
+[0.846s] Invoking command in '/home/leho42/ros2-ws-2024/src/drive_cb': PYTHONPATH=/home/leho42/ros2-ws-2024/build/drive_cb/prefix_override:/home/leho42/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/drive_cb build --build-base /home/leho42/ros2-ws-2024/build/drive_cb/build install --record /home/leho42/ros2-ws-2024/build/drive_cb/install.log --single-version-externally-managed install_data
+[0.957s] running egg_info
+[0.958s] writing ../../build/drive_cb/drive_cb.egg-info/PKG-INFO
+[0.958s] writing dependency_links to ../../build/drive_cb/drive_cb.egg-info/dependency_links.txt
+[0.958s] writing entry points to ../../build/drive_cb/drive_cb.egg-info/entry_points.txt
+[0.959s] writing requirements to ../../build/drive_cb/drive_cb.egg-info/requires.txt
+[0.959s] writing top-level names to ../../build/drive_cb/drive_cb.egg-info/top_level.txt
+[0.959s] reading manifest file '../../build/drive_cb/drive_cb.egg-info/SOURCES.txt'
+[0.959s] adding license file 'LICENSE'
+[0.960s] writing manifest file '../../build/drive_cb/drive_cb.egg-info/SOURCES.txt'
+[0.960s] running build
+[0.960s] running build_py
+[0.960s] copying drive_cb/drivetrain_cb_sub.py -> /home/leho42/ros2-ws-2024/build/drive_cb/build/lib/drive_cb
+[0.967s] copying drive_cb/__init__.py -> /home/leho42/ros2-ws-2024/build/drive_cb/build/lib/drive_cb
+[0.967s] running install
+[0.967s] running install_lib
+[0.967s] copying /home/leho42/ros2-ws-2024/build/drive_cb/build/lib/drive_cb/drivetrain_cb_sub.py -> /home/leho42/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages/drive_cb
+[0.967s] copying /home/leho42/ros2-ws-2024/build/drive_cb/build/lib/drive_cb/__init__.py -> /home/leho42/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages/drive_cb
+[0.967s] byte-compiling /home/leho42/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages/drive_cb/drivetrain_cb_sub.py to drivetrain_cb_sub.cpython-310.pyc
+[0.967s] byte-compiling /home/leho42/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages/drive_cb/__init__.py to __init__.cpython-310.pyc
+[0.967s] running install_data
+[0.967s] copying resource/drive_cb -> /home/leho42/ros2-ws-2024/install/drive_cb/share/ament_index/resource_index/packages
+[0.968s] copying package.xml -> /home/leho42/ros2-ws-2024/install/drive_cb/share/drive_cb
+[0.968s] running install_egg_info
+[0.968s] removing '/home/leho42/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages/drive_cb-0.0.0-py3.10.egg-info' (and everything under it)
+[0.968s] Copying ../../build/drive_cb/drive_cb.egg-info to /home/leho42/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages/drive_cb-0.0.0-py3.10.egg-info
+[0.968s] running install_scripts
+[0.983s] Installing drivetrain_cb script to /home/leho42/ros2-ws-2024/install/drive_cb/lib/drive_cb
+[0.983s] writing list of installed files to '/home/leho42/ros2-ws-2024/build/drive_cb/install.log'
+[0.991s] Invoked command in '/home/leho42/ros2-ws-2024/src/drive_cb' returned '0': PYTHONPATH=/home/leho42/ros2-ws-2024/build/drive_cb/prefix_override:/home/leho42/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/drive_cb build --build-base /home/leho42/ros2-ws-2024/build/drive_cb/build install --record /home/leho42/ros2-ws-2024/build/drive_cb/install.log --single-version-externally-managed install_data

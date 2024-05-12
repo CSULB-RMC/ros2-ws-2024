@@ -58,6 +58,7 @@ class JoyPub_Ex(Node):
 
         # excavator bot
         if self.controller == 0: 
+
             # Left Stick Maps - Left Drive Train
             if msg.axes[1] > self.DEADBAND: # L Stick Up 
                 uint8.data = int((msg.axes[1] * self.ex_speed_limit)) # add 100 to indicate forward motion and not include 100
@@ -65,6 +66,9 @@ class JoyPub_Ex(Node):
 
             elif msg.axes[1] < -self.DEADBAND: # L Stick Down 
                 uint8.data = int((abs(msg.axes[1]) * self.ex_speed_limit) + 100) # subtract 1 to no include 100 
+                #bug where if its too small it will crank speed to 100%
+                if uint8.data == 100:
+                    uint8.data = 0
                 self.dt_l_publisher_.publish(uint8)
 
             else:
@@ -78,21 +82,24 @@ class JoyPub_Ex(Node):
 
             elif msg.axes[3] < -self.DEADBAND: # R Stick Down
                 uint8.data = int((abs(msg.axes[3]) * self.ex_speed_limit) + 100) # subtract 1 to no include 100 
+                #bug where if its too small it will crank speed to 100%
+                if uint8.data == 100:
+                    uint8.data = 0
                 self.dt_r_publisher_.publish(uint8)
                 
             else:
                 uint8.data = 0 # deadband resets it to neutral
                 self.dt_r_publisher_.publish(uint8)
             
-            # X Button - Digger
-            if msg.buttons[3] == 1: # D pad Up
+            # X Button - conveyor
+            if msg.buttons[3] == 1:
                 uint8.data = 60  # 600 
                 self.ex_conveyer_publisher_.publish(uint8)                
             else:
                 uint8.data = 50 # 500
                 self.ex_conveyer_publisher_.publish(uint8)
 
-            # Right Trigger button - conveyer
+            # Right Trigger button - digger
             if msg.buttons[7] == 1:
                 uint8.data = 60
                 self.ex_digger_publisher_.publish(uint8)
@@ -133,17 +140,17 @@ class JoyPub_Ex(Node):
 
             # Right Stick Maps - Right Drive Train
             if msg.axes[3] > self.DEADBAND: # R Stick Up
-                uint8.data = 50 - int((msg.axes[3] * 100) // 2) # add 100 to indicate forward motion and not include 100
+                uint8.data = 50 - int((msg.axes[3] * self.cb_speed_limit)) # add 100 to indicate forward motion and not include 100
                 self.cb_r_publisher_.publish(uint8)
             elif msg.axes[3] < -self.DEADBAND: # R Stick Down
-                uint8.data = 50 + int((abs(msg.axes[3]) * 100) // 2) # subtract 1 to no include 100 
+                uint8.data = 50 + int((abs(msg.axes[3]) * self.cb_speed_limit)) # subtract 1 to no include 100 
                 self.cb_r_publisher_.publish(uint8)
             else:
                 uint8.data = 50 # deadband resets it to neutral
                 self.cb_r_publisher_.publish(uint8)    
             
-            # A button
-            if msg.buttons[2] == 1:
+            # X button
+            if msg.buttons[3] == 1:
                 uint8.data = 16
                 self.cb_scoop_publisher_.publish(uint8)
             else:

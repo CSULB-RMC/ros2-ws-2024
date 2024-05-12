@@ -17,7 +17,7 @@ class ImagePublisher(Node):
 			'joy',
 			self.listener_callback,
 			10)
-        self.cap = cv2.VideoCapture(2)
+        self.cap = cv2.VideoCapture(0)
         self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('P', 'N', 'G', ' '))
         self.cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
         self.cv_bridge = CvBridge()
