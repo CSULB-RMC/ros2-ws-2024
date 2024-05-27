@@ -1,26 +1,22 @@
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import Joy
-from std_msgs.msg import UInt8
-#ignore can import error if it's there, it works if you installed python-can
-import random
 from paho.mqtt import client as mqtt_client
-import can
+import paho.mqtt.publish as publish
 import time
+from dotenv import find_dotenv, load_dotenv
+import os
+load_dotenv(find_dotenv())
 class DB_Broker(Node):
     
     def __init__(self):
         super().__init__('db_broker_pub')
          
-        self.status_timer = self.create_timer(1, self.timer_callback)
-        self.broker = '54.151.96.241'
-        # self.broker = 'broker.emqx.io'
-        self.port = 8083
-        # self.port = 1883
+        self.status_timer = self.create_timer(5, self.timer_callback)
+        self.broker = os.getenv("DATANIZ_IP")
+        self.port = 1883
         self.topic = 'python/mqtt'
-        # self.client_id = f'python-mqtt-{random.randint(0, 1000)}'
-        self.username = 'porter.clevidence01@student.csulb.edu'
-        self.password = '66b9ed8a-f2bc-4292-924c-466a06d9'
+        self.username = os.getenv("DATANIZ_EMAIL")
+        self.password = os.getenv("DATANIZ_KEY") 
 
         self.FIRST_RECONNECT_DELAY = 1
         self.RECONNECT_RATE = 2
@@ -29,12 +25,15 @@ class DB_Broker(Node):
  
     # def on_connect(client, userdata, flags, rc):
     # For paho-mqtt 2.0.0, you need to add the properties parameter.
-    def on_connect(self, client, userdata, flags, rc, properties):
+    def on_connect(self, client, userdata, flags, rc):
         self.get_logger().info('connecting...')
         if rc == 0:
             self.get_logger().info(f'Connected to MQTT Broker!')
         else:
             self.get_logger().info(f'Failed to connect, return code {rc}\n')
+
+    def on_publish(self, client, userdata, mid):
+        print("mid: "+str(mid))
 
     def on_disconnect(self, client, userdata, rc):
         self.get_logger().info("Disconnected with result code: %s" % rc)
@@ -55,43 +54,29 @@ class DB_Broker(Node):
             reconnect_count += 1
         self.get_logger().info("Reconnect failed after %s attempts. Exiting..." % reconnect_count)
     
-    def publish(self, client):
-        msg_count = 1
-        while True:
-            time.sleep(1)
-            msg = f"messages: {msg_count}"
-            result = client.publish(self.topic, msg)
-            # result: [0, 1]
-            status = result[0]
-            if status == 0:
-                print(f"Send `{msg}` to topic `{self.topic}`")
-            else:
-                print(f"Failed to send message to topic {self.topic}")
-            msg_count += 1
-            if msg_count > 5:
-                break
-    
     def connect_mqtt(self):
         # Set Connecting Client ID
         # client = mqtt_client.Client(client_id='')
 
         # For paho-mqtt 2.0.0, you need to set callback_api_version.
-        client = mqtt_client.Client(transport="websockets", callback_api_version=mqtt_client.CallbackAPIVersion.VERSION2)
+#        client = mqtt_client.Client(transport="websockets")
+        client = mqtt_client.Client()
         # client = mqtt_client.Client(callback_api_version=mqtt_client.CallbackAPIVersion.VERSION2)
 
         client.username_pw_set(self.username, self.password)
         client.on_connect = self.on_connect
+        client.on_publish = self.on_publish
         client.connect(self.broker, self.port)
         return client
 
     def timer_callback(self):
         client = self.connect_mqtt()
         client.loop_start()
-        self.publish(client)
+        client.publish(self.topic, "hello")
         client.loop_stop() 
 
 def main(args=None):
-    print("DB1")
+    print("DB")
 
     rclpy.init(args=args)
     db_node = DB_Broker()
