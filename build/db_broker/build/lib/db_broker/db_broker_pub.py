@@ -1,63 +1,86 @@
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import Joy
-from std_msgs.msg import UInt8
-#ignore can import error if it's there, it works if you installed python-can
-import random
 from paho.mqtt import client as mqtt_client
-import can
+import paho.mqtt.publish as publish
+import time
+from dotenv import find_dotenv, load_dotenv
+import os
+load_dotenv(find_dotenv())
 class DB_Broker(Node):
     
     def __init__(self):
         super().__init__('db_broker_pub')
+         
+        self.status_timer = self.create_timer(5, self.timer_callback)
+        self.broker = os.getenv("DATANIZ_IP")
+        self.port = 1883
+        self.topic = 'python/mqtt'
+        self.username = os.getenv("DATANIZ_EMAIL")
+        self.password = os.getenv("DATANIZ_KEY") 
 
-        self.broker = 'ws://54.151.96.241:8083/mqtt'
-        self.port = 8083
-        self.topic = "python/mqtt"
-        self.client_id = f'python-mqtt-{random.randint(0, 1000)}'
-        self.username = 'porter.clevidence01@student.csulb.edu'
-        self.password = '66b9ed8a-f2bc-4292-924c-466a06d9'
+        self.FIRST_RECONNECT_DELAY = 1
+        self.RECONNECT_RATE = 2
+        self.MAX_RECONNECT_COUNT = 12
+        self.MAX_RECONNECT_DELAY = 60
+ 
+    # def on_connect(client, userdata, flags, rc):
+    # For paho-mqtt 2.0.0, you need to add the properties parameter.
+    def on_connect(self, client, userdata, flags, rc):
+        self.get_logger().info('connecting...')
+        if rc == 0:
+            self.get_logger().info(f'Connected to MQTT Broker!')
+        else:
+            self.get_logger().info(f'Failed to connect, return code {rc}\n')
 
+    def on_publish(self, client, userdata, mid):
+        print("mid: "+str(mid))
 
+    def on_disconnect(self, client, userdata, rc):
+        self.get_logger().info("Disconnected with result code: %s" % rc)
+        reconnect_count, reconnect_delay = 0, self.FIRST_RECONNECT_DELAY
+        while reconnect_count < self.MAX_RECONNECT_COUNT:
+            self.get_logger().info("Reconnecting in %d seconds..." % reconnect_delay)
+            time.sleep(reconnect_delay)
+
+            try:
+                client.reconnect()
+                self.get_logger().info("Reconnected successfully!")
+                return
+            except Exception as err:
+                self.get_logger().info("%s. Reconnect failed. Retrying..." % err)
+
+            reconnect_delay *= self.RECONNECT_RATE
+            reconnect_delay = min(reconnect_delay, self.MAX_RECONNECT_DELAY)
+            reconnect_count += 1
+        self.get_logger().info("Reconnect failed after %s attempts. Exiting..." % reconnect_count)
+    
     def connect_mqtt(self):
-        def on_connect(client, userdata, flags, rc):
-        # For paho-mqtt 2.0.0, you need to add the properties parameter.
-        # def on_connect(client, userdata, flags, rc, properties):
-            if rc == 0:
-                print("Connected to MQTT Broker!")
-            else:
-                print("Failed to connect, return code %d\n", rc)
         # Set Connecting Client ID
-        client = mqtt_client.Client(self.client_id)
+        # client = mqtt_client.Client(client_id='')
 
         # For paho-mqtt 2.0.0, you need to set callback_api_version.
-        # client = mqtt_client.Client(client_id=client_id, callback_api_version=mqtt_client.CallbackAPIVersion.VERSION2)
+#        client = mqtt_client.Client(transport="websockets")
+        client = mqtt_client.Client()
+        # client = mqtt_client.Client(callback_api_version=mqtt_client.CallbackAPIVersion.VERSION2)
 
         client.username_pw_set(self.username, self.password)
-        client.on_connect = on_connect
+        client.on_connect = self.on_connect
+        client.on_publish = self.on_publish
         client.connect(self.broker, self.port)
         return client
 
-
-
-    def publish(self, client): 
-        while True:
-            result = client.publish(self.topic, "hello")
-            status = result[0]
-            if status == 0:
-                print(f"Send Hello to topic `{self.topic}`")
-            else:
-                print(f"Failed to send message to topic {self.topic}")
+    def timer_callback(self):
+        client = self.connect_mqtt()
+        client.loop_start()
+        client.publish(self.topic, "hello")
+        client.loop_stop() 
 
 def main(args=None):
     print("DB")
 
     rclpy.init(args=args)
     db_node = DB_Broker()
-    client = db_node.connect_mqtt()
-    client.loop_start()
-    db_node.publish(client)
-    client.loop_forever()
+
 
     rclpy.spin(db_node)
     # Destroy the node explicitly
