@@ -3,6 +3,7 @@ from rclpy.node import Node
 from paho.mqtt import client as mqtt_client
 import paho.mqtt.publish as publish
 import time
+from std_msgs.msg import UInt8, String, Int16
 from dotenv import find_dotenv, load_dotenv
 import os
 load_dotenv(find_dotenv())
@@ -11,7 +12,11 @@ class DB_Broker(Node):
     def __init__(self):
         super().__init__('db_broker_pub')
          
-        self.status_timer = self.create_timer(5, self.timer_callback)
+        # self.status_timer = self.create_timer(5, self.timer_callback)
+        self.vesc1_temp_sub = self.create_subscription(Int16, 'temp_pub', self.temp_update, 10)
+        
+        self.temp = 0
+
         self.broker = os.getenv("DATANIZ_IP")
         self.port = 1883
         self.topic = 'python/mqtt'
@@ -22,7 +27,7 @@ class DB_Broker(Node):
         self.RECONNECT_RATE = 2
         self.MAX_RECONNECT_COUNT = 12
         self.MAX_RECONNECT_DELAY = 60
- 
+
     # def on_connect(client, userdata, flags, rc):
     # For paho-mqtt 2.0.0, you need to add the properties parameter.
     def on_connect(self, client, userdata, flags, rc, properties):
@@ -69,11 +74,12 @@ class DB_Broker(Node):
         client.connect(self.broker, self.port)
         return client
 
-    def timer_callback(self):
+    def temp_update(self, msg):
         client = self.connect_mqtt()
         client.loop_start()
-        time.sleep(10)
-        client.publish(self.topic, "hello")
+        temp = msg.data
+        self.get_logger().info(f"Sending {temp}")
+        client.publish(self.topic, temp)
         client.loop_stop() 
 
 def main(args=None):
