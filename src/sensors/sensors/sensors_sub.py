@@ -10,24 +10,28 @@ class SensorSub(Node):
         super().__init__('sensors_sub')
 
         filters=[
-                {"can_id": 0x0000103D, "can_mask": 0x1FFFFFFF, "extended": True}
+                {"can_id": 0x0000100F, "can_mask": 0x1FFFFFFF, "extended": True}
         ]
-        self.bus = can.interface.Bus(interface='socketcan', channel='vcan0', bitrate='500000', can_filters=filters)
-
+        # Standard CAN
+        self.bus = can.interface.Bus(interface='socketcan', channel='can0', bitrate='500000', can_filters=filters)
+        
         self.vesc1_temp_publisher_ = self.create_publisher(Int16, 'temp_pub', 10) 
         self.status_timer = self.create_timer(1, self.timer_callback)
 
     def timer_callback(self):
         for msg in self.bus:
-            x = hex(msg.data[2]) + hex(msg.data[3])[2:] 
+            num = int.from_bytes(msg.data[2:4], byteorder='big', signed=False)
             temp = Int16()
             
             min = -32768
             max = 32767
-            x = int(x, 0)
-            if x < min or x > max:
-                x = ((x + 2**15) % 2**16) - 2**15
-            temp.data = x // 10
+
+            self.get_logger().info(f'{num}')
+            if num < min or num > max:
+                num = ((num + 2**15) % 2**16) - 2**15
+            
+            self.get_logger().info(f'{num}')
+            temp.data = num
             print("publishing ", temp)
             self.vesc1_temp_publisher_.publish(temp)
 

@@ -30,14 +30,14 @@ class DB_Broker(Node):
 
     # def on_connect(client, userdata, flags, rc):
     # For paho-mqtt 2.0.0, you need to add the properties parameter.
-    def on_connect(self, client, userdata, flags, rc, properties):
+    def on_connect(self, client, userdata, flags, rc):
         self.get_logger().info('connecting...')
         if rc == 0:
             self.get_logger().info(f'Connected to MQTT Broker!')
         else:
             self.get_logger().info(f'Failed to connect, return code {rc}\n')
 
-    def on_publish(self, client, userdata, mid, reason_code, properties):
+    def on_publish(self, client, userdata, mid):
         print("mid: "+str(userdata))
 
     def on_disconnect(self, client, userdata, rc):
@@ -65,8 +65,8 @@ class DB_Broker(Node):
 
         # For paho-mqtt 2.0.0, you need to set callback_api_version.
 #        client = mqtt_client.Client(transport="websockets")
-        # client = mqtt_client.Client()
-        client = mqtt_client.Client(callback_api_version=mqtt_client.CallbackAPIVersion.VERSION2)
+        client = mqtt_client.Client()
+        # client = mqtt_client.Client(callback_api_version=mqtt_client.CallbackAPIVersion.VERSION2)
 
         client.username_pw_set(self.username, self.password)
         client.on_connect = self.on_connect
@@ -75,11 +75,12 @@ class DB_Broker(Node):
         return client
 
     def temp_update(self, msg):
+        self.get_logger().info(f'{msg.data/10}') 
         client = self.connect_mqtt()
         client.loop_start()
         temp = msg.data
-        self.get_logger().info(f"Sending {temp}")
-        client.publish(self.topic, temp)
+        self.get_logger().info(f"Sending {msg.data/10}")
+        client.publish(self.topic, msg.data/10)
         client.loop_stop() 
 
 def main(args=None):
