@@ -1,0 +1,34 @@
+[4.741s] Invoking command in '/home/beachlbl/porter/ros2-ws-2024/build/ui': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/ui/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/beachlbl/porter/ros2-ws-2024/build/ui/build
+[6.549s] running develop
+[6.551s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[6.552s]   warnings.warn(
+[7.705s] Removing /home/beachlbl/porter/ros2-ws-2024/install/ui/lib/python3.10/site-packages/ui.egg-link (link to .)
+[7.885s] Invoked command in '/home/beachlbl/porter/ros2-ws-2024/build/ui' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/ui/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/beachlbl/porter/ros2-ws-2024/build/ui/build
+[7.896s] Invoking command in '/home/beachlbl/porter/ros2-ws-2024/src/ui': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/ui/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ui build --build-base /home/beachlbl/porter/ros2-ws-2024/build/ui/build install --record /home/beachlbl/porter/ros2-ws-2024/build/ui/install.log --single-version-externally-managed install_data --force
+[9.168s] running egg_info
+[9.170s] writing ../../build/ui/ui.egg-info/PKG-INFO
+[9.171s] writing dependency_links to ../../build/ui/ui.egg-info/dependency_links.txt
+[9.172s] writing entry points to ../../build/ui/ui.egg-info/entry_points.txt
+[9.173s] writing requirements to ../../build/ui/ui.egg-info/requires.txt
+[9.173s] writing top-level names to ../../build/ui/ui.egg-info/top_level.txt
+[9.181s] reading manifest file '../../build/ui/ui.egg-info/SOURCES.txt'
+[9.182s] adding license file 'LICENSE'
+[9.185s] writing manifest file '../../build/ui/ui.egg-info/SOURCES.txt'
+[9.185s] running build
+[9.186s] running build_py
+[9.187s] running install
+[9.188s] running install_lib
+[9.192s] creating /home/beachlbl/porter/ros2-ws-2024/install/ui/lib/python3.10/site-packages/ui
+[9.192s] copying /home/beachlbl/porter/ros2-ws-2024/build/ui/build/lib/ui/__init__.py -> /home/beachlbl/porter/ros2-ws-2024/install/ui/lib/python3.10/site-packages/ui
+[9.193s] copying /home/beachlbl/porter/ros2-ws-2024/build/ui/build/lib/ui/ui_health.py -> /home/beachlbl/porter/ros2-ws-2024/install/ui/lib/python3.10/site-packages/ui
+[9.195s] byte-compiling /home/beachlbl/porter/ros2-ws-2024/install/ui/lib/python3.10/site-packages/ui/__init__.py to __init__.cpython-310.pyc
+[9.197s] byte-compiling /home/beachlbl/porter/ros2-ws-2024/install/ui/lib/python3.10/site-packages/ui/ui_health.py to ui_health.cpython-310.pyc
+[9.201s] running install_data
+[9.202s] copying resource/ui -> /home/beachlbl/porter/ros2-ws-2024/install/ui/share/ament_index/resource_index/packages
+[9.202s] copying package.xml -> /home/beachlbl/porter/ros2-ws-2024/install/ui/share/ui
+[9.203s] running install_egg_info
+[9.214s] Copying ../../build/ui/ui.egg-info to /home/beachlbl/porter/ros2-ws-2024/install/ui/lib/python3.10/site-packages/ui-0.0.0-py3.10.egg-info
+[9.219s] running install_scripts
+[9.297s] Installing ui_health script to /home/beachlbl/porter/ros2-ws-2024/install/ui/lib/ui
+[9.299s] writing list of installed files to '/home/beachlbl/porter/ros2-ws-2024/build/ui/install.log'
+[9.415s] Invoked command in '/home/beachlbl/porter/ros2-ws-2024/src/ui' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/ui/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ui build --build-base /home/beachlbl/porter/ros2-ws-2024/build/ui/build install --record /home/beachlbl/porter/ros2-ws-2024/build/ui/install.log --single-version-externally-managed install_data --force

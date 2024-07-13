@@ -1,0 +1,21 @@
+[8.260s] Invoking command in '/home/beachlbl/porter/ros2-ws-2024/build/sensors': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/sensors/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/sensors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/beachlbl/porter/ros2-ws-2024/build/sensors/build --no-deps symlink_data --force
+[10.296s] running develop
+[10.298s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[10.298s]   warnings.warn(
+[11.518s] running egg_info
+[11.521s] writing sensors.egg-info/PKG-INFO
+[11.526s] writing dependency_links to sensors.egg-info/dependency_links.txt
+[11.527s] writing entry points to sensors.egg-info/entry_points.txt
+[11.530s] writing requirements to sensors.egg-info/requires.txt
+[11.533s] writing top-level names to sensors.egg-info/top_level.txt
+[11.547s] reading manifest file 'sensors.egg-info/SOURCES.txt'
+[11.554s] writing manifest file 'sensors.egg-info/SOURCES.txt'
+[11.570s] running build_ext
+[11.572s] Creating /home/beachlbl/porter/ros2-ws-2024/install/sensors/lib/python3.10/site-packages/sensors.egg-link (link to .)
+[11.582s] Installing sensors_sub script to /home/beachlbl/porter/ros2-ws-2024/install/sensors/lib/sensors
+[11.588s] 
+[11.590s] Installed /home/beachlbl/porter/ros2-ws-2024/build/sensors
+[11.593s] running symlink_data
+[11.596s] symbolically linking /home/beachlbl/porter/ros2-ws-2024/build/sensors/resource/sensors -> /home/beachlbl/porter/ros2-ws-2024/install/sensors/share/ament_index/resource_index/packages
+[11.598s] symbolically linking /home/beachlbl/porter/ros2-ws-2024/build/sensors/package.xml -> /home/beachlbl/porter/ros2-ws-2024/install/sensors/share/sensors
+[11.934s] Invoked command in '/home/beachlbl/porter/ros2-ws-2024/build/sensors' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/sensors/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/sensors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/beachlbl/porter/ros2-ws-2024/build/sensors/build --no-deps symlink_data --force

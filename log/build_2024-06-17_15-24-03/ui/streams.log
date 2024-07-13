@@ -1,0 +1,21 @@
+[6.968s] Invoking command in '/home/beachlbl/porter/ros2-ws-2024/build/ui': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/ui/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/beachlbl/porter/ros2-ws-2024/build/ui/build --no-deps symlink_data --force
+[8.920s] running develop
+[8.921s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[8.922s]   warnings.warn(
+[10.141s] running egg_info
+[10.142s] writing ui.egg-info/PKG-INFO
+[10.144s] writing dependency_links to ui.egg-info/dependency_links.txt
+[10.145s] writing entry points to ui.egg-info/entry_points.txt
+[10.146s] writing requirements to ui.egg-info/requires.txt
+[10.148s] writing top-level names to ui.egg-info/top_level.txt
+[10.157s] reading manifest file 'ui.egg-info/SOURCES.txt'
+[10.162s] writing manifest file 'ui.egg-info/SOURCES.txt'
+[10.180s] running build_ext
+[10.183s] Creating /home/beachlbl/porter/ros2-ws-2024/install/ui/lib/python3.10/site-packages/ui.egg-link (link to .)
+[10.185s] Installing ui_health script to /home/beachlbl/porter/ros2-ws-2024/install/ui/lib/ui
+[10.186s] 
+[10.188s] Installed /home/beachlbl/porter/ros2-ws-2024/build/ui
+[10.191s] running symlink_data
+[10.193s] symbolically linking /home/beachlbl/porter/ros2-ws-2024/build/ui/resource/ui -> /home/beachlbl/porter/ros2-ws-2024/install/ui/share/ament_index/resource_index/packages
+[10.197s] symbolically linking /home/beachlbl/porter/ros2-ws-2024/build/ui/package.xml -> /home/beachlbl/porter/ros2-ws-2024/install/ui/share/ui
+[10.542s] Invoked command in '/home/beachlbl/porter/ros2-ws-2024/build/ui' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/ui/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/beachlbl/porter/ros2-ws-2024/build/ui/build --no-deps symlink_data --force

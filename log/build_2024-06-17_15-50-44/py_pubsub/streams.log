@@ -1,0 +1,33 @@
+[6.734s] Invoking command in '/home/beachlbl/porter/ros2-ws-2024/build/py_pubsub': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/py_pubsub/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/beachlbl/porter/ros2-ws-2024/build/py_pubsub/build
+[8.702s] running develop
+[8.705s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[8.706s]   warnings.warn(
+[10.014s] Removing /home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages/py-pubsub.egg-link (link to .)
+[10.245s] Invoked command in '/home/beachlbl/porter/ros2-ws-2024/build/py_pubsub' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/py_pubsub/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/beachlbl/porter/ros2-ws-2024/build/py_pubsub/build
+[10.247s] Invoking command in '/home/beachlbl/porter/ros2-ws-2024/src/py_pubsub': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/py_pubsub/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/py_pubsub build --build-base /home/beachlbl/porter/ros2-ws-2024/build/py_pubsub/build install --record /home/beachlbl/porter/ros2-ws-2024/build/py_pubsub/install.log --single-version-externally-managed install_data --force
+[11.772s] running egg_info
+[11.776s] writing ../../build/py_pubsub/py_pubsub.egg-info/PKG-INFO
+[11.778s] writing dependency_links to ../../build/py_pubsub/py_pubsub.egg-info/dependency_links.txt
+[11.780s] writing entry points to ../../build/py_pubsub/py_pubsub.egg-info/entry_points.txt
+[11.781s] writing requirements to ../../build/py_pubsub/py_pubsub.egg-info/requires.txt
+[11.782s] writing top-level names to ../../build/py_pubsub/py_pubsub.egg-info/top_level.txt
+[11.789s] reading manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'
+[11.791s] adding license file 'LICENSE'
+[11.795s] writing manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'
+[11.797s] running build
+[11.799s] running build_py
+[11.801s] running install
+[11.805s] running install_lib
+[11.809s] creating /home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages/py_pubsub
+[11.811s] copying /home/beachlbl/porter/ros2-ws-2024/build/py_pubsub/build/lib/py_pubsub/__init__.py -> /home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages/py_pubsub
+[11.815s] copying /home/beachlbl/porter/ros2-ws-2024/build/py_pubsub/build/lib/py_pubsub/publisher_member_function.py -> /home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages/py_pubsub
+[11.816s] byte-compiling /home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages/py_pubsub/__init__.py to __init__.cpython-310.pyc
+[11.820s] byte-compiling /home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages/py_pubsub/publisher_member_function.py to publisher_member_function.cpython-310.pyc
+[11.823s] running install_data
+[11.824s] copying resource/py_pubsub -> /home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/share/ament_index/resource_index/packages
+[11.826s] copying package.xml -> /home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/share/py_pubsub
+[11.827s] running install_egg_info
+[11.839s] Copying ../../build/py_pubsub/py_pubsub.egg-info to /home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages/py_pubsub-0.0.0-py3.10.egg-info
+[11.852s] running install_scripts
+[11.998s] writing list of installed files to '/home/beachlbl/porter/ros2-ws-2024/build/py_pubsub/install.log'
+[12.247s] Invoked command in '/home/beachlbl/porter/ros2-ws-2024/src/py_pubsub' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/py_pubsub/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/py_pubsub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/py_pubsub build --build-base /home/beachlbl/porter/ros2-ws-2024/build/py_pubsub/build install --record /home/beachlbl/porter/ros2-ws-2024/build/py_pubsub/install.log --single-version-externally-managed install_data --force

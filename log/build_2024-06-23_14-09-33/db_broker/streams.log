@@ -1,0 +1,30 @@
+[10.868s] Invoking command in '/home/beachlbl/porter/ros2-ws-2024/src/db_broker': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/db_broker/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/db_broker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/db_broker build --build-base /home/beachlbl/porter/ros2-ws-2024/build/db_broker/build install --record /home/beachlbl/porter/ros2-ws-2024/build/db_broker/install.log --single-version-externally-managed install_data
+[13.539s] running egg_info
+[13.548s] writing ../../build/db_broker/db_broker.egg-info/PKG-INFO
+[13.567s] writing dependency_links to ../../build/db_broker/db_broker.egg-info/dependency_links.txt
+[13.571s] writing entry points to ../../build/db_broker/db_broker.egg-info/entry_points.txt
+[13.575s] writing requirements to ../../build/db_broker/db_broker.egg-info/requires.txt
+[13.588s] writing top-level names to ../../build/db_broker/db_broker.egg-info/top_level.txt
+[13.616s] reading manifest file '../../build/db_broker/db_broker.egg-info/SOURCES.txt'
+[13.618s] adding license file 'LICENSE'
+[13.622s] writing manifest file '../../build/db_broker/db_broker.egg-info/SOURCES.txt'
+[13.636s] running build
+[13.636s] running build_py
+[13.637s] copying db_broker/db_broker_pub.py -> /home/beachlbl/porter/ros2-ws-2024/build/db_broker/build/lib/db_broker
+[13.640s] running install
+[13.643s] running install_lib
+[13.651s] copying /home/beachlbl/porter/ros2-ws-2024/build/db_broker/build/lib/db_broker/db_broker_pub.py -> /home/beachlbl/porter/ros2-ws-2024/install/db_broker/lib/python3.10/site-packages/db_broker
+[13.669s] byte-compiling /home/beachlbl/porter/ros2-ws-2024/install/db_broker/lib/python3.10/site-packages/db_broker/db_broker_pub.py to db_broker_pub.cpython-310.pyc
+[13.677s]   File "/home/beachlbl/porter/ros2-ws-2024/install/db_broker/lib/python3.10/site-packages/db_broker/db_broker_pub.py", line 90
+[13.687s]     client.publish(self.topic, {'message': 10}
+[13.688s]                   ^
+[13.689s] SyntaxError: '(' was never closed
+[13.690s] 
+[13.692s] running install_data
+[13.696s] running install_egg_info
+[13.739s] removing '/home/beachlbl/porter/ros2-ws-2024/install/db_broker/lib/python3.10/site-packages/db_broker-0.0.0-py3.10.egg-info' (and everything under it)
+[13.758s] Copying ../../build/db_broker/db_broker.egg-info to /home/beachlbl/porter/ros2-ws-2024/install/db_broker/lib/python3.10/site-packages/db_broker-0.0.0-py3.10.egg-info
+[13.770s] running install_scripts
+[13.884s] Installing db_broker_pub script to /home/beachlbl/porter/ros2-ws-2024/install/db_broker/lib/db_broker
+[13.886s] writing list of installed files to '/home/beachlbl/porter/ros2-ws-2024/build/db_broker/install.log'
+[14.888s] Invoked command in '/home/beachlbl/porter/ros2-ws-2024/src/db_broker' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/db_broker/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/db_broker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/db_broker build --build-base /home/beachlbl/porter/ros2-ws-2024/build/db_broker/build install --record /home/beachlbl/porter/ros2-ws-2024/build/db_broker/install.log --single-version-externally-managed install_data

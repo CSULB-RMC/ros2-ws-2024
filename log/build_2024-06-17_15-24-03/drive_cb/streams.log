@@ -1,0 +1,21 @@
+[8.072s] Invoking command in '/home/beachlbl/porter/ros2-ws-2024/build/drive_cb': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/drive_cb/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/beachlbl/porter/ros2-ws-2024/build/drive_cb/build --no-deps symlink_data --force
+[10.007s] running develop
+[10.008s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[10.009s]   warnings.warn(
+[11.445s] running egg_info
+[11.447s] writing drive_cb.egg-info/PKG-INFO
+[11.449s] writing dependency_links to drive_cb.egg-info/dependency_links.txt
+[11.450s] writing entry points to drive_cb.egg-info/entry_points.txt
+[11.459s] writing requirements to drive_cb.egg-info/requires.txt
+[11.459s] writing top-level names to drive_cb.egg-info/top_level.txt
+[11.464s] reading manifest file 'drive_cb.egg-info/SOURCES.txt'
+[11.469s] writing manifest file 'drive_cb.egg-info/SOURCES.txt'
+[11.480s] running build_ext
+[11.487s] Creating /home/beachlbl/porter/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages/drive-cb.egg-link (link to .)
+[11.494s] Installing drivetrain_cb script to /home/beachlbl/porter/ros2-ws-2024/install/drive_cb/lib/drive_cb
+[11.500s] 
+[11.504s] Installed /home/beachlbl/porter/ros2-ws-2024/build/drive_cb
+[11.508s] running symlink_data
+[11.511s] symbolically linking /home/beachlbl/porter/ros2-ws-2024/build/drive_cb/resource/drive_cb -> /home/beachlbl/porter/ros2-ws-2024/install/drive_cb/share/ament_index/resource_index/packages
+[11.528s] symbolically linking /home/beachlbl/porter/ros2-ws-2024/build/drive_cb/package.xml -> /home/beachlbl/porter/ros2-ws-2024/install/drive_cb/share/drive_cb
+[12.069s] Invoked command in '/home/beachlbl/porter/ros2-ws-2024/build/drive_cb' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/drive_cb/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/drive_cb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/beachlbl/porter/ros2-ws-2024/build/drive_cb/build --no-deps symlink_data --force

@@ -1,0 +1,36 @@
+[6.954s] Invoking command in '/home/beachlbl/porter/ros2-ws-2024/build/joy_control': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/joy_control/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/beachlbl/porter/ros2-ws-2024/build/joy_control/build
+[8.937s] running develop
+[8.940s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[8.942s]   warnings.warn(
+[10.143s] Removing /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages/joy-control.egg-link (link to .)
+[10.357s] Invoked command in '/home/beachlbl/porter/ros2-ws-2024/build/joy_control' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/joy_control/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/beachlbl/porter/ros2-ws-2024/build/joy_control/build
+[10.358s] Invoking command in '/home/beachlbl/porter/ros2-ws-2024/src/joy_control': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/joy_control/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/joy_control build --build-base /home/beachlbl/porter/ros2-ws-2024/build/joy_control/build install --record /home/beachlbl/porter/ros2-ws-2024/build/joy_control/install.log --single-version-externally-managed install_data --force
+[11.846s] running egg_info
+[11.850s] writing ../../build/joy_control/joy_control.egg-info/PKG-INFO
+[11.851s] writing dependency_links to ../../build/joy_control/joy_control.egg-info/dependency_links.txt
+[11.854s] writing entry points to ../../build/joy_control/joy_control.egg-info/entry_points.txt
+[11.854s] writing requirements to ../../build/joy_control/joy_control.egg-info/requires.txt
+[11.856s] writing top-level names to ../../build/joy_control/joy_control.egg-info/top_level.txt
+[11.863s] reading manifest file '../../build/joy_control/joy_control.egg-info/SOURCES.txt'
+[11.865s] adding license file 'LICENSE'
+[11.868s] writing manifest file '../../build/joy_control/joy_control.egg-info/SOURCES.txt'
+[11.869s] running build
+[11.870s] running build_py
+[11.874s] running install
+[11.877s] running install_lib
+[11.881s] copying /home/beachlbl/porter/ros2-ws-2024/build/joy_control/build/lib/joy_control/__init__.py -> /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages/joy_control
+[11.884s] copying /home/beachlbl/porter/ros2-ws-2024/build/joy_control/build/lib/joy_control/joy_ex_pub.py -> /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages/joy_control
+[11.887s] copying /home/beachlbl/porter/ros2-ws-2024/build/joy_control/build/lib/joy_control/joy_cb_pub.py -> /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages/joy_control
+[11.891s] byte-compiling /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages/joy_control/__init__.py to __init__.cpython-310.pyc
+[11.893s] byte-compiling /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages/joy_control/joy_ex_pub.py to joy_ex_pub.cpython-310.pyc
+[11.901s] byte-compiling /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages/joy_control/joy_cb_pub.py to joy_cb_pub.cpython-310.pyc
+[11.904s] running install_data
+[11.905s] copying resource/joy_control -> /home/beachlbl/porter/ros2-ws-2024/install/joy_control/share/ament_index/resource_index/packages
+[11.908s] copying package.xml -> /home/beachlbl/porter/ros2-ws-2024/install/joy_control/share/joy_control
+[11.909s] running install_egg_info
+[11.920s] Copying ../../build/joy_control/joy_control.egg-info to /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages/joy_control-0.0.0-py3.10.egg-info
+[11.934s] running install_scripts
+[12.073s] Installing control_cb script to /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/joy_control
+[12.077s] Installing control_ex script to /home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/joy_control
+[12.079s] writing list of installed files to '/home/beachlbl/porter/ros2-ws-2024/build/joy_control/install.log'
+[12.274s] Invoked command in '/home/beachlbl/porter/ros2-ws-2024/src/joy_control' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/joy_control/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/joy_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/joy_control build --build-base /home/beachlbl/porter/ros2-ws-2024/build/joy_control/build install --record /home/beachlbl/porter/ros2-ws-2024/build/joy_control/install.log --single-version-externally-managed install_data --force

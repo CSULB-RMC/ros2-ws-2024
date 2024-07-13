@@ -1,0 +1,24 @@
+[8.083s] Invoking command in '/home/beachlbl/porter/ros2-ws-2024/build/camera_test': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/camera_test/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/beachlbl/porter/ros2-ws-2024/build/camera_test/build --no-deps symlink_data --force
+[10.058s] running develop
+[10.064s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[10.064s]   warnings.warn(
+[11.546s] running egg_info
+[11.554s] writing camera_test.egg-info/PKG-INFO
+[11.565s] writing dependency_links to camera_test.egg-info/dependency_links.txt
+[11.575s] writing entry points to camera_test.egg-info/entry_points.txt
+[11.577s] writing requirements to camera_test.egg-info/requires.txt
+[11.579s] writing top-level names to camera_test.egg-info/top_level.txt
+[11.598s] reading manifest file 'camera_test.egg-info/SOURCES.txt'
+[11.599s] writing manifest file 'camera_test.egg-info/SOURCES.txt'
+[11.614s] running build_ext
+[11.616s] Creating /home/beachlbl/porter/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages/camera-test.egg-link (link to .)
+[11.626s] Installing listener script to /home/beachlbl/porter/ros2-ws-2024/install/camera_test/lib/camera_test
+[11.628s] Installing listener2 script to /home/beachlbl/porter/ros2-ws-2024/install/camera_test/lib/camera_test
+[11.630s] Installing talker script to /home/beachlbl/porter/ros2-ws-2024/install/camera_test/lib/camera_test
+[11.632s] Installing talker2 script to /home/beachlbl/porter/ros2-ws-2024/install/camera_test/lib/camera_test
+[11.636s] 
+[11.638s] Installed /home/beachlbl/porter/ros2-ws-2024/build/camera_test
+[11.640s] running symlink_data
+[11.642s] symbolically linking /home/beachlbl/porter/ros2-ws-2024/build/camera_test/resource/camera_test -> /home/beachlbl/porter/ros2-ws-2024/install/camera_test/share/ament_index/resource_index/packages
+[11.644s] symbolically linking /home/beachlbl/porter/ros2-ws-2024/build/camera_test/package.xml -> /home/beachlbl/porter/ros2-ws-2024/install/camera_test/share/camera_test
+[12.084s] Invoked command in '/home/beachlbl/porter/ros2-ws-2024/build/camera_test' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/camera_test/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/beachlbl/porter/ros2-ws-2024/build/camera_test/build --no-deps symlink_data --force

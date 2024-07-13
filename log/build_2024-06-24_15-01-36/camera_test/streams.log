@@ -1,0 +1,25 @@
+[8.890s] Invoking command in '/home/beachlbl/porter/ros2-ws-2024/src/camera_test': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/camera_test/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/camera_test build --build-base /home/beachlbl/porter/ros2-ws-2024/build/camera_test/build install --record /home/beachlbl/porter/ros2-ws-2024/build/camera_test/install.log --single-version-externally-managed install_data
+[10.521s] running egg_info
+[10.525s] writing ../../build/camera_test/camera_test.egg-info/PKG-INFO
+[10.526s] writing dependency_links to ../../build/camera_test/camera_test.egg-info/dependency_links.txt
+[10.529s] writing entry points to ../../build/camera_test/camera_test.egg-info/entry_points.txt
+[10.532s] writing requirements to ../../build/camera_test/camera_test.egg-info/requires.txt
+[10.533s] writing top-level names to ../../build/camera_test/camera_test.egg-info/top_level.txt
+[10.545s] reading manifest file '../../build/camera_test/camera_test.egg-info/SOURCES.txt'
+[10.562s] adding license file 'LICENSE'
+[10.569s] writing manifest file '../../build/camera_test/camera_test.egg-info/SOURCES.txt'
+[10.574s] running build
+[10.575s] running build_py
+[10.577s] running install
+[10.578s] running install_lib
+[10.657s] running install_data
+[10.660s] running install_egg_info
+[10.670s] removing '/home/beachlbl/porter/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages/camera_test-0.0.0-py3.10.egg-info' (and everything under it)
+[10.673s] Copying ../../build/camera_test/camera_test.egg-info to /home/beachlbl/porter/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages/camera_test-0.0.0-py3.10.egg-info
+[10.744s] running install_scripts
+[10.880s] Installing listener script to /home/beachlbl/porter/ros2-ws-2024/install/camera_test/lib/camera_test
+[10.886s] Installing listener2 script to /home/beachlbl/porter/ros2-ws-2024/install/camera_test/lib/camera_test
+[10.892s] Installing talker script to /home/beachlbl/porter/ros2-ws-2024/install/camera_test/lib/camera_test
+[10.898s] Installing talker2 script to /home/beachlbl/porter/ros2-ws-2024/install/camera_test/lib/camera_test
+[10.902s] writing list of installed files to '/home/beachlbl/porter/ros2-ws-2024/build/camera_test/install.log'
+[11.377s] Invoked command in '/home/beachlbl/porter/ros2-ws-2024/src/camera_test' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/camera_test/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/camera_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/camera_test build --build-base /home/beachlbl/porter/ros2-ws-2024/build/camera_test/build install --record /home/beachlbl/porter/ros2-ws-2024/build/camera_test/install.log --single-version-externally-managed install_data

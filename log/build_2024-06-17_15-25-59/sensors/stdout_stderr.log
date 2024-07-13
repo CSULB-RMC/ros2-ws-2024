@@ -1,0 +1,30 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+Removing /home/beachlbl/porter/ros2-ws-2024/install/sensors/lib/python3.10/site-packages/sensors.egg-link (link to .)
+running egg_info
+writing ../../build/sensors/sensors.egg-info/PKG-INFO
+writing dependency_links to ../../build/sensors/sensors.egg-info/dependency_links.txt
+writing entry points to ../../build/sensors/sensors.egg-info/entry_points.txt
+writing requirements to ../../build/sensors/sensors.egg-info/requires.txt
+writing top-level names to ../../build/sensors/sensors.egg-info/top_level.txt
+reading manifest file '../../build/sensors/sensors.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/sensors/sensors.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+creating /home/beachlbl/porter/ros2-ws-2024/install/sensors/lib/python3.10/site-packages/sensors
+copying /home/beachlbl/porter/ros2-ws-2024/build/sensors/build/lib/sensors/__init__.py -> /home/beachlbl/porter/ros2-ws-2024/install/sensors/lib/python3.10/site-packages/sensors
+copying /home/beachlbl/porter/ros2-ws-2024/build/sensors/build/lib/sensors/sensors_sub.py -> /home/beachlbl/porter/ros2-ws-2024/install/sensors/lib/python3.10/site-packages/sensors
+byte-compiling /home/beachlbl/porter/ros2-ws-2024/install/sensors/lib/python3.10/site-packages/sensors/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/beachlbl/porter/ros2-ws-2024/install/sensors/lib/python3.10/site-packages/sensors/sensors_sub.py to sensors_sub.cpython-310.pyc
+running install_data
+copying resource/sensors -> /home/beachlbl/porter/ros2-ws-2024/install/sensors/share/ament_index/resource_index/packages
+copying package.xml -> /home/beachlbl/porter/ros2-ws-2024/install/sensors/share/sensors
+running install_egg_info
+Copying ../../build/sensors/sensors.egg-info to /home/beachlbl/porter/ros2-ws-2024/install/sensors/lib/python3.10/site-packages/sensors-0.0.0-py3.10.egg-info
+running install_scripts
+Installing sensors_sub script to /home/beachlbl/porter/ros2-ws-2024/install/sensors/lib/sensors
+writing list of installed files to '/home/beachlbl/porter/ros2-ws-2024/build/sensors/install.log'
