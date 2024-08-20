@@ -21,7 +21,7 @@ class DB_Broker(Node):
 
         self.broker = os.getenv("DATANIZ_IP")
         self.port = 1883
-        self.topic = 'python/mqtt'
+        self.topic = 'python/mqtt/real'
         self.username = os.getenv("DATANIZ_EMAIL")
         self.password = os.getenv("DATANIZ_KEY") 
 
@@ -62,9 +62,6 @@ class DB_Broker(Node):
         self.get_logger().info("Reconnect failed after %s attempts. Exiting..." % reconnect_count)
     
     def connect_mqtt(self):
-        # Set Connecting Client ID
-        # client = mqtt_client.Client(client_id='')
-
         # For paho-mqtt 2.0.0, you need to set callback_api_version.
 #        client = mqtt_client.Client(transport="websockets")
         client = mqtt_client.Client()
@@ -82,6 +79,7 @@ class DB_Broker(Node):
         self.sensorData[msg.data[0]][msg.data[1]] = msg.data[2]
 
     def publish(self, client, topic, message, timeout):
+        self.get_logger().info(f"publishing {message}")
         msg_info = client.publish(topic, json.dumps(message), qos=1)
         self.unacked_publish.add(msg_info.mid)
 
@@ -89,7 +87,8 @@ class DB_Broker(Node):
         msg_info.wait_for_publish(timeout=timeout)
 
     def timer_callback(self):
-        self.get_logger().info(f'{self.sensorData}')
+        #self.get_logger().info(f'{self.broker}')
+        #self.get_logger().info(f'{self.sensorData}')
         client = self.connect_mqtt()
         client.loop_start()
         ASSET_UID = "823-bzm-4i9-091"
@@ -109,12 +108,8 @@ class DB_Broker(Node):
                 "PID position": self.sensorData[4111][3]/50,
                 "tachometer": self.sensorData[6927][0],
                 "input voltage": self.sensorData[6927][1]/(math.e**4),
-                # TODO Populate data for as many sensors as you have
             }
         self.publish(client, self.topic, message, timeout=15) 
-        
-
-
         client.loop_stop() 
 
 def main(args=None):

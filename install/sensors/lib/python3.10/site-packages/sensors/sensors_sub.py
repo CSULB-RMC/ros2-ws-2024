@@ -25,7 +25,7 @@ class SensorSub(Node):
     def timer_callback(self):
         self.bus.flush_tx_buffer()
         msg = self.bus.recv()
-        self.get_logger().info(f'Id: {msg.arbitration_id}, Time: {msg.timestamp}, Data: {msg.data}')
+        # self.get_logger().info(f'Id: {msg.arbitration_id}, Time: {msg.timestamp}, Data: {msg.data}')
         
         match msg.arbitration_id:
             case 2319:

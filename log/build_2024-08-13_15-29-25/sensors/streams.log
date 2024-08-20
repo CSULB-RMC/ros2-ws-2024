@@ -1,0 +1,25 @@
+[7.929s] Invoking command in '/home/beachlbl/porter/ros2-ws-2024/src/sensors': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/sensors/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/sensors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/sensors build --build-base /home/beachlbl/porter/ros2-ws-2024/build/sensors/build install --record /home/beachlbl/porter/ros2-ws-2024/build/sensors/install.log --single-version-externally-managed install_data
+[9.498s] running egg_info
+[9.501s] writing ../../build/sensors/sensors.egg-info/PKG-INFO
+[9.502s] writing dependency_links to ../../build/sensors/sensors.egg-info/dependency_links.txt
+[9.503s] writing entry points to ../../build/sensors/sensors.egg-info/entry_points.txt
+[9.504s] writing requirements to ../../build/sensors/sensors.egg-info/requires.txt
+[9.505s] writing top-level names to ../../build/sensors/sensors.egg-info/top_level.txt
+[9.515s] reading manifest file '../../build/sensors/sensors.egg-info/SOURCES.txt'
+[9.516s] adding license file 'LICENSE'
+[9.520s] writing manifest file '../../build/sensors/sensors.egg-info/SOURCES.txt'
+[9.520s] running build
+[9.521s] running build_py
+[9.522s] copying sensors/sensors_sub.py -> /home/beachlbl/porter/ros2-ws-2024/build/sensors/build/lib/sensors
+[9.523s] running install
+[9.525s] running install_lib
+[9.529s] copying /home/beachlbl/porter/ros2-ws-2024/build/sensors/build/lib/sensors/sensors_sub.py -> /home/beachlbl/porter/ros2-ws-2024/install/sensors/lib/python3.10/site-packages/sensors
+[9.533s] byte-compiling /home/beachlbl/porter/ros2-ws-2024/install/sensors/lib/python3.10/site-packages/sensors/sensors_sub.py to sensors_sub.cpython-310.pyc
+[9.538s] running install_data
+[9.539s] running install_egg_info
+[9.548s] removing '/home/beachlbl/porter/ros2-ws-2024/install/sensors/lib/python3.10/site-packages/sensors-0.0.0-py3.10.egg-info' (and everything under it)
+[9.551s] Copying ../../build/sensors/sensors.egg-info to /home/beachlbl/porter/ros2-ws-2024/install/sensors/lib/python3.10/site-packages/sensors-0.0.0-py3.10.egg-info
+[9.556s] running install_scripts
+[9.661s] Installing sensors_sub script to /home/beachlbl/porter/ros2-ws-2024/install/sensors/lib/sensors
+[9.663s] writing list of installed files to '/home/beachlbl/porter/ros2-ws-2024/build/sensors/install.log'
+[9.872s] Invoked command in '/home/beachlbl/porter/ros2-ws-2024/src/sensors' returned '0': PYTHONPATH=/home/beachlbl/porter/ros2-ws-2024/build/sensors/prefix_override:/home/beachlbl/porter/ros2-ws-2024/install/sensors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/sensors build --build-base /home/beachlbl/porter/ros2-ws-2024/build/sensors/build install --record /home/beachlbl/porter/ros2-ws-2024/build/sensors/install.log --single-version-externally-managed install_data
